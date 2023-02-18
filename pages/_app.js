@@ -7,12 +7,13 @@ import '../styles/Sign-in.css';
 import '../styles/Sign-up.css';
 import '../styles/Sign-up-success.css';
 import '../styles/404-not-found.css';
+import '../styles/navbar-log-in.css';
 import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-    <Head>
+      <Head>
         {/* Bootstrap css */}
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
@@ -37,6 +38,12 @@ export default function App({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
+      {/* Call Bootstrap JS */}
+      <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossOrigin="anonymous"
+        />
       <Component {...pageProps} />
     </>
   )

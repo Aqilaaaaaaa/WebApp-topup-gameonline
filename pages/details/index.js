@@ -1,6 +1,6 @@
 export default function Details() {
     return (
-        <section className="detail pt-lg-60 pb-50">
+        <section className="detail pt-lg-60 pb-50 .bg-secondary">
             <div className="container-xxl container-fluid">
                 <div className="detail-header pb-50">
                     <h2 className="text-4xl fw-bold color-palette-1 text-start mb-10">Top Up</h2>
