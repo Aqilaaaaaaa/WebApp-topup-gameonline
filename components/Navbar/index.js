@@ -23,7 +23,7 @@ export default function Navbar(){
                         </a>
                         <ToogleNav/>
                         <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
+                            <ul className="navbar-nav ms-auto gap-lg-0 gap-2">
                                 <li className="nav-item my-auto">
                                     <div className="d-flex rounded" action="action_page.php">
                                         {show ?(
@@ -36,7 +36,7 @@ export default function Navbar(){
 
                                         ):(
                                             <button 
-                                            className="border border-light bg-transparent"
+                                            className="border border-light bg-transparent border-0 text-light"
                                             onClick={() => setShow(true)}>
                                                 Search
                                             </button>
@@ -44,7 +44,7 @@ export default function Navbar(){
                                     </div>
                                 </li>
                                 <li className="nav-item my-auto">
-                                    <Link className="nav-link active" href="/#">
+                                    <Link className="nav-link text-light active" href="/#">
                                         Home
                                     </Link>
                                 </li>
