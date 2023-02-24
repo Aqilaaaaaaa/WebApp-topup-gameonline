@@ -1,10 +1,11 @@
 /* Navbar */
 .navbar {
     background-color: #1d394a;
+    font-weight: 900;
 }
 
 /* .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
-    font-weight: 500;
+    
     color: #0C145A;
 } */
 
@@ -13,7 +14,7 @@
 }
 
 .navbar-light .btn-sign-in{
-    color: #0C145A;
+    color: #ADFF2F;
     background-color: #E7EAF5;
     padding: 0.75rem 1.875rem;
 }

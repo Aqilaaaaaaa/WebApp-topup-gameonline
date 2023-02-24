@@ -12,7 +12,7 @@ export default function Footer(){
                                     <img src="icon/logoo.png" width={130} height={130}/>
                                 </Link>
                                 
-                                <p className="mt-30 text-light mb-30">Copyright 2021. All Rights Reserved.</p>
+                                <p className="mt-30 text-light mb-30">Copyright 2023. All Rights Reserved.</p>
                             </div>
                             <div className="col-lg-8 mt-lg-0 mt-20 ">
                                 <div className="row gap-sm-0 ">
