@@ -16,10 +16,10 @@ export default function Navbar(){
     return (
         <>
             <section>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light bg-white pt-lg-40 pb-lg-40 pt-30 pb-50">
+                <nav className="navbar navbar-expand-lg navbar-light pt-lg-10 pb-lg-30 pt-10 pb-30">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/#">
-                            <img src="icon/logo.svg" width={80} height={80}/>
+                            <img src="icon/logoo.png" width={130} height={130}/>
                         </a>
                         <ToogleNav/>
                         <div className="collapse navbar-collapse" id="navbarNav">

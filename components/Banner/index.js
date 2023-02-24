@@ -4,11 +4,11 @@ import React from 'react';
 export default function Banner(){
     return (
         <>
-            <section className="header pt-lg-60 pb-50">
+            <section className="header pt-lg-60 pb-50 bg-light">
                 <div className="container-xxl container-fluid">
                     <div className="row gap-lg-0 gap-5">
                         <div className="col-lg-6 col-12 my-auto">
-                            <p className="text-support text-lg color-palette-2">
+                            <p className="text-light text-lg color-palette-2">
                                 Halo gamers,
                             </p>
                             <h1 className="header-title color-palette-1 fw-bold">
@@ -20,7 +20,7 @@ export default function Banner(){
                                     className="d-md-block d-none"/> players menjadi pemenang sejati
                             </p>
                             <div className="d-flex flex-lg-row flex-column gap-4">
-                                <a className="btn btn-get text-lg text-white rounded-pill" href="#feature" role="button">Get
+                                <a className="btn btn-get text-lg text-black shadow-sm rounded-pill" href="#feature" role="button">Get
                                     Started</a>
                                 <a className="btn-learn text-lg color-palette-1 my-auto text-center" href="#" role="button">Learn
                                     More</a>
