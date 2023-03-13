@@ -1,5 +1,10 @@
 /* Checkout */
 .checkout{
+    max-width: 100%;
+    background-color: #E7EAF5;
+}
+
+.checkout .container-fluid{
     max-width: 800px;
 }
 
@@ -60,12 +65,12 @@
     height: 22px;
     width: 22px;
     border-radius: 0.375rem;
-    border: 2px solid #0C145A;
+    border: 2px solid #ADFF2F;
   }
   
   .checkout .checkbox-label input:checked ~ .checkmark {
     background-color: #FFFFFF;
-    border: 2px solid #00BAFF;
+    border: 2px solid #ADFF2F;
   }
   
   .checkout .checkmark:after {
@@ -81,7 +86,7 @@
   .checkout .checkbox-label .checkmark:after {
     width: 14px;
     height: 14px;
-    background-color: #00BAFF;
+    background-color: #ADFF2F;
     border-radius: 0.25rem;
     left: 50%;
     top: 50%;
@@ -90,7 +95,7 @@
 
   .checkout .btn-confirm-payment{
       padding: 0.75rem 2.875rem;
-      background-color: #4D17E2;
+      background-color: #ADFF2F;
   }
 
   .checkout .img-checkout{
