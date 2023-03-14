@@ -4,7 +4,7 @@ import React from 'react';
 export default function Banner(){
     return (
         <>
-            <section className="header pt-lg-60 pb-50 bg-light">
+            <section className="header pt-lg-60 pb-50 ">
                 <div className="container-xxl container-fluid">
                     <div className="row gap-lg-0 gap-5">
                         <div className="col-lg-6 col-12 my-auto">

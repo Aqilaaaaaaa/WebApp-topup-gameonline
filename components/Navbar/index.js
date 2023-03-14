@@ -19,10 +19,10 @@ export default function Navbar(){
                 <nav className="navbar navbar-expand-lg navbar-light pt-lg-10 pb-lg-30 pt-10 pb-30">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/#">
-                            <img src="icon/logoo.png" width={130} height={130}/>
+                            <img src="icon/logoo.png" width={100} height={100}/>
                         </a>
                         <ToogleNav/>
-                        <div className="collapse navbar-collapse" id="navbarNav">
+                        <div className="collapse navbar-collapse color-palette-1" id="navbarNav">
                             <ul className="navbar-nav ms-auto gap-lg-0 gap-2">
                                 <li className="nav-item my-auto">
                                     <div className="d-flex rounded" action="action_page.php">
@@ -36,7 +36,7 @@ export default function Navbar(){
 
                                         ):(
                                             <button 
-                                            className="border border-light bg-transparent border-0 text-light"
+                                            className="border border-light bg-transparent border-0"
                                             onClick={() => setShow(true)}>
                                                 Search
                                             </button>
@@ -44,7 +44,7 @@ export default function Navbar(){
                                     </div>
                                 </li>
                                 <li className="nav-item my-auto">
-                                    <Link className="nav-link text-light active" href="/#">
+                                    <Link className="nav-link active color-palette-1" href="/#">
                                         Home
                                     </Link>
                                 </li>

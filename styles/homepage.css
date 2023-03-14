@@ -1,7 +1,8 @@
 /* Navbar */
 .navbar {
-    background-color: #1d394a;
+    /* background-color: #1d394a; */
     font-weight: 900;
+    box-shadow: 1px 18px 20px -5px rgba(231,234,245,0.77);
 }
 
 /* .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
@@ -15,16 +16,14 @@
 
 .navbar-light .btn-sign-in{
     color: #ADFF2F;
-    background-color: #E7EAF5;
+    /* background-color: #E7EAF5; */
     padding: 0.75rem 1.875rem;
 }
 /*  */
 
 
 /* Header */
-.header {
-    background-color: #E7EAF5;
-}
+
 .header .header-title{
     font-size: 2.625rem;
     line-height: 1.5;
@@ -74,7 +73,7 @@
 
 /* Feature */
 .feature .feature-card{
-    background-color: #F9FAFF;
+    background-color: #E7EAF5;
     padding: 1.875rem;
     border-radius: 1.625rem;
     margin-right: 16px;
