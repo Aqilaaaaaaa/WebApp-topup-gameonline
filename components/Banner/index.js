@@ -20,9 +20,9 @@ export default function Banner(){
                                     className="d-md-block d-none"/> players menjadi pemenang sejati
                             </p>
                             <div className="d-flex flex-lg-row flex-column gap-4">
-                                <a className="btn btn-get text-lg text-black shadow-sm rounded-pill" href="#feature" role="button">Get
+                                <a className="btn btn-get text-lg text-black shadow-sm rounded-pill" href="#" role="button">Get
                                     Started</a>
-                                <a className="btn-learn text-lg color-palette-1 my-auto text-center" href="#" role="button">Learn
+                                <a className="btn-learn text-lg color-palette-1 my-auto text-center" href="#feature" role="button">Learn
                                     More</a>
                             </div>
                         </div>

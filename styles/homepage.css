@@ -100,7 +100,7 @@
     border: 4px solid #ADFF2F;
 }
 
-.featured-game .featured-game-card:hover img{
+.featured-game .featured-game-card:hover img.thumbnail{
     transition: all 0.4s;
     filter: blur(40px);
     width: 181px;
@@ -140,32 +140,6 @@
 
 /*  */
 
-
-/* Reached */
-.reached .vertical-line{
-    width: 1px;
-    background-color: #E7EAF5;
-    height: 94px;
-}
-
-.reached .horizontal-line{
-    width: 240px;
-    background-color: #E7EAF5;
-    height: 1px;
-}
-/*  */
-
-/* Story */
-.story .btn-read{
-    padding: 0.75rem 3rem;
-    background-color: #E7EAF5;
-}
-
-.story .img-fluid{
-    max-width: 100%;
-    height: auto;
-}
-/*  */
 
 
 /* Footer */
