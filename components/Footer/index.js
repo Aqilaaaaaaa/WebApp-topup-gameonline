@@ -20,11 +20,11 @@ export default function Footer(){
                                         <p className="text-light fw-semibold mb-12">Company</p>
                                         <ul className="list-unstyled ">
                                             <li className="mb-6">
-                                                <a href="" className=" text-light text-decoration-none">About Us</a>
+                                                <Link href="" className=" text-light text-decoration-none">About Us</Link >
                                             </li>
                                             <li className="mb-6">
-                                                <a href="" className=" text-light text-decoration-none">Press
-                                                    Release</a>
+                                                <Link href="" className=" text-light text-decoration-none">Press
+                                                    Release</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -32,16 +32,16 @@ export default function Footer(){
                                         <p className=" text-light fw-semibold mb-12">Support</p>
                                         <ul className="list-unstyled text-light">
                                             <li className="mb-6">
-                                                <a href="" className=" text-light text-decoration-none">Refund
-                                                    Policy</a>
+                                                <Link href="" className=" text-light text-decoration-none">Refund
+                                                    Policy</Link>
                                             </li>
                                             <li className="mb-6">
-                                                <a href="" className=" text-light text-decoration-none">Unlock
-                                                    Rewards</a>
+                                                <Link href="" className=" text-light text-decoration-none">Unlock
+                                                    Rewards</Link>
                                             </li>
                                             <li className="mb-6">
-                                                <a href="" className=" text-light text-decoration-none">Live
-                                                    Chatting</a>
+                                                <Link href="" className=" text-light text-decoration-none">Live
+                                                    Chatting</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -49,19 +49,19 @@ export default function Footer(){
                                         <p className=" text-light fw-semibold mb-12">Connect</p>
                                         <ul className="list-unstyled">
                                             <li className="mb-6">
-                                                <a href="mailto: hi@store.gg"
-                                                    className=" text-light text-decoration-none">hi@store.gg</a>
+                                                <Link href="mailto: cashless.shop@gmail.com<"
+                                                    className=" text-light text-decoration-none">cashless.shop@gmail.com</Link>
                                             </li>
                                             <li className="mb-6">
-                                                <a href="http://maps.google.com/?q=Pasific 12,
+                                                <Link href="http://maps.google.com/?q=Pasific 12,
                                                 Jakarta Selatan" className=" text-light text-decoration-none">Pasific
                                                     12,
-                                                    Jakarta Selatan</a>
+                                                    Jakarta Selatan</Link>
                                             </li>
                                             <li className="mb-6">
-                                                <a href="tel: 02111229090"
+                                                <Link href="tel: 02111229090"
                                                     className=" text-light text-decoration-none">021 - 1122 -
-                                                    9090</a>
+                                                    9090</Link>
                                             </li>
                                         </ul>
                                     </div>

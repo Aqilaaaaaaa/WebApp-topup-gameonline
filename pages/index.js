@@ -23,7 +23,6 @@ export default function Home() {
         <Banner/>
         <Guide/>
         <Featured/>
-
         <Footer/>
 
     </>
