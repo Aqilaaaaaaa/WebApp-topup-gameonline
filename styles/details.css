@@ -1,8 +1,28 @@
 /* Details */
+
+@media (max-width:768px) {
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-img {
+    display: flex;
+}
+}
+
 .detail .img-fluid{
     max-width: 100%;
     height: auto;
-    border-radius: 1.625rem;
+    border-radius: 1rem;
+
+}
+
+.detail .form {
+    display: flex;
+    justify-content: center;
+
 }
 
 .detail hr{
@@ -14,13 +34,13 @@
 
 .detail input[type="text"]{
     max-width: 437px;
-    border: 1px solid #0C145A;
+    border: 1px solid #1d394a;
     padding: 0.75rem 1.625rem;
-    color: #0C145A;
+    color: #1d394a;
 }
 
 .detail input[type="text"]:focus-within{
-    color: #0C145A;
+    color: #1d394a;
 }
 
 .detail input[type="text"]::placeholder{
@@ -29,14 +49,14 @@
 
 .detail .detail-card{
     transition: all 0.1s linear;
-    background-color: #F9FAFF;
+    background-color: #E7EAF5;
     border-radius: 1.625rem;
     padding: 1.875rem;
     cursor: pointer;
 }
 
 .detail input[type="radio"]:checked+.detail-card{
-    border: 2px solid #00BAFF;
+    border: 2px solid #1d394a;
     background-color: rgba(0, 186, 255, 0.05);
 }
 
@@ -50,6 +70,6 @@
 }
 
 .detail .btn-submit{    
-        background-color: #4D17E2;
+        background-color: #ADFF2F;
         padding: 0.75rem 3rem;
 }
