@@ -14,8 +14,8 @@ export default function Featured(){
                         <CardFeatured img="Thumbnail-2" title="Mobile Legends" type="Mobile"/>
                         <CardFeatured img="Thumbnail-3" title="Clash of Clans" type="Mobile"/>
                         <CardFeatured img="Thumbnail-4" title="Mobile Legends" type="Mobile"/>
-                        <CardFeatured img="Thumbnail-1" title="Mobile Legends" type="Mobile"/>
-                        <CardFeatured img="Thumbnail-5" title="Mobile Legends" type="Mobile"/>
+                        {/* <CardFeatured img="Thumbnail-1" title="Mobile Legends" type="Mobile"/>
+                        <CardFeatured img="Thumbnail-5" title="Mobile Legends" type="Mobile"/> */}
                         <button className="nxt-button border-0 bg-transparent"><IoIosArrowForward size={30}/></button>
                     </div>
                 </div>

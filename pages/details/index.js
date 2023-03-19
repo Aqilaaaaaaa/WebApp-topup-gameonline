@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import TopUpForm from "@/components/TopUpForm"
 import TopUpItem from "@/components/TopUpForm/TopUpItem"
@@ -30,6 +31,7 @@ export default function Details() {
                     </div> */}
                 </div>
             </section>
+            <Footer/>
         </>
 
     )
