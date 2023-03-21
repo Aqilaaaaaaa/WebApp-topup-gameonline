@@ -6,17 +6,17 @@ export default function CompleteCheckout(){
                 <div className="text-center">
                     <svg className="img-fluid" width="343" height="300" viewBox="0 0 343 300" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
+                        <g clipPath="url(#clip0)">
                             <path d="M263.96 271.587C264.986 271.07 265.5 270.554 266.525 270.037" stroke="#FF78B7"
-                                stroke-width="0.6123" stroke-linecap="round" stroke-linejoin="round" />
+                                strokeWidth="0.6123" stroke-linecap="round" stroke-linejoin="round" />
                             <path
                                 d="M276.786 262.804C284.994 256.605 293.202 250.406 299.873 242.657C310.132 231.292 317.827 216.31 317.315 200.812C317.315 189.963 313.211 179.631 309.107 169.299C305.001 159.484 300.385 149.152 298.845 138.303C297.306 127.454 298.845 115.572 306.541 107.823C311.159 102.657 319.367 100.074 325.523 105.24C327.574 107.307 329.114 109.89 330.141 112.99C339.374 143.469 298.333 162.584 273.708 156.901C261.908 153.801 250.622 147.085 241.387 139.336C221.892 123.321 208.04 108.857 199.832 84.5764C192.65 63.9121 188.032 41.1817 172.642 24.1337C121.339 -32.6927 20.2732 34.9825 19.7601 100.591C19.7601 137.787 42.8462 174.982 77.7319 185.83C94.6618 190.997 113.131 189.963 131.087 188.93C139.808 188.414 148.529 187.897 157.764 187.38"
                                 stroke="#FF78B7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.22 4" />
                             <path d="M163.407 187.897C164.433 187.897 165.46 187.897 166.486 187.897" stroke="#FF78B7"
-                                stroke-width="0.6123" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M30.5337 294.317H334.245" stroke="#B1B9CC" stroke-width="2" stroke-miterlimit="10"
+                                strokeWidth="0.6123" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M30.5337 294.317H334.245" stroke="#B1B9CC" strokeWidth="2" stroke-miterlimit="10"
                                 stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M2.8302 294.317H15.1428" stroke="#B1B9CC" stroke-width="2" stroke-miterlimit="10"
+                            <path d="M2.8302 294.317H15.1428" stroke="#B1B9CC" strokeWidth="2" stroke-miterlimit="10"
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M254.212 33.9492H185.98V111.44H254.212V33.9492Z" fill="#B4C2D1" />
                             <path d="M254.212 33.9492H208.553V111.44H254.212V33.9492Z" fill="url(#paint0_linear)" />
@@ -43,7 +43,7 @@ export default function CompleteCheckout(){
                                 fill="#B4C2D1" />
                             <path
                                 d="M239.847 95.4248V119.189C239.847 143.469 220.352 162.583 196.753 162.583C172.641 162.583 153.659 142.952 153.659 119.189V95.4248"
-                                stroke="white" stroke-width="1.8941" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke="white" strokeWidth="1.8941" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
                             <path opacity="0.7"
                                 d="M280.89 275.72L150.068 300C148.016 298.967 146.477 296.383 146.477 293.802V215.277C146.477 211.144 149.555 208.044 153.659 208.044H273.707L280.89 275.72Z"
@@ -71,48 +71,48 @@ export default function CompleteCheckout(){
                         <defs>
                             <linearGradient id="paint0_linear" x1="208.801" y1="72.5824" x2="254.26" y2="72.5824"
                                 gradientUnits="userSpaceOnUse">
-                                <stop offset="0.00289017" stop-color="#E6ECF5" />
-                                <stop offset="1" stop-color="#CED7E2" />
+                                <stop offset="0.00289017" stopColor="#E6ECF5" />
+                                <stop offset="1" stopColor="#CED7E2" />
                             </linearGradient>
                             <linearGradient id="paint1_linear" x1="143.285" y1="14.5673" x2="143.285" y2="143.347"
                                 gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FF66A9" />
-                                <stop offset="1" stop-color="#F53689" />
+                                <stop stopColor="#FF66A9" />
+                                <stop offset="1" stopColor="#F53689" />
                             </linearGradient>
                             <linearGradient id="paint2_linear" x1="163.166" y1="127.787" x2="156.337" y2="4.80769"
                                 gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FF66A9" />
-                                <stop offset="1" stop-color="#F53689" />
+                                <stop stopColor="#FF66A9" />
+                                <stop offset="1" stopColor="#F53689" />
                             </linearGradient>
                             <linearGradient id="paint3_linear" x1="6.76077" y1="181.739" x2="18.528" y2="181.739"
                                 gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FF66A9" />
-                                <stop offset="1" stop-color="#F53689" />
+                                <stop stopColor="#FF66A9" />
+                                <stop offset="1" stopColor="#F53689" />
                             </linearGradient>
                             <linearGradient id="paint4_linear" x1="286.418" y1="33.7799" x2="297.858" y2="33.7799"
                                 gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#83A6FF" />
-                                <stop offset="1" stop-color="#5A78FF" />
+                                <stop stopColor="#83A6FF" />
+                                <stop offset="1" stopColor="#5A78FF" />
                             </linearGradient>
                             <linearGradient id="paint5_linear" x1="334.206" y1="85.84" x2="342.314" y2="85.84"
                                 gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FF66A9" />
-                                <stop offset="1" stop-color="#F53689" />
+                                <stop stopColor="#FF66A9" />
+                                <stop offset="1" stopColor="#F53689" />
                             </linearGradient>
                             <linearGradient id="paint6_linear" x1="61.3001" y1="56.4076" x2="61.3001" y2="288.195"
                                 gradientUnits="userSpaceOnUse">
-                                <stop offset="0.00289017" stop-color="#E6ECF5" />
-                                <stop offset="1" stop-color="#CED7E2" />
+                                <stop offset="0.00289017" stopColor="#E6ECF5" />
+                                <stop offset="1" stopColor="#CED7E2" />
                             </linearGradient>
                             <linearGradient id="paint7_linear" x1="158.725" y1="240.949" x2="274.511" y2="269.213"
                                 gradientUnits="userSpaceOnUse">
-                                <stop offset="0.00289017" stop-color="#606673" stop-opacity="0" />
-                                <stop offset="1" stop-color="#373C47" />
+                                <stop offset="0.00289017" stopColor="#606673" stopOpacity="0" />
+                                <stop offset="1" stopColor="#373C47" />
                             </linearGradient>
                             <linearGradient id="paint8_linear" x1="235.098" y1="243.554" x2="317.994" y2="300.73"
                                 gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#83A6FF" />
-                                <stop offset="1" stop-color="#5A78FF" />
+                                <stop stopColor="#83A6FF" />
+                                <stop offset="1" stopColor="#5A78FF" />
                             </linearGradient>
                             <clipPath id="clip0">
                                 <rect width="342.453" height="300" fill="white" />
