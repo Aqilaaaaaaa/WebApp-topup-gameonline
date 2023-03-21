@@ -24,7 +24,7 @@ export default function Banner(){
                                 <Link className="btn btn-get text-lg text-black shadow-sm rounded-pill" 
                                     href="#feature" 
                                     role="button">
-                                    Learn More
+                                    Lets Go
                                 </Link>
                             </div>
                         </div>
