@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from "next/link"
 
 export default function Banner(){
     return (
@@ -20,10 +20,12 @@ export default function Banner(){
                                     className="d-md-block d-none"/> players menjadi pemenang sejati
                             </p>
                             <div className="d-flex flex-lg-row flex-column gap-4">
-                                <a className="btn btn-get text-lg text-black shadow-sm rounded-pill" href="#" role="button">Get
-                                    Started</a>
-                                <a className="btn-learn text-lg color-palette-1 my-auto text-center" href="#feature" role="button">Learn
-                                    More</a>
+                                
+                                <Link className="btn btn-get text-lg text-black shadow-sm rounded-pill" 
+                                    href="#feature" 
+                                    role="button">
+                                    Learn More
+                                </Link>
                             </div>
                         </div>
                         <div className="col-lg-6 col-12 d-lg-block d-none">
