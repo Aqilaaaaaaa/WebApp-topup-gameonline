@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useState } from "react";
-// import { BsSearch, BsHouseFill } from "react-icons/bs";
+import { BsSearch } from "react-icons/bs";
 import Auth from "./Auth";
 import ToogleNav from "./ToogleNav";
 
@@ -27,12 +27,19 @@ export default function Navbar(){
                                 <li className="nav-item my-auto">
                                     <div className="d-flex rounded" action="action_page.php">
                                         {show ?(
-                                            <input type="search" 
-                                            className="form-control rounded border"  
-                                            placeholder="Search.." 
-                                            name="search"
-                                            onClick={() => setShow(true)}
-                                            />
+                                            <>
+                                                <input type="search" 
+                                                    className="form-control rounded border"  
+                                                    placeholder="Search.." 
+                                                    name="search"
+                                                    onClick={() => setShow(true)}
+                                                    />
+                                                    <button 
+                                                        className="border border-light bg-transparent border-0"
+                                                        onClick={() => setShow(false)}>
+                                                        <BsSearch className="m-2"/>
+                                                    </button>
+                                            </>
 
                                         ):(
                                             <button 
@@ -41,6 +48,7 @@ export default function Navbar(){
                                                 Search
                                             </button>
                                         )}
+                                        
                                     </div>
                                 </li>
                                 <li className="nav-item my-auto">
