@@ -3,15 +3,15 @@
 .sign-up input[type="password"],
 .sign-up input[type="email"],
 .sign-up input[type="text"]{
-    border: 1px solid #0C145A;
+    border: 1px solid #ADFF2F;
     padding: 0.75rem 1.625rem;
-    color: #0C145A;
+    color: #ADFF2F;
 }
 
 .sign-up input[type="password"]:focus-within,
 .sign-up input[type="email"]:focus-within,
 .sign-up input[type="text"]:focus-within{
-    color: #0C145A;
+    color: #ADFF2F;
 }
 
 .sign-up input[type="password"]::placeholder,
@@ -22,12 +22,12 @@
 
 .sign-up .btn-sign-up{
     padding: 0.75rem;
-    background-color: #4D17E2;
+    background-color: #1d394a;
 }
 
 .sign-up .btn-sign-in{
     padding: 0.75rem;
-    background-color: #E7EAF5;
+    background-color: #ADFF2F;
 }
 
 
