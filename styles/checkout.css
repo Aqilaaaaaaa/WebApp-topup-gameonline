@@ -110,6 +110,28 @@
     .checkout span.payment-details {
         float: right;
       }
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .checkout .cropped {
+      width: 200px;
+      height: 130px;
+      overflow: hidden;
+      border-radius: 1.625rem;
+    }
+    
+  }
+  @media (min-width: 414px) { 
+    .checkout span.purchase-details,
+    .checkout span.payment-details {
+        float: right;
+      }
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
     
     .checkout .cropped {
       width: 200px;
