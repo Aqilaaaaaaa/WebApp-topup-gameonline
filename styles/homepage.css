@@ -107,28 +107,26 @@
     height: 246px;   
 }
 
-.featured-game .container {
-    display: flex;
-    
-}
-/*
+
 .featured-game .container-btnR {
     position: absolute;
     top: 50%;
     z-index: -1px;
+    left: 10px;
 }
 
 .featured-game .container-btnL {
     position: absolute;
     top: 50%;
     z-index: 1px;
+    right: 10px;
 }
 
 .featured-game .swiper{
    margin: 40px;
    display: flex;
 
-} */
+}
 
 .featured-game .featured-game-card .blur-sharp{
     overflow: hidden;

@@ -3,6 +3,10 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import React, { useCallback, useRef } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Featured = () => {
     const swiperRef = useRef();
@@ -23,9 +27,9 @@ const Featured = () => {
                     <h2 className="text-4xl fw-bold color-palette-1 mb-30">Our Featured Games</h2>
                     <div className="container overflow-setting justify-content-lg-between gap-lg-3 gap-4"
                         data-aos="fade-up">
-                        {/* <div className="container-btnR" >
+                        <div className="container-btnR" >
                             <button className="pre-button border-0 bg-transparent" onClick={() => swiperRef.current?.slidePrev()}><IoIosArrowBack size={30}/></button>
-                        </div> */}
+                        </div>
                         <Swiper
                             className=""
                             breakpoints={
@@ -67,11 +71,23 @@ const Featured = () => {
                             <SwiperSlide className="m-auto p-4" >
                                 <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
                             </SwiperSlide>
+                            <SwiperSlide className="m-auto p-4" >
+                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
+                            </SwiperSlide>
+                            <SwiperSlide className="m-auto p-4" >
+                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
+                            </SwiperSlide>
+                            <SwiperSlide className="m-auto p-4" >
+                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
+                            </SwiperSlide>
+                            <SwiperSlide className="m-auto p-4" >
+                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
+                            </SwiperSlide>
                                 
                         </Swiper>
-                        {/* <div className="container-btnL">
+                        <div className="container-btnL">
                             <button className="nxt-button border-0 bg-transparent" onClick={() => swiperRef.current?.slideNext()}><IoIosArrowForward size={30}/></button>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </section>
