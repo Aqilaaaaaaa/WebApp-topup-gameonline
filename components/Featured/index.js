@@ -8,7 +8,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Featured = () => {
+const Featured = ({dataProduct}) => {
     const swiperRef = useRef();
     const handlePrev = useCallback(() => {
         if (!sliderRef.current) return;
@@ -58,8 +58,15 @@ const Featured = () => {
                                 swiperRef.current = swiper;
                             }}
                         >
+                            {dataProduct?.map((data, idx) => {
+                                return (
+                                    <SwiperSlide key={idx} className="m-auto p-4" >
+                                        <CardFeatured id={data.id} img={data.img} title={data.name} type={data.type}/>
+                                    </SwiperSlide>
+                                )
+                            })}
                             
-                            <SwiperSlide className="m-auto p-4" >
+                            {/* <SwiperSlide className="m-auto p-4" >
                                 <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
                             </SwiperSlide>
                             <SwiperSlide className="m-auto p-4" >
@@ -82,7 +89,7 @@ const Featured = () => {
                             </SwiperSlide>
                             <SwiperSlide className="m-auto p-4" >
                                 <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide>
+                            </SwiperSlide> */}
                                 
                         </Swiper>
                         <div className="container-btnL">
