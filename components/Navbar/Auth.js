@@ -15,8 +15,8 @@ export default function Auth(props){
                     </a>
 
                     <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
-                        <li><Link href="/member" className="dropdown-item text-lg color-palette-2">My Profile</Link></li>
-                        <li><Link href="/history" className="dropdown-item text-lg color-palette-2">History Purchase</Link></li>
+                        <li><Link href="/product" className="dropdown-item text-lg color-palette-2">All Game</Link></li>
+                        <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">History Purchase</Link></li>
                         <li><Link href="/sign-in" className="dropdown-item text-lg color-palette-2">Log Out</Link></li>
                     </ul>
                 </div>

@@ -8,6 +8,7 @@ import '../styles/Sign-up.css';
 import '../styles/Sign-up-success.css';
 import '../styles/404-not-found.css';
 import '../styles/navbar-log-in.css';
+import '../styles/history.css';
 import Head from 'next/head';
 import Script from 'next/script';
 
