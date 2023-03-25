@@ -6,7 +6,7 @@ const CardFeatured = ({id, img, title, type}) => {
     return (
         <>
           <div className="featured-game-card position-relative">
-            <Link href="/details">
+            <Link href={`details/${id}`}>
                 <div className="blur-sharp">
                     <img className="thumbnail" src={img} width="205" height="270" alt=""/>
                 </div>

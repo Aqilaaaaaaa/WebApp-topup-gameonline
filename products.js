@@ -8,17 +8,20 @@ export const products = [
             {
                 idProduct : 1,
                 item :"20dm",
-                price : 10000
+                price : 10000,
+                coin : +1
             },
             {
                 idProduct : 2,
                 item :"50dm",
-                price : 27000
+                price : 27000,
+                coin : +3
             },
             {
                 idProduct : 3,
                 item :"40dm",
-                price : 240000
+                price : 240000,
+                coin : +2
             }
         ]
     },
@@ -31,17 +34,20 @@ export const products = [
             {
                 idProduct : 1,
                 item :"20dm",
-                price : 10000
+                price : 10000,
+                coin : +1
             },
             {
                 idProduct : 2,
                 item :"50dm",
-                price : 27000
+                price : 27000,
+                coin : +3
             },
             {
                 idProduct : 3,
                 item :"40dm",
-                price : 240000
+                price : 240000,
+                coin : +2
             }
         ]
     },
@@ -54,17 +60,20 @@ export const products = [
             {
                 idProduct : 1,
                 item :"20dm",
-                price : 10000
+                price : 10000,
+                coin : +1
             },
             {
                 idProduct : 2,
                 item :"50dm",
-                price : 27000
+                price : 27000,
+                coin : +3
             },
             {
                 idProduct : 3,
                 item :"40dm",
-                price : 240000
+                price : 240000,
+                coin : +2
             }
         ]
     },
@@ -77,17 +86,20 @@ export const products = [
             {
                 idProduct : 1,
                 item :"20dm",
-                price : 10000
+                price : 10000,
+                coin : +1
             },
             {
                 idProduct : 2,
                 item :"50dm",
-                price : 27000
+                price : 27000,
+                coin : +3
             },
             {
                 idProduct : 3,
                 item :"40dm",
-                price : 240000
+                price : 240000,
+                coin : +3
             }
         ]
     },
@@ -100,17 +112,20 @@ export const products = [
             {
                 idProduct : 1,
                 item :"20dm",
-                price : 1000
+                price : 1000,
+                coin : +1
             },
             {
                 idProduct : 2,
                 item :"50dm",
-                price : 27000
+                price : 27000,
+                coin : +3
             },
             {
                 idProduct : 3,
                 item :"40dm",
-                price : 240000
+                price : 240000,
+                coin : +2
             }
         ]
     }
