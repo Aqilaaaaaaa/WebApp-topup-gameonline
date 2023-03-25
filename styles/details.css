@@ -7,14 +7,14 @@
     justify-content: center;
     align-items: center;
 }
-.card-img {
+/* .card-img {
     display: flex;
-}
+} */
 }
 
 .detail .img-fluid{
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
     border-radius: 1rem;
 
 }
@@ -53,10 +53,11 @@
     border-radius: 1.625rem;
     padding: 1.875rem;
     cursor: pointer;
+    width: 200px;
 }
 
 .detail input[type="radio"]:checked+.detail-card{
-    border: 2px solid #1d394a;
+    border: 2px solid #ADFF2F;
     background-color: rgba(0, 186, 255, 0.05);
 }
 

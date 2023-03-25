@@ -1,13 +1,14 @@
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
-import TopUpForm from "@/components/TopUpForm"
-import TopUpItem from "@/components/TopUpForm/TopUpItem"
-import { products } from "@/products"
+import TopUpItem from "@/components/Details/TopUpItem"
+import NominalCard from "@/components/Details/NominalCard"
+import PaymentCard from "@/components/Details/PaymentCard"
 import Head from "next/head"
+import Link from "next/link"
 import { useState } from "react"
 
-export default function Details({products}) {
-    const [data, setData] = useState(products)
+export default function Details({product}) {
+    const [data, setData] = useState(product)
     console.log(data)
     return (
         <>
@@ -26,8 +27,56 @@ export default function Details({products}) {
                     <div className="form col">
                         <TopUpItem
                             img={data.img}
+                            title={data.name}
                         />
-                        <TopUpForm/>
+                        <form method="POST">
+                            <div className="md-50">
+                                
+                                    <label id="ID" className="form-label text-lg fw-medium color-palette-1 mb-10" >User
+                                        ID</label>
+                                    <input type="text" className="form-control rounded-pill text-lg" id="ID" name="ID"
+                                        aria-describedby="UserID" placeholder="Enter your ID"/>
+                                
+                            </div>
+                            <div className="mt-30">
+                                <p className="text-lg fw-medium color-palette-1 ">Nominal Top Up</p>
+                            </div>
+                            <div className="flex d-flex flex-wrap pb-md-30 pb-20">
+                                {data?.priceList?.map((priceList) => (
+                                    <NominalCard item={priceList.item} price={priceList.price} coin={priceList.coin}/>
+                                )) }
+                            </div>
+                            <div className="pb-md-50 pb-20">
+                                <p className="text-lg fw-medium color-palette-1 mb-md-10 mb-0">Payment Method</p>
+                                <fieldset id="paymentMethod">
+                                    <div className="row justify-content-between">
+                                        <PaymentCard/>
+                                        <PaymentCard/>
+                                        <PaymentCard/>
+                                        <PaymentCard/>
+                                        <PaymentCard/>
+                                        
+                                        <div className="col-lg-4 col-sm-6">
+                                            
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            {/* <div className="pb-50">
+                                <label for="bankAccount" className="form-label text-lg fw-medium color-palette-1 mb-10">Bank
+                                    Account
+                                    Name</label>
+                                <input type="text" className="form-control rounded-pill text-lg" id="bankAccount"
+                                    name="bankAccount" aria-describedby="bankAccount"
+                                    placeholder="Enter your Bank Account Name"/>
+                            </div> */}
+                            <div className="d-sm-block d-flex flex-column w-100">
+                                <Link href="/checkout" type="submit"
+                                    className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
+                                </Link>
+                            </div>
+                        </form>
+                        
                     </div>
                     {/* <div className="row">
                         <div className="col-xl-3 col-lg-4 col-md-5 pb-30 pb-md-0 pe-md-25 text-md-start">
@@ -46,7 +95,7 @@ export default function Details({products}) {
 
     )
 }
-export async function getServerSideprops({params}){
+export async function getServerSideProps({params}){
     const res = await fetch('http://localhost:3000/api/product/'+params.id)
     const product = await res.json()
     return {
