@@ -28,6 +28,7 @@ export default function Details({product}) {
                         <TopUpItem
                             img={data.img}
                             title={data.name}
+                            type={data.type}
                         />
                         <form method="POST">
                             <div className="md-50">
@@ -41,26 +42,20 @@ export default function Details({product}) {
                             <div className="mt-30">
                                 <p className="text-lg fw-medium color-palette-1 ">Nominal Top Up</p>
                             </div>
-                            <div className="flex d-flex flex-wrap pb-md-30 pb-20">
+                            <div className="flex-row d-flex flex-wrap pb-md-30 pb-20">
                                 {data?.priceList?.map((priceList) => (
                                     <NominalCard item={priceList.item} price={priceList.price} coin={priceList.coin}/>
                                 )) }
                             </div>
-                            <div className="pb-md-50 pb-20">
+                            <div className="pb-md-30 pb-20">
                                 <p className="text-lg fw-medium color-palette-1 mb-md-10 mb-0">Payment Method</p>
-                                <fieldset id="paymentMethod">
-                                    <div className="row justify-content-between">
-                                        <PaymentCard/>
-                                        <PaymentCard/>
-                                        <PaymentCard/>
-                                        <PaymentCard/>
-                                        <PaymentCard/>
-                                        
-                                        <div className="col-lg-4 col-sm-6">
-                                            
-                                        </div>
-                                    </div>
-                                </fieldset>
+                                <div className="flex-row d-flex flex-wrap ">
+                                    <PaymentCard/>
+                                    <PaymentCard/>
+                                    <PaymentCard/>
+                                    <PaymentCard/>
+                                    <PaymentCard/>
+                                </div>
                             </div>
                             {/* <div className="pb-50">
                                 <label for="bankAccount" className="form-label text-lg fw-medium color-palette-1 mb-10">Bank
@@ -70,7 +65,7 @@ export default function Details({product}) {
                                     name="bankAccount" aria-describedby="bankAccount"
                                     placeholder="Enter your Bank Account Name"/>
                             </div> */}
-                            <div className="d-sm-block d-flex flex-column w-100">
+                            <div className="d-sm-block d-flex flex-column w-100 mt-4">
                                 <Link href="/checkout" type="submit"
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link>

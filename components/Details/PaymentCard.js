@@ -3,7 +3,7 @@ import React from 'react';
 const PaymentCard = () => {
     return (
         <>
-            <label className="col-lg-4 col-sm-6 ps-md-15 pe-md-15 pt-md-15 pb-md-15 pt-10 pb-10 px-5"
+            <label className="row justify-content-between px-2 m-1 mt-4"
                 id="GoPay">
                 <input className="d-none" type="radio" id="GoPay" name="paymentMethod" value="oGoPayvo"/>
                 <div className="detail-card">

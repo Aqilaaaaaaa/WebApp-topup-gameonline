@@ -140,5 +140,31 @@ export const products = [
                 coin : 2
             }
         ]
+    },
+    {
+        id :6,
+        name : "Crush Candy",
+        img :'/img/Thumbnail-1.png',
+        type : "PC",
+        priceList: [
+            {
+                idProduct : 1,
+                item :"20dm",
+                price : 1000,
+                coin : 1
+            },
+            {
+                idProduct : 2,
+                item :"50dm",
+                price : 27000,
+                coin : 3
+            },
+            {
+                idProduct : 3,
+                item :"40dm",
+                price : 240000,
+                coin : 2
+            }
+        ]
     }
 ]

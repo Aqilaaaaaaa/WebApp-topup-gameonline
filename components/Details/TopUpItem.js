@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default function TopUpItem ({img, title}) {
+export default function TopUpItem ({img, title, type}) {
 
     return (
 
@@ -11,8 +11,8 @@ export default function TopUpItem ({img, title}) {
             </div>
             <div className="m-4 col-md-12 col-8 d-block">
                 <h2 className="text-xl fw-bold color-palette-1 text-start mb-10">{title}<br/>
-                    The New Battle 2021</h2>
-                <p className="text-sm color-palette-2 text-start mb-0">Category: Mobile</p>
+                    The New Battle </h2>
+                <p className="text-sm color-palette-2 text-start mb-0">Category : {type}</p>
             </div>
         </div>
    )
