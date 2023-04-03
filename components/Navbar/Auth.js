@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Auth(props){
     const {isLogin} = props;
@@ -7,15 +8,15 @@ export default function Auth(props){
             <li className="nav-item my-auto dropdown d-flex">
                 <div className="vertical-line d-lg-block d-none"></div>
                 <div>
-                    <a className="dropdown-toggle ms-lg-40" href="#" role="button" id="dropdownMenuLink"
+                    <Link className="dropdown-toggle ms-lg-40" href="#" role="button" id="dropdownMenuLink"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="img/avatar-1.png" 
+                        <Image src="/img/avatar-1.png" 
                             className="rounded-circle" width="40" height="40"
                            alt=""/>
-                    </a>
+                    </Link>
 
                     <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
-                        <li><Link href="/product" className="dropdown-item text-lg color-palette-2">All Game</Link></li>
+                        <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">Cash Coin : Rp 15.000</Link></li>
                         <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">History Purchase</Link></li>
                         <li><Link href="/sign-in" className="dropdown-item text-lg color-palette-2">Log Out</Link></li>
                     </ul>

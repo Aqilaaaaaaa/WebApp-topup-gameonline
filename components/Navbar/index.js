@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import Auth from "./Auth";
@@ -19,7 +20,7 @@ export default function Navbar(){
                 <nav className="navbar navbar-expand-lg navbar-light pt-lg-10 pb-lg-30 pt-10 pb-30">
                     <div className="container-fluid">
                         <Link className="navbar-brand" href="/#">
-                            <img src="icon/logoo.png" width={100} height={100}/>
+                            <Image src="/icon/logoo.png" width={100} height={100}/>
                         </Link>
                         <ToogleNav/>
                         <div className="collapse navbar-collapse color-palette-1" id="navbarNav">

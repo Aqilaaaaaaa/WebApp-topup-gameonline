@@ -9,11 +9,10 @@ export default function Guide(){
                     </h2>
                     <div className="row gap-lg-0 gap-4" data-aos="fade-up">
                         <CardGuide icon="icon/guidestep1.svg" title="1. Start" desc="Pilih salah satu game
-                                    yang ingin kamu top up" />
+                                    yang ingin kamu top up dari Featured game atau Cari diatas" />
                         <CardGuide icon="icon/guidestep2.svg" title="2. Fill Up" desc="Top up sesuai dengan
-                                    nominal yang sudah tersedia"/>
-                        <CardGuide icon="icon/guidestep3.svg" title="3. Be a Winner" desc="Siap digunakan untuk
-                                    improve permainan kamu"/>
+                                    nominal yang  kamu butuhkan"/>
+                        <CardGuide icon="icon/guidestep3.svg" title="3. Proccesing" desc="Checkout, Tunggu dan pantau prosesnya di History Purchase"/>
                         
                         
                     </div>
