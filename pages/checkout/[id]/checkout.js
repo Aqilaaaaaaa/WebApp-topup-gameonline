@@ -2,8 +2,11 @@ import CheckoutDetail from "@/components/Checkout/checkoutDetail";
 import CheckoutInform from "@/components/Checkout/checkoutInform";
 import CheckoutItem from "@/components/Checkout/checkoutItem";
 import Link from "next/link";
+import { useState } from "react"
 
-export default function Checkout() {
+export default function Checkout({product}) {
+    cons [data, setData] = useState(product)
+
     return (
         <section className="checkout mx-auto pt-md-100 pb-md-145 pt-30 pb-30">
             <div className="container-fluid">
@@ -16,11 +19,20 @@ export default function Checkout() {
                     <h2 className="text-4xl fw-bold color-palette-1 mb-10">Checkout</h2>
                     <p className="text-lg color-palette-1 mb-0">Waktunya meningkatkan semangat bermainmu</p>
                 </div>
-                <CheckoutItem img="img/Thumbnail-3.png"/>
+                <CheckoutItem img={data.img}/>
                 <hr/>
                 <CheckoutDetail/>
                 <CheckoutInform/>
             </div>
         </section>
     )
+}
+export async function getServerSideProps({params}){
+    const res = await fetch('http://localhost:3000/api/product/'+params.id)
+    const product = await res.json()
+    return {
+      props:{
+        product
+      }
+    }
 }

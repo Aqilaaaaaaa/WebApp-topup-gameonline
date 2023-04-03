@@ -9,7 +9,7 @@ import { useState } from "react"
 
 export default function Details({product}) {
     const [data, setData] = useState(product)
-    console.log(data)
+    
     return (
         <>
             <Head>
@@ -29,6 +29,7 @@ export default function Details({product}) {
                             img={data.img}
                             title={data.name}
                             type={data.type}
+                            idProduct={data.id}
                         />
                         <form method="POST">
                             <div className="md-50">
@@ -66,7 +67,7 @@ export default function Details({product}) {
                                     placeholder="Enter your Bank Account Name"/>
                             </div> */}
                             <div className="d-sm-block d-flex flex-column w-100 mt-4">
-                                <Link href="/checkout" type="submit"
+                                <Link href={`checkout/${data.id}`} type="submit"
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link>
                             </div>

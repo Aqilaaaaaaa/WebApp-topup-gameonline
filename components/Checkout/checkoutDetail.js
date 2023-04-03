@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CheckoutDetail = () => {
+const CheckoutDetail = ({id, name, type}) => {
     return (
         <>
             <div className="purchase pt-md-50 pt-30">
@@ -8,9 +8,9 @@ const CheckoutDetail = () => {
                 <p className="text-lg color-palette-1 mb-20">Your Game ID 
                         <span className="purchase-details">masayoshizero</span>
                 </p>
-                <p className="text-lg color-palette-1 mb-20">Order ID <span className="purchase-details">#GG001</span></p>
-                <p className="text-lg color-palette-1 mb-20">Item <span className="purchase-details">250 Diamonds</span></p>
-                <p className="text-lg color-palette-1 mb-20">Price <span className="purchase-details">Rp 42.280.500</span></p>
+                <p className="text-lg color-palette-1 mb-20">Order ID <span className="purchase-details">{id}</span></p>
+                <p className="text-lg color-palette-1 mb-20">Item <span className="purchase-details">{item}</span></p>
+                <p className="text-lg color-palette-1 mb-20">Price <span className="purchase-details">{price}</span></p>
                 <p className="text-lg color-palette-1 mb-20">Tax (10%) <span className="purchase-details">Rp 4.228.000</span>
                 </p>
                 <p className="text-lg color-palette-1 mb-20">Total <span className="purchase-details color-palette-4">Rp
@@ -20,7 +20,7 @@ const CheckoutDetail = () => {
                     <h2 className="fw-bold text-xl color-palette-1 mb-20">Payment Informations</h2>
                     <p className="text-lg color-palette-1 mb-20">Your Account Name <span className="purchase-details">Masayoshi
                             Angga Zero</span></p>
-                    <p className="text-lg color-palette-1 mb-20">Type <span className="payment-details">Worldwide Transfer</span>
+                    <p className="text-lg color-palette-1 mb-20">Type <span className="payment-details">{name}</span>
                     </p>
                     <p className="text-lg color-palette-1 mb-20">Bank Name <span className="payment-details">Mandiri</span></p>
                     <p className="text-lg color-palette-1 mb-20">Bank Account Name <span className="payment-details">PT Store GG
