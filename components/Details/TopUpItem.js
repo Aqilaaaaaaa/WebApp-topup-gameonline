@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default function TopUpItem ({img, title, type}) {
+export default function TopUpItem ({img, title, type, idProduct}) {
 
     return (
 
