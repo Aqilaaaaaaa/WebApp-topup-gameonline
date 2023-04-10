@@ -4,7 +4,7 @@ import Link from "next/link";
 const CheckoutInform = () => {
     return (
         <>
-            <label className="checkbox-label text-lg color-palette-1">I have transferred the money
+            <label className="checkbox-label text-lg color-palette-1">I have transfered the money
                 <input type="checkbox"/>
                 <span className="checkmark"></span>
             </label>

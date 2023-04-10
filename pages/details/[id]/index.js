@@ -67,7 +67,10 @@ export default function Details({product}) {
                                     placeholder="Enter your Bank Account Name"/>
                             </div> */}
                             <div className="d-sm-block d-flex flex-column w-100 mt-4">
-                                <Link href={`checkout/${data.id}`} type="submit"
+                                {/* <Link href={`checkout/${data.id}`} type="submit"
+                                    className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
+                                </Link> */}
+                                <Link href="/checkout" type="submit"
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link>
                             </div>
