@@ -7,8 +7,14 @@ import Head from "next/head"
 import Link from "next/link"
 import { useState } from "react"
 
+
 export default function Details({product}) {
     const [data, setData] = useState(product)
+    const [idGame, setIdGame] = useState('');
+
+    const handleInputIdGame = (e) => {
+        setIdGame(e.target.value)
+    }
     
     return (
         <>
@@ -33,12 +39,16 @@ export default function Details({product}) {
                         />
                         <form method="POST">
                             <div className="md-50">
-                                
-                                    <label id="ID" className="form-label text-lg fw-medium color-palette-1 mb-10" >User
-                                        ID</label>
-                                    <input type="text" className="form-control rounded-pill text-lg" id="ID" name="ID"
-                                        aria-describedby="UserID" placeholder="Enter your ID"/>
-                                
+                                <label id="ID" className="form-label text-lg fw-medium color-palette-1 mb-10" >User
+                                    ID</label>
+                                <input type="text" className="form-control rounded-pill text-lg" id="ID" name="ID"
+                                    aria-describedby="UserID" placeholder="Enter your ID"
+                                    onChange={handleInputIdGame}/>
+                                {idGame? '' :
+                                    <span className="text-danger text-xs">
+                                    Masukkan ID Game
+                                    </span>
+                                }
                             </div>
                             <div className="mt-30">
                                 <p className="text-lg fw-medium color-palette-1 ">Nominal Top Up</p>
@@ -66,12 +76,12 @@ export default function Details({product}) {
                                     name="bankAccount" aria-describedby="bankAccount"
                                     placeholder="Enter your Bank Account Name"/>
                             </div> */}
-                            <div className="d-sm-block d-flex flex-column w-100 mt-4">
+                            <div className="detail d-sm-block d-flex flex-column w-100 mt-4">
                                 {/* <Link href={`checkout/${data.id}`} type="submit"
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link> */}
-                                <Link href="/checkout" type="submit"
-                                    className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
+                                <Link href="/checkout" type="submit">
+                                    <button className="button-sub" disabled={!idGame? true : false}>Continue</button>
                                 </Link>
                             </div>
                         </form>

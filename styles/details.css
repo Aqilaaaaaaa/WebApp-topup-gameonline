@@ -84,7 +84,11 @@
     opacity: 1;
 }
 
-.detail .btn-submit{    
-        background-color: #ADFF2F;
-        padding: 0.75rem 3rem;
-}
+.detail .button-sub {
+    background-color: #ADFF2F;
+    padding: 0.75rem 3rem;
+    border: 0;
+    border-radius: 15px;
+    font-weight: 700px;
+    font-size: 18px;
+ }
