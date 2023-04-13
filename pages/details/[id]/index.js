@@ -55,7 +55,7 @@ export default function Details({product}) {
                             </div>
                             <div className="flex-row d-flex flex-wrap pb-md-30 pb-20">
                                 {data?.priceList?.map((priceList) => (
-                                    <NominalCard item={priceList.item} price={priceList.price} coin={priceList.coin}/>
+                                    <NominalCard item={priceList.item} itemName={priceList.itemName} price={priceList.price} coin={priceList.coin}/>
                                 )) }
                             </div>
                             <div className="pb-md-30 pb-20">

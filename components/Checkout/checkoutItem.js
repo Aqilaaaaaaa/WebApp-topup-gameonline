@@ -11,7 +11,7 @@ const CheckoutItem = ({img, title, type}) => {
                     </div>
                     <div>
                         <p className="fw-bold text-xl color-palette-1 mb-10">{title}</p>
-                        <p className="color-palette-2 m-0">{type}</p>
+                        <p className="color-palette-2 m-0">Categori : {type}</p>
                     </div>
                 </div>
         </div>

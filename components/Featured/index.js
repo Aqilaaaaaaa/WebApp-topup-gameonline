@@ -66,30 +66,6 @@ const Featured = ({dataProduct}) => {
                                 )
                             })}
                             
-                            {/* <SwiperSlide className="m-auto p-4" >
-                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide>
-                            <SwiperSlide className="m-auto p-4" >
-                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide>
-                            <SwiperSlide className="m-auto p-4" >
-                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide>
-                            <SwiperSlide className="m-auto p-4" >
-                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide>
-                            <SwiperSlide className="m-auto p-4" >
-                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide>
-                            <SwiperSlide className="m-auto p-4" >
-                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide>
-                            <SwiperSlide className="m-auto p-4" >
-                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide>
-                            <SwiperSlide className="m-auto p-4" >
-                                <CardFeatured img="Thumbnail-1" title="Super Mechs" type="Desktop"/>
-                            </SwiperSlide> */}
                                 
                         </Swiper>
                         <div className="container-btnL">

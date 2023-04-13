@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NominalCard = ({item, price, coin}) => {
+const NominalCard = ({item, itemName, price, coin}) => {
     return (
         <div className="row justify-content-between px-2">
             <label className="col-lg-4 col-sm-6 ps-md-15 pe-md-15 pt-md-15 pb-md-15 pt-10 pb-10"
@@ -8,8 +8,8 @@ const NominalCard = ({item, price, coin}) => {
                 <input className="d-none" type="radio" id="topup1" name="topup" value="topup1"/>
                 <div className="detail-card">
                     <div className="d-flex justify-content-between">
-                        <p className="text-3xl color-palette-1 m-0">
-                            {item}
+                        <p className="text-2xl color-palette-1 m-0">
+                            <span>{item} </span>{itemName}
                         </p>
                         <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
