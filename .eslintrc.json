@@ -5,7 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        "plugin:@next/next/recommended"
     ],
     "overrides": [
     ],
@@ -18,6 +19,16 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".json"]}],
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-props-no-spreading": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "react/self-closing-comp": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "quotes": [
+            "error",
+            "double"
+        ]
     }
 }

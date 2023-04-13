@@ -80,7 +80,7 @@ export default function Details({product}) {
                                 {/* <Link href={`checkout/${data.id}`} type="submit"
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link> */}
-                                <Link href="/checkout" type="submit">
+                                <Link href={`/checkout/${data.id}`} type="submit">
                                     <button className="button-sub" disabled={!idGame? true : false}>Continue</button>
                                 </Link>
                             </div>
