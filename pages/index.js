@@ -6,6 +6,7 @@ import Footer from "components/Footer/index"
 import Banner from '@/components/Banner';
 import Guide from '@/components/Guide'
 import Featured from '@/components/Featured'
+import { useState } from 'react'
 
 
 export default function Home({product}) {
@@ -14,6 +15,12 @@ export default function Home({product}) {
   }, []);
 
   console.log(product)
+
+  const [data, setData] = useState(product)
+  useEffect(() => {
+    const temp = product.filter((data) => data.rate >= 4)
+    setData(temp)
+  })
 
   
   return (
@@ -26,7 +33,7 @@ export default function Home({product}) {
         <Navbar/>
         <Banner/>
         <Guide/>
-        <Featured dataProduct={product}/>
+        <Featured dataProduct={data}/>
         <Footer/>
 
     </>
