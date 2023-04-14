@@ -61,7 +61,7 @@ const Featured = ({dataProduct}) => {
                             {dataProduct?.map((data, idx) => {
                                 return (
                                     <SwiperSlide key={idx} className="m-auto p-4" >
-                                        <CardFeatured id={data.id} img={data.img} title={data.name} type={data.type}/>
+                                        <CardFeatured id={data.id} img={data.img} icon="icon/stick.svg" title={data.name} type={data.type}/>
                                     </SwiperSlide>
                                 )
                             })}
