@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { } from 'react'
 import AOS from 'aos'
 import Head from 'next/head'
 import Navbar from "components/Navbar/index"
@@ -6,21 +6,21 @@ import Footer from "components/Footer/index"
 import Banner from '@/components/Banner';
 import Guide from '@/components/Guide'
 import Featured from '@/components/Featured'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 export default function Home({product}) {
+  const [popular, setPopular] = useState()
   useEffect(() => {
     AOS.init();
-  }, []);
+  });
 
-  console.log(product)
-
-  const [data, setData] = useState(product)
+  
+  
   useEffect(() => {
-    const temp = product.filter((data) => data.rate >= 4)
-    setData(temp)
-  })
+    const temp = product.filter((popular) => popular.rate >= 4)
+    setPopular(temp)
+  },[])
 
   
   return (
@@ -33,7 +33,7 @@ export default function Home({product}) {
         <Navbar/>
         <Banner/>
         <Guide/>
-        <Featured dataProduct={data}/>
+        <Featured dataProduct={popular}/>
         <Footer/>
 
     </>
