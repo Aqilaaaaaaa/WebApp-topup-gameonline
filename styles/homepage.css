@@ -5,10 +5,10 @@
     box-shadow: 1px 18px 20px -5px rgba(231,234,245,0.77);
 }
 
-/* .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
     
-    color: #0C145A;
-} */
+    color: #ADFF2F;
+}
 
 .navbar-light .navbar-nav .nav-link:hover{
     color: #ADFF2F;

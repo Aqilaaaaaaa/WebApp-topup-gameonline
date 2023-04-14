@@ -1,0 +1,30 @@
+.product .product-container {
+    margin-right: 16px;
+}
+
+.product .product-item {
+    height: 100%;
+    margin: 2rem;
+}
+
+.product .thumbnail {
+    border-radius: 2rem;
+}
+
+.product .search {
+    margin: 0 auto;
+    width: 500px;
+
+}
+
+.product .text {
+    background-color: #1d394a;
+    width: 140px;
+    border-radius: 8px;   
+    text-align: center;
+}
+
+.product .featured-game-card:hover{
+    border-radius: 2rem;
+    border: 5px solid #ADFF2F;    
+}
