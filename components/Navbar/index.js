@@ -1,18 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import { BsSearch } from "react-icons/bs";
 import Auth from "./Auth";
 import ToogleNav from "./ToogleNav";
 
 
 export default function Navbar(){
 
-    const [show, setShow] = useState(false) 
-    const handleShow = () => {
-        setShow(false)
-    } ;
+    
    
     return (
         <>
@@ -26,35 +21,13 @@ export default function Navbar(){
                         <div className="collapse navbar-collapse color-palette-1" id="navbarNav">
                             <ul className="navbar-nav ms-auto gap-lg-0 gap-2">
                                 <li className="nav-item my-auto">
-                                    <div className="d-flex rounded" action="action_page.php">
-                                        {show ?(
-                                            <>
-                                                <input type="search" 
-                                                    className="form-control rounded border"  
-                                                    placeholder="Search.." 
-                                                    name="search"
-                                                    onClick={() => setShow(true)}
-                                                    />
-                                                    <button 
-                                                        className="border border-light bg-transparent border-0"
-                                                        onClick={() => setShow(false)}>
-                                                        <BsSearch className="m-2"/>
-                                                    </button>
-                                            </>
-
-                                        ):(
-                                            <button 
-                                            className="border border-light bg-transparent border-0"
-                                            onClick={() => setShow(true)}>
-                                                Search
-                                            </button>
-                                        )}
-                                        
-                                    </div>
+                                    <Link className="nav-link " href="/#">
+                                        Home
+                                    </Link>
                                 </li>
                                 <li className="nav-item my-auto">
-                                    <Link className="nav-link active color-palette-1" href="/#">
-                                        Home
+                                    <Link className="nav-link " href="/product">
+                                        All Games
                                     </Link>
                                 </li>
                                 <Auth isLogin/>

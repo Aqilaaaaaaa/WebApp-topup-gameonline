@@ -25,6 +25,18 @@
 }
 
 .product .featured-game-card:hover{
+    transition: all 0.2s;
+    overflow: hidden;
+    width: 200px;
+    height: 270px;
     border-radius: 2rem;
     border: 5px solid #ADFF2F;    
+    
+}
+
+.product .btn-radio {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
 }

@@ -2,15 +2,19 @@ import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import CardFeatured from '@/components/Featured/cardFeatured';
+import SearchBar from '@/components/SearchBar';
 import { useState, useEffect } from 'react';
 import { Grid, Pagination} from '@mui/material'
 import usePagination from './usePagination'
-import { BsSearch } from "react-icons/bs";
+
+
 
 export default function index({product}){
     const [data,setData] = useState(product)
-    const [searchData,setSearchData] = useState('')
-    console.log(data)
+    const [search,setSearch] = useState('')
+    const [type, setType] = useState('')
+    console.log(search)
+    console.log(product)
     const [page, setPage] = useState(1)
 
   // pagination
@@ -23,22 +27,36 @@ export default function index({product}){
     }
 
     const handleSearchData = (e) =>{
-        setSearchData(e.target.value);
+        setSearch(e.target.value);
     }
 
-    const searchProduct = (temp) =>{
-        if(!searchData) {
+    const handleType = (e) => {
+        setType(e.target.value);
+        console.log(type)
+    }
+
+    const searchData = (temp) => {
+        if(!search){
+            return temp
+        } 
+        const searchLowerCase = search.toLowerCase()
+        const foundData = data.filter((data) => data.name.toLowerCase().includes(searchLowerCase))
+        return foundData
+    }
+
+    const filterType = (temp) =>{
+        if(!type){
             return temp
         }
-        const searchProduct = searchData.toLowercase()
-        const foundProduct = temp.filter((data)=>data.name.toLowerCase().includes(searchProduct) || data.brand.toLowerCase().includes(searchProduct))
-        return foundProduct
+        const filterRadio = temp.filter((data)=>(data.type == type))
+        return filterRadio
     }
 
-    useEffect(()=>{
-        let filterData = searchProduct(filterData)
-        setData(filterData)
-    }, [searchData])
+    useEffect(()=> {
+        let dataTemp = filterType(product)
+        dataTemp = searchData(dataTemp)
+        setData(dataTemp)
+    }, [search, type])
 
     return (
         <>
@@ -50,25 +68,19 @@ export default function index({product}){
             <Navbar/>
             
             <div className="product container my-5">
-                <div className="search d-flex rounded my-5" action="action_page.php">
-                   <input type="search" 
-                    className="form-control rounded border"  
-                    placeholder="Search.." 
-                    name="search"
+                <SearchBar
+                    value={search}
                     onChangeInput={handleSearchData}
-                    />
-                    <button 
-                        className="border border-light bg-transparent border-0"
-                        >
-                        <BsSearch className="m-2"/>
-                    </button>
-                </div>
+                    onFilterType={handleType}
+                />
                 <div className="product-item flex d-flex flex-wrap gap-5 justify-content-center">
-                    {data?.length !=0 && _DATA.currentData().map((data) => (
-                        <div key={data.id}>
-                            <CardFeatured id={data.id} img={data.img} title={data.name} type={data.type}/>
-                        </div>
-                    )) }
+                    {data
+                        ?.length !=0 && _DATA.currentData()
+                        .map((data) => (
+                            <div key={data.id}>
+                                <CardFeatured id={data.id} img={data.img} title={data.name} type={data.type}/>
+                            </div>
+                        )) }
                     <Grid 
                         container
                         direction="column"
