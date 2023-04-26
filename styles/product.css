@@ -40,3 +40,9 @@
     gap: 30px;
     font-size: 20px;
 }
+
+.product .btn-cancel{
+    padding: 0.50rem 2rem;
+    background-color: #ADFF2F;
+    color: #1d394a;
+}

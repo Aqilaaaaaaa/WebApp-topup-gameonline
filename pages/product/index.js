@@ -32,7 +32,14 @@ export default function index({product}){
 
     const handleType = (e) => {
         setType(e.target.value);
-        console.log(type)
+        
+    }
+
+    const handleCancelBtn = () => {
+        if(search!= ''){
+            setSearch('')
+            setData(product)
+        }
     }
 
     const searchData = (temp) => {
@@ -72,6 +79,7 @@ export default function index({product}){
                     value={search}
                     onChangeInput={handleSearchData}
                     onFilterType={handleType}
+                    onCancel={handleCancelBtn}
                 />
                 <div className="product-item flex d-flex flex-wrap gap-5 justify-content-center">
                     {data
