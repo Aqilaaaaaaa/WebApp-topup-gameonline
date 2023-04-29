@@ -18,7 +18,7 @@ const NominalCard = ({item, itemName, price, coin}) => {
                                 strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <p className="text-lg color-palette-1 m-0">Rp {price}</p>
+                    <p className="text-lg color-palette-1 m-0 mt-2">Rp {price}</p>
                     <p className="text-lg color-palette-1 text-danger m-0">+{coin} cash coin</p>
                 </div>
             </label>

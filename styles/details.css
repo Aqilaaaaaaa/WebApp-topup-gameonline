@@ -87,8 +87,7 @@
 .detail .button-sub {
     background-color: #ADFF2F;
     padding: 0.75rem 3rem;
-    border: 0;
-    border-radius: 15px;
     font-weight: 700px;
     font-size: 18px;
+    border: 0;
  }

@@ -22,7 +22,7 @@ export default function SearchBar({onChangeInput, value, onFilterType, onCancel}
                 <label className="my-2">PC</label><br/>
                 <input type="radio" name="type" value={'Mobile'}/>
                 <label className="my-2">Mobile</label>
-                <button className="btn-cancel rounded-pill fw-medium border-0 btn-lg" onClick={onCancel}>Cancel</button>
+                <button className="btn-cancel d-md-block rounded-pill fw-medium border-0 btn-lg" onClick={onCancel}>Cancel</button>
             </div>
         </>
     )

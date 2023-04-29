@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar"
 import TopUpItem from "@/components/Details/TopUpItem"
 import NominalCard from "@/components/Details/NominalCard"
 import PaymentCard from "@/components/Details/PaymentCard"
+import { IoIosArrowBack } from "react-icons/io";
 import Head from "next/head"
 import Link from "next/link"
 import { useState } from "react"
@@ -26,9 +27,14 @@ export default function Details({product}) {
             <Navbar/>
             <section className="detail pt-lg-60 pb-50 .bg-secondary">
                 <div className="container-xxl container-fluid">
-                    <div className="detail-header pb-50 pt-50">
-                        <h2 className="text-4xl fw-bold color-palette-1 text-start mb-10 ">CashLess</h2>
-                        <p className="text-lg color-palette-1 mb-0">Grab Your Own Things Here</p>
+                    <div className="detail-header flex d-flex">
+                        <Link href="/#">
+                            <button className="border-0 bg-transparent mt-20"><IoIosArrowBack size={30}/></button>
+                        </Link>
+                        <div className="pb-50 pt-10 mx-4">
+                            <h2 className="text-4xl fw-bold color-palette-1 text-start mb-10 ">CashLess</h2>
+                            <p className="text-lg color-palette-1 mb-0">Grab Your Own Things Here</p>
+                        </div>
                     </div>
                     <div className="form col">
                         <TopUpItem
@@ -81,22 +87,12 @@ export default function Details({product}) {
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link> */}
                                 <Link href={`/checkout/${data.id}`} type="submit">
-                                    <button className="button-sub" disabled={!idGame? true : false}>Continue</button>
+                                    <button className="button-sub rounded-pill fw-medium" disabled={!idGame? true : false}>Continue</button>
                                 </Link>
                             </div>
                         </form>
                         
                     </div>
-                    {/* <div className="row">
-                        <div className="col-xl-3 col-lg-4 col-md-5 pb-30 pb-md-0 pe-md-25 text-md-start">
-                            <TopUpItem />
-                        </div>
-                        
-                        <div className="col-xl-9 col-lg-8 col-md-7 ps-md-25">
-                            
-                            
-                        </div>
-                    </div> */}
                 </div>
             </section>
             <Footer/>
