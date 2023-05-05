@@ -25,12 +25,19 @@ export default function Auth(props){
         );
     }
     return (
-            
-        <li className="nav-item my-auto">
-            <Link className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
-                href="/sign-in" role="button">SignIn/SignUp
-            </Link>
-        </li>
+        <>
+            <li className="nav-item my-auto">
+                <Link className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
+                    href="/sign-in" role="button"> Sign In
+                </Link>
+            </li>
+            <li className="nav-item my-auto">
+                <Link className="btn btn-sign-up d-flex justify-content-center ms-lg-2 rounded-pill"
+                    href="/sign-up" role="button"> Sign Up
+                </Link>
+            </li>
+        </> 
+        
         
                          
     

@@ -21,12 +21,12 @@ export default function Navbar(){
                         <div className="collapse navbar-collapse color-palette-1" id="navbarNav">
                             <ul className="navbar-nav ms-auto gap-lg-0 gap-2">
                                 <li className="nav-item my-auto">
-                                    <Link className="nav-link " href="/#">
+                                    <Link className="nav-link text-lg" href="/#">
                                         Home
                                     </Link>
                                 </li>
                                 <li className="nav-item my-auto">
-                                    <Link className="nav-link " href="/product">
+                                    <Link className="nav-link text-lg" href="/product">
                                         All Games
                                     </Link>
                                 </li>

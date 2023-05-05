@@ -1,26 +1,13 @@
 /* Navbar */
 .navbar {
-    /* background-color: #1d394a; */
+    background-color: #1d394a;
     font-weight: 900;
     box-shadow: 1px 18px 20px -5px rgba(231,234,245,0.77);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
 }
-
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
-    
-    color: #ADFF2F;
-}
-
-.navbar-light .navbar-nav .nav-link:hover{
-    color: #ADFF2F;
-}
-
-.navbar-light .btn-sign-in{
-    color: #ADFF2F;
-    /* background-color: #E7EAF5; */
-    padding: 0.75rem 1.875rem;
-}
-/*  */
-
 
 /* Header */
 
@@ -32,6 +19,10 @@
 .header .btn-get{
     background-color: #ADFF2F;
     padding: 0.75rem 3rem;
+}
+.header .poster {
+    margin-top: 200px;
+    z-index: -1;
 }
 
 .header .btn-learn:hover{
@@ -87,6 +78,10 @@
     overflow-y: hidden;
 }
 
+.feature .guide {
+    position: relative;
+    z-index: -9999;
+}
 
 .featured-game .featured-game-card{
     transition: all 0.4s;

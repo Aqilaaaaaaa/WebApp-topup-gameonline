@@ -27,10 +27,14 @@
 
 }
 
+.detail .container-fluid{
+    margin-top: 100px;
+}
+
 .detail .form {
     display: flex;
     justify-content: center;
-
+    
 }
 
 .detail hr{

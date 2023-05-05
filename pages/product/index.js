@@ -13,8 +13,6 @@ export default function index({product}){
     const [data,setData] = useState(product)
     const [search,setSearch] = useState('')
     const [type, setType] = useState('')
-    console.log(search)
-    console.log(product)
     const [page, setPage] = useState(1)
 
   // pagination
@@ -73,7 +71,7 @@ export default function index({product}){
             </Head>
             <Navbar/>
             
-            <div className="product container my-5">
+            <div className="product container my-5 ">
                 <SearchBar
                     value={search}
                     onChangeInput={handleSearchData}
