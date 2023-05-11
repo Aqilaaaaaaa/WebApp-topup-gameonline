@@ -1,4 +1,8 @@
 /* Sign-in */
+.sign-in {
+    width: 100%;
+} 
+
 .sign-in .img-fluid{
     max-width: 100%;
     height: auto;
@@ -6,6 +10,7 @@
 
 .sign-in .poster{
     background-color: #E7EAF5;
+    padding-bottom: 12.2rem;
     
 }
 
@@ -47,6 +52,17 @@
     .sign-in input[type="email"]{
         max-width: 437px;
     }
+}
+
+@media (max-width: 768px) and (min-width: 414px){
+    .sign-in .container{
+        max-width: 437px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
     }
+}
 
 /*  */

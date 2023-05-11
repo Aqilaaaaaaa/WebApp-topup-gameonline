@@ -18,7 +18,7 @@ export default function Auth(props){
                     <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
                         <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">Cash Coin : Rp 15.000</Link></li>
                         <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">History Purchase</Link></li>
-                        <li><Link href="/sign-in" className="dropdown-item text-lg color-palette-2">Log Out</Link></li>
+                        <li><Link href="/#" className="dropdown-item text-lg color-palette-2">Log Out</Link></li>
                     </ul>
                 </div>
             </li>   
@@ -29,11 +29,6 @@ export default function Auth(props){
             <li className="nav-item my-auto">
                 <Link className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
                     href="/sign-in" role="button"> Sign In
-                </Link>
-            </li>
-            <li className="nav-item my-auto">
-                <Link className="btn btn-sign-up d-flex justify-content-center ms-lg-2 rounded-pill"
-                    href="/sign-up" role="button"> Sign Up
                 </Link>
             </li>
         </> 

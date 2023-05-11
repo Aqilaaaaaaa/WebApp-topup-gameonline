@@ -5,11 +5,12 @@
 }
 
 .overview main.main-wrapper{
-    margin-left: 340px;
+    
     height: 100%;
     margin-right: auto;
     position: relative;
     padding: 50px 50px 50px 0px;
+    background-color: red;
 }
 
 .overview main .main-content{
@@ -21,6 +22,10 @@
     padding: 1.25rem 1.875rem;
     border-radius: 1rem;
     max-width: 900px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .overview .latest-transaction .game-title-header{
@@ -66,9 +71,22 @@
     background-color: #FFFFFF;
     padding: 1.875rem;
     border-radius: 1rem;
+    text-align: center;
+ 
+}
+.overview .top-up-categories{
+    text-align: center;
+
+    justify-content: center;
 }
 
 @media (max-width:992px){
+    .overview main.main-wrapper{
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
     .overview main.main-wrapper{
         width: 100%;
     }

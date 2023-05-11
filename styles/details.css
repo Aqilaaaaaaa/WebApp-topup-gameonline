@@ -1,15 +1,15 @@
 /* Details */
 
 @media (max-width:768px) {
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .detail{
+        margin-top: 200px;
+    }
 }
 @media (max-width:414px) {
     .form{
@@ -17,6 +17,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .detail{
+        margin-top: 200px;
     }
 
 }
@@ -27,7 +30,7 @@
 
 }
 
-.detail .container-fluid{
+.detail .detail{
     margin-top: 100px;
 }
 

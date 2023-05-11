@@ -208,10 +208,12 @@ footer ul li a:hover{
  }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    /* Header */
-    
-    /*  */
+@media (min-width: 414px) { 
+    footer{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        background-color: #1d394a;
+    }
  }
 
 /* Large devices (desktops, 992px and up) */
