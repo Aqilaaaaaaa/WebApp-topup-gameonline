@@ -1,40 +1,22 @@
 import React from 'react';
 import HistoryRow from './historyRow';
+import HistoryTotal from './historyTotal';
 
 const History = () => {
+    const titikPrice =(numb)=>{
+        return numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+    }
+
     return (
         <>
             <section className="overview overflow-auto">
                 <main className="main-wrapper">
                     <div className="ps-lg-0">
-                        <h2 className="text-4xl fw-bold color-palette-1 mb-30">History Purchase</h2>
                         <div className="top-up-categories mb-30">
-                            
-                            <div className="main-content">
-                                <div className="row">
-                                    <div className="col-lg-4 ps-15 pe-15 pb-lg-0 pb-4">
-                                        <div className="categories-card">
-                                            <div className="d-flex align-items-center mb-24">
-                                                <img src="icon/guidestep3.svg" width={50} height={50} />
-                                                <p className="color-palette-1 mb-0 ms-12">Total<br/> Spent</p>
-                                            </div>
-                                            <div>
-                                                <p className="text-2xl color-palette-1 fw-medium m-0">Rp 18.000.500</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 ps-15 pe-15 pb-lg-0 pb-4">
-                                        <div className="categories-card">
-                                            <div className="d-flex align-items-center mb-24">
-                                                <img src="icon/guidestep3.svg" width={50} height={50} />
-                                                <p className="color-palette-1 mb-0 ms-12">Total<br/> Cash Coin</p>
-                                            </div>
-                                            <div>
-                                                <p className="text-2xl color-palette-1 fw-medium m-0">Rp 10.000</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <h2 className="text-4xl fw-bold color-palette-1 mb-30">History Purchase</h2>
+                            <div className="wrapper">
+                                <HistoryTotal title="Total Spent" total={titikPrice(8000000)}/>
+                                <HistoryTotal title="Total Cash Coin" total={titikPrice(800000)}/>
                             </div>
                         </div>
                         <div className="latest-transaction">

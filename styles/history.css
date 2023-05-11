@@ -10,11 +10,20 @@
     margin-right: auto;
     position: relative;
     padding: 50px 50px 50px 0px;
-    background-color: red;
+   
 }
 
-.overview main .main-content{
+/* .overview main .main-content{
     max-width: 900px;
+    background-color: red;
+} */
+
+.overview .wrapper{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
 }
 
 .overview .latest-transaction .main-content-table{
@@ -22,7 +31,7 @@
     padding: 1.25rem 1.875rem;
     border-radius: 1rem;
     max-width: 900px;
-    background-color: blue;
+    background-color: #E7EAF5;
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -72,6 +81,7 @@
     padding: 1.875rem;
     border-radius: 1rem;
     text-align: center;
+    width: 280px;
  
 }
 .overview .top-up-categories{
