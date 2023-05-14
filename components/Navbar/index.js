@@ -1,6 +1,5 @@
-import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import Auth from "./Auth";
 import ToogleNav from "./ToogleNav";
 
@@ -30,7 +29,7 @@ export default function Navbar(){
                                         All Games
                                     </Link>
                                 </li>
-                                <Auth isLogin/>
+                                <Auth/>
                             </ul>
                         </div>
                     </div>
