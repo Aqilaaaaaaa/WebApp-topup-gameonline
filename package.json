@@ -17,21 +17,27 @@
     "@mui/styled-engine-sc": "^5.12.0",
     "@next/font": "13.1.6",
     "aos": "^2.3.4",
+    "bcryptjs": "^2.4.3",
     "classname": "^0.0.0",
     "classnames": "^2.3.2",
     "cx": "^23.3.1",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "express-jwt": "^8.4.1",
     "fanpm": "^1.0.3",
     "install": "^0.13.0",
+    "jsonwebtoken": "^9.0.0",
     "next": "13.1.6",
     "node-sass": "^7.0.3",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.1",
+    "rxjs": "^7.8.1",
     "styled-components": "^5.3.9",
-    "swiper": "^9.1.0"
+    "swiper": "^9.1.0",
+    "yup": "^1.1.1"
   }
 }
