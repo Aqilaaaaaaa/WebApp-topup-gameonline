@@ -3,7 +3,7 @@ import '../styles/homepage.css';
 import '../styles/details.css';
 import '../styles/checkout.css';
 import '../styles/complete-checkout.css';
-import '../styles/sign-in.css';
+import '../styles/login.css';
 import '../styles/sign-up.css';
 import '../styles/sign-up-success.css';
 import '../styles/404-not-found.css';
