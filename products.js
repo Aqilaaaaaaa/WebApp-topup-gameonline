@@ -22,24 +22,24 @@ export const products = [
             },
             {
                 idProduct : 3,
-                item :"40",
+                item :"100",
                 itemName : "Diamond",
-                price : 240000,
-                coin : 2
+                price : 80000,
+                coin : 4
             },
             {
                 idProduct : 4,
-                item :"40",
+                item :"400",
                 itemName : "Diamond",
                 price : 240000,
-                coin : 2
+                coin : 20
             },
             {
                 idProduct : 5,
-                item :"40",
+                item :"80",
                 itemName : "Diamond",
-                price : 240000,
-                coin : 2
+                price : 5000,
+                coin : 3
             }
         ],
         payment : [

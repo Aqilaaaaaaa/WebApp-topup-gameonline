@@ -67,11 +67,9 @@ export default function Details({product}) {
                             <div className="pb-md-30 pb-20">
                                 <p className="text-lg fw-medium color-palette-1 mb-md-10 mb-0">Payment Method</p>
                                 <div className="flex-row d-flex flex-wrap ">
-                                    <PaymentCard/>
-                                    <PaymentCard/>
-                                    <PaymentCard/>
-                                    <PaymentCard/>
-                                    <PaymentCard/>
+                                    {data?.payment?.map((payment) => (
+                                        <PaymentCard payName={payment.payName} typePay={payment.typePay}/>
+                                    )) }
                                 </div>
                             </div>
                             {/* <div className="pb-50">

@@ -1,14 +1,14 @@
 import React from 'react';
 
-const PaymentCard = () => {
+const PaymentCard = ({payName, typePay}) => {
     return (
         <>
             <label className="row justify-content-between px-2 m-1 mt-4"
                 id="GoPay">
-                <input className="d-none" type="radio" id="GoPay" name="paymentMethod" value="oGoPayvo"/>
+                <input className="d-none" type="radio" id="payName" name="paymentMethod" value=""/>
                 <div className="detail-card">
                     <div className="d-flex justify-content-between">
-                        <p className="text-3xl color-palette-1 fw-medium m-0">GoPay</p>
+                        <p className="text-3xl color-palette-1 fw-medium m-0">{payName}</p>
                         <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <circle cx="10" cy="10" r="10" fill="#ADFF2F" />
@@ -16,7 +16,7 @@ const PaymentCard = () => {
                                 strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <p className="text-lg color-palette-1 m-0">Digital Wallet</p>
+                    <p className="text-lg color-palette-1 m-0">{typePay}</p>
                 </div>
             </label>
         </>
