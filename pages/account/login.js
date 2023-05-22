@@ -63,7 +63,7 @@ function Login() {
                                         LogIn
                                     </button>
                                         
-                                    <Link className="btn btn-sign-up fw-medium text-lg text-white color-palette-1 rounded-pill"
+                                    <Link className="btn btn-register fw-medium text-lg text-white color-palette-1 rounded-pill"
                                         href="/account/register" role="button">
                                             Register
                                     </Link>

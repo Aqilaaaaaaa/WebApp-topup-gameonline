@@ -37,7 +37,7 @@ function Register() {
 
     return (
         <>
-            <div className="sign-up mx-auto pt-lg-100 pb-lg-100 pt-30 pb-47">
+            <div className="register mx-auto pt-lg-100 pb-lg-100 pt-30 pb-47">
                 <div className="container mx-auto">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="pb-50">
@@ -63,7 +63,7 @@ function Register() {
                             <div className="invalid-feedback">{errors.password?.message}</div>
                         </div>
                         <div className="button-group d-flex flex-column mx-auto pt-50">
-                            <button disabled={formState.isSubmitting} className="btn btn-sign-up fw-medium text-lg text-white rounded-pill mb-16">
+                            <button disabled={formState.isSubmitting} className="btn btn-register fw-medium text-lg text-white rounded-pill mb-16">
                                 {/* {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>} */}
                                 
                                     Continue

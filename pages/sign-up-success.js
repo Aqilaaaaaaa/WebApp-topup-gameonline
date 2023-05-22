@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function SignUpSuccess() {
     return (
-        <section className="sign-up-success mx-auto pt-md-179 pb-md-179 pt-150 pb-100">
+        <section className="register-success mx-auto pt-md-179 pb-md-179 pt-150 pb-100">
             <div className="container-fluid">
                 <div className="text-center">
                     <img src="icon/wallet.png" width={300} height={300}/>
