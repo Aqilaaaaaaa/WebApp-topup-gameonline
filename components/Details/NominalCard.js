@@ -1,11 +1,11 @@
 import React from 'react';
 
-const NominalCard = ({item, itemName, price, coin}) => {
+const NominalCard = ({item, itemName, price, coin, onSelect, value}) => {
     return (
-        <div className="row justify-content-between px-2">
+        <div className="row justify-content-between px-2" onChange={onSelect}>
             <label className="col-lg-4 col-sm-6 ps-md-15 pe-md-15 pt-md-15 pb-md-15 pt-10 pb-10"
                 id="topup1">
-                <input className="d-none" type="radio" id="topup1" name="topup" value="topup1"/>
+                <input className="d-none" type="radio" id="topup1" name="topup" value={value}/>
                 <div className="detail-card">
                     <div className="d-flex justify-content-between">
                         <p className="text-2xl color-palette-1 m-0">

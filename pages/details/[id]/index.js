@@ -7,14 +7,45 @@ import { IoIosArrowBack } from "react-icons/io";
 import Head from "next/head"
 import Link from "next/link"
 import { useState } from "react"
+import { useRouter } from "next/router"
 
 
 export default function Details({product}) {
     const [data, setData] = useState(product)
+    const [itemGame, setItemGame] = useState('');
+    const [payment, setPayment] = useState('');
     const [idGame, setIdGame] = useState('');
+    const router = useRouter()
+
+    const onSubmit = (e)=>{
+        const orderUser ={
+            userId: idGame,
+            itemGame,
+            payment
+        }.
+        e.preventDevault();
+        router.push({
+            pathname: `/checkout/${data.id}`,
+            query: {
+                idGame: orderUser.userId,
+                itemGame: orderUser.itemGame,
+                payment: orderUser.payName
+            }
+        })
+    }
+    const handleSelect = (e) => {
+        setItemGame(e.target.value)
+        console.log(e.target.value)
+    }
+
+    const handlePayment = (e) => {
+        setPayment(e.target.value)
+        console.log(e.target.value)
+    }
 
     const handleInputIdGame = (e) => {
         setIdGame(e.target.value)
+        console.log(e.target.value)
     }
     
     return (
@@ -61,14 +92,15 @@ export default function Details({product}) {
                             </div>
                             <div className="flex-row d-flex flex-wrap pb-md-30 pb-20">
                                 {data?.priceList?.map((priceList) => (
-                                    <NominalCard item={priceList.item} itemName={priceList.itemName} price={priceList.price} coin={priceList.coin}/>
+                                    <NominalCard item={priceList.item} itemName={priceList.itemName} price={priceList.price} coin={priceList.coin} 
+                                    onSelect={handleSelect} value={`${priceList.item}`.concat(" ", priceList.itemName)}/>
                                 )) }
                             </div>
                             <div className="pb-md-30 pb-20">
                                 <p className="text-lg fw-medium color-palette-1 mb-md-10 mb-0">Payment Method</p>
                                 <div className="flex-row d-flex flex-wrap ">
                                     {data?.payment?.map((payment) => (
-                                        <PaymentCard payName={payment.payName} typePay={payment.typePay}/>
+                                        <PaymentCard payName={payment.payName} typePay={payment.typePay} onSelectPay={handlePayment} value={payment.payName}/>
                                     )) }
                                 </div>
                             </div>
@@ -84,9 +116,9 @@ export default function Details({product}) {
                                 {/* <Link href={`checkout/${data.id}`} type="submit"
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link> */}
-                                <Link href={`/checkout/${data.id}`} type="submit">
-                                    <button className="button-sub rounded-pill fw-medium" disabled={!idGame? true : false}>Continue</button>
-                                </Link>
+                                
+                                <button role="link" onClick={onSubmit} className="button-sub rounded-pill fw-medium" >Continue</button>
+                                
                             </div>
                         </form>
                         

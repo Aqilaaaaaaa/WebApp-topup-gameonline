@@ -1,11 +1,11 @@
 import React from 'react';
 
-const PaymentCard = ({payName, typePay}) => {
+const PaymentCard = ({payName, typePay, onSelectPay, value}) => {
     return (
         <>
             <label className="row justify-content-between px-2 m-1 mt-4"
-                id="GoPay">
-                <input className="d-none" type="radio" id="payName" name="paymentMethod" value=""/>
+                id="payment">
+                <input className="d-none" type="radio" id="payment" name="paymentMethod" onChange={onSelectPay} value={value}/>
                 <div className="detail-card">
                     <div className="d-flex justify-content-between">
                         <p className="text-3xl color-palette-1 fw-medium m-0">{payName}</p>
