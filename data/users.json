@@ -22,5 +22,21 @@
         "id": 3,
         "dateCreated": "2023-05-14T18:24:23.742Z",
         "dateUpdated": "2023-05-14T18:24:23.743Z"
+    },
+    {
+        "name": "authentic",
+        "username": "auth",
+        "hash": "$2a$10$3ogf4dnorJJy50dq78ITAuCW.0vnFZq43tf8UBoQSQ66rVg8b0Rda",
+        "id": 4,
+        "dateCreated": "2023-05-23T11:34:09.019Z",
+        "dateUpdated": "2023-05-23T11:34:09.020Z"
+    },
+    {
+        "name": "cobain",
+        "email": "coba@coba.com",
+        "hash": "$2a$10$YNGA02oVk0ojYcOEHhUaMuFMBCdfwZfbCSqdCq5Jdc.fzbvIiCgBK",
+        "id": 5,
+        "dateCreated": "2023-05-23T11:40:01.747Z",
+        "dateUpdated": "2023-05-23T11:40:01.747Z"
     }
 ]

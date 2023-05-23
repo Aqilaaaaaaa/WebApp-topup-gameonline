@@ -14,8 +14,8 @@ function Register() {
     const validationSchema = Yup.object().shape({
         name: Yup.string()
             .required('Name is required'),
-        username: Yup.string()
-            .required('Username is required'),
+        email: Yup.string()
+            .required('email is required'),
         password: Yup.string()
             .required('Password is required')
             .min(6, 'Password must be at least 6 characters')
@@ -53,9 +53,9 @@ function Register() {
                             <div className="invalid-feedback">{errors.name?.message}</div>
                         </div>
                         <div className="pt-20">
-                        <label id="username" className="form-label text-lg fw-medium color-palette-1 mb-10">Username</label>
-                            <input name="username" type="text" {...register('username')} className={`form-control rounded-pill text-lg ${errors.username ? 'is-invalid' : ''}`} aria-describedby="username" placeholder="Enter your Username"/>
-                            <div className="invalid-feedback">{errors.username?.message}</div>
+                        <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">Email</label>
+                            <input name="email" type="text" {...register('email')} className={`form-control rounded-pill text-lg ${errors.email ? 'is-invalid' : ''}`} aria-describedby="email" placeholder="Enter your email"/>
+                            <div className="invalid-feedback">{errors.email?.message}</div>
                         </div>
                         <div className="pt-20">
                             <label id="password" className="form-label text-lg fw-medium color-palette-1 mb-10">Password</label>

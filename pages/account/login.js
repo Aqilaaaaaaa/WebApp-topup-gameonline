@@ -13,7 +13,7 @@ function Login() {
 
     // form validation rules 
     const validationSchema = Yup.object().shape({
-        username: Yup.string().required('Username is required'),
+        email: Yup.string().required('email is required'),
         password: Yup.string().required('Password is required')
     });
     const formOptions = { resolver: yupResolver(validationSchema) };
@@ -22,8 +22,8 @@ function Login() {
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
 
-    function onSubmit({ username, password }) {
-        return userService.login(username, password)
+    function onSubmit({ email, password }) {
+        return userService.login(email, password)
             .then(() => {
                 // get return url from query parameters or default to '/'
                 const returnUrl = router.query.returnUrl || '/';
@@ -48,9 +48,9 @@ function Login() {
                                 <p className="text-lg color-palette-1 m-0">Sudah Punya akun? Ayo Segera Masuk</p>
 
                                 <div className="pt-50">
-                                    <label id="username" className="form-label text-lg fw-medium color-palette-1 mb-10">Username</label>
-                                    <input name="username" type="password" {...register('username')} className={`form-control rounded-pill text-lg ${errors.username ? 'is-invalid' : ''}`} aria-describedby="username" placeholder="Enter your username"/>
-                                    <div className="invalid-feedback">{errors.username?.message}</div>
+                                    <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">email</label>
+                                    <input name="email" type="text" {...register('email')} className={`form-control rounded-pill text-lg ${errors.email ? 'is-invalid' : ''}`} aria-describedby="email" placeholder="Enter your email"/>
+                                    <div className="invalid-feedback">{errors.email?.message}</div>
                                 </div>
                                 <div className="pt-20">
                                     <label id="password" className="form-label text-lg fw-medium color-palette-1 mb-10">Password</label>
