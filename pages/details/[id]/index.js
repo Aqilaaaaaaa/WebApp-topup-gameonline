@@ -1,13 +1,13 @@
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
-import TopUpItem from "@/components/Details/TopUpItem"
 import NominalCard from "@/components/Details/NominalCard"
 import PaymentCard from "@/components/Details/PaymentCard"
-import { IoIosArrowBack } from "react-icons/io";
+import TopUpItem from "@/components/Details/TopUpItem"
+import Footer from "@/components/Footer"
+import Navbar from "@/components/Navbar"
 import Head from "next/head"
 import Link from "next/link"
-import { useState } from "react"
 import { useRouter } from "next/router"
+import { useState } from "react"
+import { IoIosArrowBack } from "react-icons/io"
 
 
 export default function Details({product}) {
@@ -19,17 +19,19 @@ export default function Details({product}) {
 
     const onSubmit = (e)=>{
         const orderUser ={
+            idOrder: 'CHLSS'+Math.floor(Math.random() * 99999),
             userId: idGame,
-            itemGame,
-            payment
-        }.
-        e.preventDevault();
+            item: itemGame,
+            paymentMethod: payment,
+        }
+        e.preventDefault();
         router.push({
             pathname: `/checkout/${data.id}`,
             query: {
+                idOrder: orderUser.idOrder,
                 idGame: orderUser.userId,
-                itemGame: orderUser.itemGame,
-                payment: orderUser.payName
+                item: orderUser.item,
+                paymentMethod: orderUser.paymentMethod
             }
         })
     }
@@ -93,7 +95,7 @@ export default function Details({product}) {
                             <div className="flex-row d-flex flex-wrap pb-md-30 pb-20">
                                 {data?.priceList?.map((priceList) => (
                                     <NominalCard item={priceList.item} itemName={priceList.itemName} price={priceList.price} coin={priceList.coin} 
-                                    onSelect={handleSelect} value={`${priceList.item}`.concat(" ", priceList.itemName)}/>
+                                    onSelect={handleSelect} value={`${priceList.item}`} valuePrice={priceList.price}/>
                                 )) }
                             </div>
                             <div className="pb-md-30 pb-20">

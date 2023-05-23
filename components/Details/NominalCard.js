@@ -1,4 +1,3 @@
-import React from 'react';
 
 const NominalCard = ({item, itemName, price, coin, onSelect, value}) => {
     return (

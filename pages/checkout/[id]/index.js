@@ -1,13 +1,22 @@
 import DetailPayment from "@/components/Checkout/DetailPayment";
 import CheckoutConfirm from "@/components/Checkout/checkoutConfirm";
 import CheckoutItem from "@/components/Checkout/checkoutItem";
-import { IoIosArrowBack } from "react-icons/io";
+import { userService } from "@/services";
 import Link from "next/link";
-import { useState } from "react"
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { IoIosArrowBack } from "react-icons/io";
 
 export default function index({product}) {
     const [data, setData] = useState(product)
+    const router = useRouter()
+    console.log(router)
     console.log(data)
+
+    const priceFilter = (data)=>{
+        const dataPrice = data.filter((item)=> item == router.query.item)
+        return dataPrice
+    }
 
     return (
         <section className="checkout mx-auto pt-md-100 pb-md-145 pt-30 pb-30">
@@ -28,17 +37,16 @@ export default function index({product}) {
                 <hr/>
                 <div className="purchase pt-md-50 pt-30">
                 <h2 className="fw-bold text-xl color-palette-1 mb-20">Purchase Details</h2>
-                <DetailPayment label="Your Game ID" value="Gulaly Candy"/>
-                <DetailPayment label="Order ID" value="#333"/>
-                <DetailPayment label="Item" value="60 DM"/>
-                <DetailPayment label="Price" value={`Rp ${4228000}`}/>
-                
+                <DetailPayment label="Your Game ID" value={router.query.idGame}/>
+                <DetailPayment label="Order ID" value={router.query.idOrder}/>
+                <DetailPayment label="Item" value={router.query.item}/>
+                <DetailPayment label="Price" value={priceFilter(data.priceList)}/>
+
             </div>
             <div className="payment pt-md-50 pb-md-50 pt-10 pb-10">
                 <h2 className="fw-bold text-xl color-palette-1 mb-20">Payment Informations</h2>
-                <DetailPayment label="Payment Method" value="Gopay"/>
-                <p className="text-lg color-palette-1 mb-20">Your Account Name <span className="purchase-details">Masayoshi
-                        Angga Zero</span></p>
+                <DetailPayment label="Payment Method" value={router.query.paymentMethod}/>
+                <p className="text-lg color-palette-1 mb-20">Your Account<span className="purchase-details">{userService?.userValue.email}</span></p>
                 <p className="text-lg color-palette-1 mb-20">Type <span className="payment-details"></span>
                 </p>
             </div>
