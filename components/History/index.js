@@ -1,11 +1,23 @@
-import React from 'react';
-import HistoryRow from './historyRow';
+import { userService } from '@/services';
+import { useEffect, useState } from 'react';
 import HistoryTotal from './historyTotal';
 
 const History = () => {
+    const [data, setData] = useState()
+
     const titikPrice =(numb)=>{
         return numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     }
+
+    const getItemLocal =()=>{
+        const item = localStorage.getItem('history_payment')
+        const parseData = JSON.parse(item)
+        const temp = parseData?.filter((data)=>data.email == userService?.userValue.email)
+        setData(temp)
+    }
+    useEffect(()=>{
+        getItemLocal()
+    },[])
 
     return (
         <>
@@ -32,63 +44,32 @@ const History = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <HistoryRow title="Minta" item={5} img="img/overview-1.png" type="PC" price={2000} coin={2} status="Pending"/>
-                                        <tr className="align-middle text-center">
-                                            <th scope="row">
-                                                <img className="float-start me-3 mb-lg-0 mb-3" src="img/overview-2.png"
-                                                    width="80" height="60" alt=""/>
-                                                <div className="game-title-header">
-                                                    <p className="game-title fw-medium text-start color-palette-1 m-0">Call of
-                                                        Duty:Modern</p>
-                                                    <p className="text-xs fw-normal text-start color-palette-2 m-0">Desktop</p>
-                                                </div>
-                                            </th>
-                                            <td>
-                                                <p className="fw-medium text-start color-palette-1 m-0">550 Gold</p>
-                                            </td>
-                                            <td>
-                                                <p className="fw-medium text-start color-palette-1 m-0">Rp 740.000</p>
-                                            </td>
-                                            <td>
-                                                <p className="fw-medium text-start color-palette-1 m-0">+35</p>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <span className="float-start icon-status success"></span>
-                                                    <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-                                                        Success</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr className="align-middle text-center">
-                                            <th scope="row">
-                                                <img className="float-start me-3 mb-lg-0 mb-3" src="img/overview-3.png"
-                                                    width="80" height="60" alt=""/>
-                                                <div className="game-title-header">
-                                                    <p className="game-title fw-medium text-start color-palette-1 m-0">Clash of
-                                                        Clans</p>
-                                                    <p className="text-xs fw-normal text-start color-palette-2 m-0">Mobile</p>
-                                                </div>
-                                            </th>
-                                            <td>
-                                                <p className="fw-medium text-start color-palette-1 m-0">100 Gold</p>
-                                            </td>
-                                            <td>
-                                                <p className="fw-medium text-start color-palette-1 m-0">Rp 120.000</p>
-                                            </td>
-                                            <td>
-                                                <p className="fw-medium text-start color-palette-1 m-0">+8</p>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <span className="float-start icon-status failed"></span>
-                                                    <p className="fw-medium text-start color-palette-1 m-0 position-relative">Failed
-                                                    </p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        
-
+                                        {data?.map((data, i)=>(
+                                            <tr className="align-middle text-center">
+                                                <th scope="row">
+                                                    <div className="game-title-header">
+                                                        <p className="game-title fw-medium text-start color-palette-1 m-0">{data.name}</p>
+                                                        <p className="text-xs fw-normal text-start color-palette-2 m-0">{data.type}</p>
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    <p className="fw-medium text-start color-palette-1 m-0">{`${data.item}`.concat(' ',data.itemName)}</p>
+                                                </td>
+                                                <td>
+                                                    <p className="fw-medium text-start color-palette-1 m-0">Rp {data.price}</p>
+                                                </td>
+                                                <td>
+                                                    <p className="fw-medium text-start color-palette-1 m-0">+{data.coin}</p>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span className="float-start icon-status success"></span>
+                                                        <p className="fw-medium text-start color-palette-1 m-0 position-relative">
+                                                            Success</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        ))}
                                     </tbody>
                                 </table>
                             </div>
