@@ -12,11 +12,46 @@ export default function index({product}) {
     const router = useRouter()
     console.log(router)
     console.log(data)
+    // console.log('data')
 
-    const priceFilter = (data)=>{
-        const dataPrice = data.filter((item)=> item == router.query.item)
-        return dataPrice
+    const onCheckout =()=>{
+        let temp={
+            email: userService?.userValue.email,
+            idOrder: router.query.idOrder,
+            item: router.query.item,
+            type: data.type,
+            name: data.name,
+            price: priceFilter(data.priceList),
+            itemName: itemNameMap(data.priceList),
+            coin: cointMap(data.priceList)
+        }
+        const dataLocalStorage = localStorage.getItem('history_payment')
+        const historyData = dataLocalStorage?[...JSON.parse(dataLocalStorage), temp]:[temp]
+        if(dataLocalStorage){
+            localStorage.removeItem('history_payment')
+        }
+        localStorage.setItem('history_payment', JSON.stringify(historyData))
     }
+
+
+    const priceFilter = (temp)=>{
+        const x = temp?.find((data)=>(data.item == router.query.item))
+        return x.price
+    }
+    const itemNameMap = (temp)=>{
+        const x =  temp?.find((data)=>(data.item == router.query.item))
+        return x.itemName
+    }
+    const paymentType =(temp)=>{
+        const x = temp?.find((data)=>data.payName == router.query.paymentMethod)
+        return x.typePay
+    }
+    const cointMap =(temp)=>{
+        const x =  temp?.find((data)=>(data.item == router.query.item))
+        return x.coin
+    }
+    // console.log(cointMap(data.priceList))
+
 
     return (
         <section className="checkout mx-auto pt-md-100 pb-md-145 pt-30 pb-30">
@@ -39,18 +74,18 @@ export default function index({product}) {
                 <h2 className="fw-bold text-xl color-palette-1 mb-20">Purchase Details</h2>
                 <DetailPayment label="Your Game ID" value={router.query.idGame}/>
                 <DetailPayment label="Order ID" value={router.query.idOrder}/>
-                <DetailPayment label="Item" value={router.query.item}/>
+                <DetailPayment label="Item" value={`${router.query.item}`.concat(' ',itemNameMap(data.priceList))}/>
                 <DetailPayment label="Price" value={priceFilter(data.priceList)}/>
 
             </div>
             <div className="payment pt-md-50 pb-md-50 pt-10 pb-10">
                 <h2 className="fw-bold text-xl color-palette-1 mb-20">Payment Informations</h2>
-                <DetailPayment label="Payment Method" value={router.query.paymentMethod}/>
                 <p className="text-lg color-palette-1 mb-20">Your Account<span className="purchase-details">{userService?.userValue.email}</span></p>
-                <p className="text-lg color-palette-1 mb-20">Type <span className="payment-details"></span>
+                <DetailPayment label="Payment Method" value={router.query.paymentMethod}/>
+                <p className="text-lg color-palette-1 mb-20">Type <span className="payment-details">{paymentType(data.payment)}</span>
                 </p>
             </div>
-                <CheckoutConfirm/>
+                <CheckoutConfirm onSubmit={onCheckout}/>
             </div>
         </section>
     )

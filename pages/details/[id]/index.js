@@ -31,7 +31,8 @@ export default function Details({product}) {
                 idOrder: orderUser.idOrder,
                 idGame: orderUser.userId,
                 item: orderUser.item,
-                paymentMethod: orderUser.paymentMethod
+                paymentMethod: orderUser.paymentMethod,
+                // status: 'process'
             }
         })
     }
@@ -95,7 +96,7 @@ export default function Details({product}) {
                             <div className="flex-row d-flex flex-wrap pb-md-30 pb-20">
                                 {data?.priceList?.map((priceList) => (
                                     <NominalCard item={priceList.item} itemName={priceList.itemName} price={priceList.price} coin={priceList.coin} 
-                                    onSelect={handleSelect} value={`${priceList.item}`} valuePrice={priceList.price}/>
+                                    onSelect={handleSelect} value={priceList.item}/>
                                 )) }
                             </div>
                             <div className="pb-md-30 pb-20">

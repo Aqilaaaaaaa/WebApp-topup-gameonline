@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import Link from "next/link";
+import { useState } from 'react';
 
 
-const CheckoutConfirm = () => {
+const CheckoutConfirm = ({onSubmit}) => {
     const [checkBox, setCheckBox] = useState();
     // if (!checkBox) {
     //     toast.error("Pastikan anda telah melakukan pembayaran!");
@@ -17,7 +17,7 @@ const CheckoutConfirm = () => {
             </label>
             <div className="button-check d-md-block d-flex flex-column w-100 pt-50">
                 <Link className="btn btn-confirm-payment rounded-pill fw-medium border-0 text-lg"
-                    href="./complete-checkout" role="button">Confirm
+                    href="/complete-checkout" role="button" onClick={onSubmit}>Confirm
                     Payment
                 </Link>
                 

@@ -2,7 +2,7 @@ import { products } from "@/products";
 
 export default function handler(req, res) {
     const method = req.method
-    let { id, name, img, type } = req.body 
+    let { id, name, img, type, priceList } = req.body 
 
     switch (method) {
         case 'GET':
@@ -16,6 +16,7 @@ export default function handler(req, res) {
                 name,
                 img,
                 type,
+                priceList
             }
             products.push(newProduct)
             res.status(200).json(products)
