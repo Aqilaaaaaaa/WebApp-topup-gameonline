@@ -1,8 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
+import { userService } from "@/services";
+import { useState } from "react";
 
-export default function Auth(props){
-    const {isLogin} = props;
+export default function Auth(){
+    
+    const [isLogin, setIsLogin] = useState(false);
+    const [token, setToken] = useState({
+        token: ""
+    });
+    useEffect(() => {
+        const token = userService.userValue.token
+        
+        if(token) {
+            setIsLogin(true);
+            setToken(token);
+        }
+    })
+
     if (isLogin) {
         return (
             <li className="nav-item my-auto dropdown d-flex">

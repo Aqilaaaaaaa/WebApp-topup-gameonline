@@ -32,11 +32,13 @@
 
 .detail .detail{
     margin-top: 100px;
+   
 }
 
 .detail .form {
     display: flex;
     justify-content: center;
+    
     
 }
 

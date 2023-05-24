@@ -8,34 +8,18 @@
         "dateUpdated": "2023-05-14T17:01:17.008Z"
     },
     {
-        "name": "aqila",
-        "username": "haqilaan",
-        "hash": "$2a$10$qIzTTDLvK5wPa48PeVUcte0.qFEKX554XsTiX8gfHi0xbCk0CqBf2",
-        "id": 2,
-        "dateCreated": "2023-05-14T17:13:48.080Z",
-        "dateUpdated": "2023-05-14T17:13:48.080Z"
-    },
-    {
         "name": "aqila cantik",
         "username": "aqiladun",
         "hash": "$2a$10$pkbL.JL.58gAV4ekO3Sz9eO9cSJC51D5LoJXu4ppbLdG1ZmRbfOxS",
-        "id": 3,
+        "id": 2,
         "dateCreated": "2023-05-14T18:24:23.742Z",
         "dateUpdated": "2023-05-14T18:24:23.743Z"
-    },
-    {
-        "name": "authentic",
-        "username": "auth",
-        "hash": "$2a$10$3ogf4dnorJJy50dq78ITAuCW.0vnFZq43tf8UBoQSQ66rVg8b0Rda",
-        "id": 4,
-        "dateCreated": "2023-05-23T11:34:09.019Z",
-        "dateUpdated": "2023-05-23T11:34:09.020Z"
     },
     {
         "name": "cobain",
         "email": "coba@coba.com",
         "hash": "$2a$10$YNGA02oVk0ojYcOEHhUaMuFMBCdfwZfbCSqdCq5Jdc.fzbvIiCgBK",
-        "id": 5,
+        "id": 3,
         "dateCreated": "2023-05-23T11:40:01.747Z",
         "dateUpdated": "2023-05-23T11:40:01.747Z"
     }
