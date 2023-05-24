@@ -2,16 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Auth from "./Auth";
 import ToogleNav from "./ToogleNav";
+import { useState } from "react";
 
 
 export default function Navbar(){
 
-    
-   
     return (
         <>
             <section>
-                <nav className="navbar navbar-expand-lg navbar-light pt-lg-10 pb-lg-30 pt-10 pb-30">
+                <nav className="navbar navbar-expand-lg navbar-light ">
                     <div className="container-fluid">
                         <Link className="navbar-brand" href="/#">
                             <Image src="/icon/logoo.png" width={100} height={100}/>

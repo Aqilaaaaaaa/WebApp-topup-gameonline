@@ -59,14 +59,16 @@ function Login() {
                                 </div>
                                 <div className="button-group d-flex flex-column mx-auto pt-30 pb-30">
                                     <button disabled={formState.isSubmitting} className="btn btn-login fw-medium text-lg rounded-pill mb-10" role="button">
-                                        
                                         LogIn
                                     </button>
-                                        
-                                    <Link className="btn btn-register fw-medium text-lg text-white color-palette-1 rounded-pill"
-                                        href="/account/register" role="button">
-                                            Register
-                                    </Link>
+                                    <div className="w-full">
+                                        <p className="text-center text-sm text-dark">
+                                            Sudah punya akun Di CashLess Shop?{" "}
+                                            <span className="font-semibold text-sm cursor-pointer hover:text-success">
+                                            <Link href="/account/register" role="button">Register</Link>
+                                            </span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             
