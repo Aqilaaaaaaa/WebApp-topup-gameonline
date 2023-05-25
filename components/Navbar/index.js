@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import Auth from "./Auth";
-import ToogleNav from "./ToogleNav";
 import { useState } from "react";
+import Auth from "./Auth";
 
 
 export default function Navbar(){
@@ -10,6 +9,7 @@ export default function Navbar(){
 
     const handleModal =()=>{
         setShow(!isShow)
+        console.log(isShow)
     }
     return (
         <>
@@ -19,16 +19,18 @@ export default function Navbar(){
                         <Link className="navbar-brand" href="/#">
                             <Image src="/icon/logoo.png" width={100} height={100}/>
                         </Link>
-                        <ToogleNav/>
-                        <div  className="collapse navbar-collapse color-palette-1" id="navbarNav">
-                            <ul onClick={handleModal} className={isShow? "navbar-nav ms-auto gap-lg-0 gap-2": "d-none"}>
+                        <button onClick={handleModal} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className={isShow?"collapse navbar-collapse color-palette-1":'d-none'} id="navbarNav">
+                            <ul onClick={handleModal} className={"navbar-nav ms-auto gap-lg-0 gap-2"}>
                                 <li className="nav-item my-auto">
-                                    <Link className="nav-link text-lg" href="/#">
+                                    <Link className="nav-link text-lg text-center" href="/#">
                                         Home
                                     </Link>
                                 </li>
                                 <li className="nav-item my-auto">
-                                    <Link className="nav-link text-lg" href="/product">
+                                    <Link className="nav-link text-lg text-center" href="/product">
                                         All Games
                                     </Link>
                                 </li>
