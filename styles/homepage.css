@@ -200,15 +200,6 @@ footer ul li a:hover{
 }
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-
- }
-
- @media (max-width:768px) {
-
- }
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 414px) { 
     footer{
@@ -250,14 +241,17 @@ footer ul li a:hover{
     /* Featured Game */
     .featured-game .featured-game-card:hover .blur-sharp{
         position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
  }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-
+    .header{
+        margin-top: 5rem;
+    }
+    
  }
 

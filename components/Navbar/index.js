@@ -6,7 +6,11 @@ import { useState } from "react";
 
 
 export default function Navbar(){
+    const [isShow, setShow] = useState(false)
 
+    const handleModal =()=>{
+        setShow(!isShow)
+    }
     return (
         <>
             <section>
@@ -16,8 +20,8 @@ export default function Navbar(){
                             <Image src="/icon/logoo.png" width={100} height={100}/>
                         </Link>
                         <ToogleNav/>
-                        <div className="collapse navbar-collapse color-palette-1" id="navbarNav">
-                            <ul className="navbar-nav ms-auto gap-lg-0 gap-2">
+                        <div  className="collapse navbar-collapse color-palette-1" id="navbarNav">
+                            <ul onClick={handleModal} className={isShow? "navbar-nav ms-auto gap-lg-0 gap-2": "d-none"}>
                                 <li className="nav-item my-auto">
                                     <Link className="nav-link text-lg" href="/#">
                                         Home

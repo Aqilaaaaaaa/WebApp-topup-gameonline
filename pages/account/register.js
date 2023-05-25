@@ -65,14 +65,16 @@ function Register() {
                         <div className="button-group d-flex flex-column mx-auto pt-50">
                             <button disabled={formState.isSubmitting} className="btn btn-register fw-medium text-lg text-white rounded-pill mb-16">
                                 {/* {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>} */}
-                                
                                     Continue
-                               
                             </button>
-                            
-                            <Link className="btn btn-login fw-medium text-lg color-palette-1 rounded-pill" href="/account/login" role="button">
-                                LogIn
-                            </Link>
+                            <div className="w-full">
+                                <p className="text-center text-dark">
+                                    Sudah punya akun Di CashLess Shop?{" "}
+                                    <Link href="/account/login" role="button" style={{textDecoration:"none", color:"#ADFF2F"}}>
+                                        <span className="font-semibold cursor-pointer hover:text-danger">Login</span>
+                                    </Link>
+                                </p>
+                            </div>
                         </div>
                     </form>
                 </div>

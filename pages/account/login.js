@@ -62,11 +62,11 @@ function Login() {
                                         LogIn
                                     </button>
                                     <div className="w-full">
-                                        <p className="text-center text-sm text-dark">
-                                            Sudah punya akun Di CashLess Shop?{" "}
-                                            <span className="font-semibold text-sm cursor-pointer hover:text-success">
-                                            <Link href="/account/register" role="button">Register</Link>
-                                            </span>
+                                        <p className="text-center text-dark">
+                                            Belum punya akun Di CashLess Shop?{" "}
+                                            <Link href="/account/register" role="button" style={{textDecoration:"none", color:"#ADFF2F"}}>
+                                                <span className="font-semibold cursor-pointer hover:text-success">Register</span>
+                                            </Link>
                                         </p>
                                     </div>
                                 </div>

@@ -22,5 +22,13 @@
         "id": 3,
         "dateCreated": "2023-05-23T11:40:01.747Z",
         "dateUpdated": "2023-05-23T11:40:01.747Z"
+    },
+    {
+        "name": "tester",
+        "email": "test@test.com",
+        "hash": "$2a$10$3t2SUJaMj41Zzjw5ol15We5MagAHmA9Hv3UJiYyHVZcp2J1E1iKl2",
+        "id": 4,
+        "dateCreated": "2023-05-24T14:56:20.594Z",
+        "dateUpdated": "2023-05-24T14:56:20.594Z"
     }
 ]
