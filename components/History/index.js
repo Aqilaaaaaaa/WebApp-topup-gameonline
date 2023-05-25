@@ -56,7 +56,7 @@ const History = () => {
                                                     <p className="fw-medium text-start color-palette-1 m-0">{`${data.item}`.concat(' ',data.itemName)}</p>
                                                 </td>
                                                 <td>
-                                                    <p className="fw-medium text-start color-palette-1 m-0">Rp {data.price}</p>
+                                                    <p className="fw-medium text-start color-palette-1 m-0">Rp {titikPrice(data.price)}</p>
                                                 </td>
                                                 <td>
                                                     <p className="fw-medium text-start color-palette-1 m-0">+{data.coin}</p>
