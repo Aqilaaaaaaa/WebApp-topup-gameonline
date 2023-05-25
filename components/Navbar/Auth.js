@@ -1,8 +1,36 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
+import { userService } from "@/services";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
-export default function Auth(props){
-    const {isLogin} = props;
+export default function Auth(){
+    
+    const [isLogin, setIsLogin] = useState();
+
+    // const [token, setToken] = useState({
+    //     token: ""
+    // });
+    // const router = useRouter();
+    // useEffect(() => {
+    //     const token = userService.userValue.token
+        
+    //     if(!token) {
+    //         router.push('/');
+    //     }else{
+    //         setIsLogin(true);
+    //         setToken(token);
+    //     }
+    // })
+    // console.log(userService);
+
+    const logOut = () => {
+        userService.logout(token);
+        router.push('/');
+        setIsLogin(false);
+    }
+
     if (isLogin) {
         return (
             <li className="nav-item my-auto dropdown d-flex">
@@ -18,7 +46,7 @@ export default function Auth(props){
                     <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
                         <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">Cash Coin : Rp 15.000</Link></li>
                         <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">History Purchase</Link></li>
-                        <li><Link href="/#" className="dropdown-item text-lg color-palette-2">Log Out</Link></li>
+                        <li onClick={logOut} className="dropdown-item text-lg color-palette-2"> Log Out</li>
                     </ul>
                 </div>
             </li>   

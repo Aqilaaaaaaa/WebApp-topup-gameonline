@@ -59,7 +59,7 @@ export default function Details({product}) {
                 <link rel="icon" href="/icon/logoo.png" />
             </Head>
             <Navbar/>
-            <section className="detail pt-lg-60 pb-50 .bg-secondary">
+            <section className="detail pt-lg-60 pb-50 .bg-secondary" style={{marginTop:"7rem"}}>
                 <div className="container-xxl container-fluid">
                     <div className="detail-header flex d-flex">
                         <Link href="/#">

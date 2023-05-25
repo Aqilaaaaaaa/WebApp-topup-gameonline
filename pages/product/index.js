@@ -1,12 +1,11 @@
 import Head from 'next/head';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import CardFeatured from '@/components/Featured/cardFeatured';
 import SearchBar from '@/components/SearchBar';
 import { useState, useEffect } from 'react';
 import { Grid, Pagination} from '@mui/material'
 import usePagination from './usePagination'
-
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 
 export default function index({product}){
@@ -70,7 +69,6 @@ export default function index({product}){
                 <link rel="icon" href="/icon/logoo.png" />
             </Head>
             <Navbar/>
-            
             <div className="product container my-5 ">
                 <SearchBar
                     value={search}
@@ -105,7 +103,6 @@ export default function index({product}){
                         </Grid>
                     </Grid>
                 </div>
-               
             </div>
             <Footer/>
         </>

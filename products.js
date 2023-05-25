@@ -110,6 +110,38 @@ export const products = [
                 price : 40000,
                 coin : 3
             },
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -139,6 +171,38 @@ export const products = [
                 itemName : "CP",
                 price : 240000,
                 coin : 2
+            }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
             }
         ]
     },
@@ -170,6 +234,38 @@ export const products = [
                 price : 240000,
                 coin : 3
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -200,6 +296,38 @@ export const products = [
                 price : 240000,
                 coin : 2
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -229,6 +357,38 @@ export const products = [
                 itemName : "Wild Cores",
                 price : 240000,
                 coin : 2
+            }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
             }
         ]
     },
@@ -267,6 +427,38 @@ export const products = [
                 price : 240000,
                 coin : 2
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -303,6 +495,38 @@ export const products = [
                 itemName : "Points",
                 price : 240000,
                 coin : 2
+            }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
             }
         ]
     },
@@ -348,6 +572,38 @@ export const products = [
                 price : 240000,
                 coin : 2
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -385,6 +641,38 @@ export const products = [
                 price : 40000,
                 coin : 3
             },
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -414,6 +702,38 @@ export const products = [
                 itemName : "CP",
                 price : 240000,
                 coin : 2
+            }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
             }
         ]
     },
@@ -445,6 +765,38 @@ export const products = [
                 price : 240000,
                 coin : 3
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -475,6 +827,38 @@ export const products = [
                 price : 240000,
                 coin : 2
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -504,6 +888,38 @@ export const products = [
                 itemName : "Wild Cores",
                 price : 240000,
                 coin : 2
+            }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
             }
         ]
     },
@@ -542,6 +958,38 @@ export const products = [
                 price : 240000,
                 coin : 2
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -578,6 +1026,38 @@ export const products = [
                 itemName : "Points",
                 price : 240000,
                 coin : 2
+            }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
             }
         ]
     },
@@ -616,6 +1096,38 @@ export const products = [
                 price : 240000,
                 coin : 2
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -652,6 +1164,38 @@ export const products = [
                 itemName : "Points",
                 price : 240000,
                 coin : 2
+            }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
             }
         ]
     },
@@ -697,6 +1241,38 @@ export const products = [
                 price : 240000,
                 coin : 2
             }
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     },
     {
@@ -734,6 +1310,38 @@ export const products = [
                 price : 40000,
                 coin : 3
             },
+        ],
+        payment : [
+            {
+                idPay : "#001",
+                payName : "Gopay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#002",
+                payName : "OVO",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#003",
+                payName : "DANA",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#004",
+                payName : "Shopee Pay",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#005",
+                payName : "PayPal",
+                typePay : "Digital Wallet",
+            },
+            {
+                idPay : "#006",
+                payName : "BCA",
+                typePay : "Bank Account",
+            }
         ]
     }
 ]
