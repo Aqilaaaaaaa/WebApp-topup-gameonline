@@ -1,20 +1,19 @@
-import '../styles/utilities.css';
-import '../styles/homepage.css';
-import '../styles/details.css';
+import { userService } from '@/services';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+import { useEffect, useState } from 'react';
+import '../styles/404-not-found.css';
 import '../styles/checkout.css';
 import '../styles/complete-checkout.css';
-import '../styles/login.css';
-import '../styles/register.css';
-import '../styles/register-success.css';
-import '../styles/404-not-found.css';
-import '../styles/navbar-log-in.css';
+import '../styles/details.css';
 import '../styles/history.css';
+import '../styles/homepage.css';
+import '../styles/login.css';
+import '../styles/navbar-log-in.css';
 import '../styles/product.css';
-import Head from 'next/head';
-import Script from 'next/script';
-import { userService } from '@/services';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import '../styles/register-success.css';
+import '../styles/register.css';
+import '../styles/utilities.css';
 
 
 
