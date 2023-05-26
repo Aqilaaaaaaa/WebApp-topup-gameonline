@@ -25,11 +25,11 @@ export default function Auth(){
     // })
     // console.log(userService);
 
-    const logOut = () => {
-        userService.logout(token);
-        router.push('/');
-        setIsLogin(false);
+    function logOut (){
+        userService.logout();
+      
     }
+    console.log(logOut)
 
     if (isLogin) {
         return (
@@ -58,6 +58,7 @@ export default function Auth(){
                 <Link className="btn btn-login d-flex justify-content-center ms-lg-2 rounded-pill"
                     href="/account/login" role="button"> Sign In
                 </Link>
+                <li onClick={logOut} className="dropdown-item text-lg color-palette-2"> Log Out</li>
             </li>
         </> 
         

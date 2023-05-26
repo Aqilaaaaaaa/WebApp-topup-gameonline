@@ -19,10 +19,14 @@ export default function SearchBar({onChangeInput, value, onFilterType, onCancel}
                     </button>
                 </div>
                 <div className="btn-radio flex-row d-flex" onChange={onFilterType}>
-                    <input type="radio" name="type" value={'PC'}/>
-                    <label className="my-2">PC</label><br/>
-                    <input type="radio" name="type" value={'Mobile'}/>
-                    <label className="my-2">Mobile</label>
+                    <label className="checkbox-label text-lg color-palette-1 pt-10">PC
+                        <input type="radio" name="type" value={'PC'}/>
+                        <span className="checkmark"></span>
+                    </label>
+                    <label className="checkbox-label text-lg color-palette-1 pt-10">Mobile
+                        <input type="radio" name="type" value={'Mobile'}/>
+                        <span className="checkmark"></span>
+                    </label>
                     <button className="btn-cancel d-md-block rounded-pill fw-medium border-0 btn-lg" onClick={onCancel}>Cancel</button>
                 </div>
             </div>
