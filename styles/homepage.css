@@ -9,6 +9,26 @@
     z-index: 1;
     margin-bottom: 7rem;
 }
+.navbar .collapse{
+    background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .collapse{
+        display: none;
+    }
+    .navbar .navbarMobile{
+        display: block;
+        height: 100%;
+        background-color: #1d394a;
+        position: absolute;
+        width: 100%;
+        /* height: 100; */
+        top: 120px;
+        right: 0px;
+        /* border-radius: 0 0 2rem 2rem ; */
+    }
+}
 
 /* Header */
 
