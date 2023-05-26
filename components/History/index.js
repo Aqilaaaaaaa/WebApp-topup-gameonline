@@ -1,12 +1,35 @@
 import { userService } from '@/services';
 import { useEffect, useState } from 'react';
 import HistoryTotal from './historyTotal';
+import HistoryRow from './historyRow';
 
 const History = () => {
     const [data, setData] = useState()
 
     const titikPrice =(numb)=>{
         return numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+    }
+    const sumPrice =(data)=>{
+        if(data){
+          let sum=0
+          data?.forEach(element => {
+            sum+=element.price
+          });
+          return sum
+        }else{
+          return 0
+        }
+    }
+    const sumCoin =(data)=>{
+        if(data){
+          let sum=0
+          data?.forEach(element => {
+            sum+=element.coin
+          });
+          return sum
+        }else{
+          return 0
+        }
     }
 
     const getItemLocal =()=>{
@@ -27,8 +50,8 @@ const History = () => {
                         <div className="top-up-categories mb-30">
                             <h2 className="text-4xl fw-bold color-palette-1 mb-30">History Purchase</h2>
                             <div className="wrapper">
-                                <HistoryTotal title="Total Spent" total={titikPrice(8000000)}/>
-                                <HistoryTotal title="Total Cash Coin" total={titikPrice(800000)}/>
+                                <HistoryTotal title="Total Spent" total={titikPrice(sumPrice(data))}/>
+                                <HistoryTotal title="Total Cash Coin" total={titikPrice(sumCoin(data))}/>
                             </div>
                         </div>
                         <div className="latest-transaction">
@@ -45,30 +68,31 @@ const History = () => {
                                     </thead>
                                     <tbody>
                                         {data?.map((data, i)=>(
-                                            <tr className="align-middle text-center">
-                                                <th scope="row">
-                                                    <div className="game-title-header">
-                                                        <p className="game-title fw-medium text-start color-palette-1 m-0">{data.name}</p>
-                                                        <p className="text-xs fw-normal text-start color-palette-2 m-0">{data.type}</p>
-                                                    </div>
-                                                </th>
-                                                <td>
-                                                    <p className="fw-medium text-start color-palette-1 m-0">{`${data.item}`.concat(' ',data.itemName)}</p>
-                                                </td>
-                                                <td>
-                                                    <p className="fw-medium text-start color-palette-1 m-0">Rp {titikPrice(data.price)}</p>
-                                                </td>
-                                                <td>
-                                                    <p className="fw-medium text-start color-palette-1 m-0">+{data.coin}</p>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <span className="float-start icon-status success"></span>
-                                                        <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-                                                            Success</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            <HistoryRow title={data.name} type={data.type} item={`${data.item}`.concat(' ',data.itemName)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
+                                            // <tr className="align-middle text-center">
+                                            //     <th scope="row">
+                                            //         <div className="game-title-header">
+                                            //             <p className="game-title fw-medium text-start color-palette-1 m-0">{data.name}</p>
+                                            //             <p className="text-xs fw-normal text-start color-palette-2 m-0">{data.type}</p>
+                                            //         </div>
+                                            //     </th>
+                                            //     <td>
+                                            //         <p className="fw-medium text-start color-palette-1 m-0">{`${data.item}`.concat(' ',data.itemName)}</p>
+                                            //     </td>
+                                            //     <td>
+                                            //         <p className="fw-medium text-start color-palette-1 m-0">Rp {titikPrice(data.price)}</p>
+                                            //     </td>
+                                            //     <td>
+                                            //         <p className="fw-medium text-start color-palette-1 m-0">+{data.coin}</p>
+                                            //     </td>
+                                            //     <td>
+                                            //         <div>
+                                            //             <span className="float-start icon-status success"></span>
+                                            //             <p className="fw-medium text-start color-palette-1 m-0 position-relative">
+                                            //                 Success</p>
+                                            //         </div>
+                                            //     </td>
+                                            // </tr>
                                         ))}
                                     </tbody>
                                 </table>
