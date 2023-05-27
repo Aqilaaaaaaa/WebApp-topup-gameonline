@@ -3,12 +3,39 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { alertService, userService } from 'services';
+import { useEffect, useState } from 'react';
+import { Alert, AlertTitle, Stack } from '@mui/material';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import * as Yup from 'yup';
 
 export default Register;
 
-function Register() {
+function Register({id}) {
     const router = useRouter();
+    const [alerts, setAlerts] = useState([]);
+
+    useEffect(() => {
+      const subscription = alertService.onAlert(id)
+      .subscribe(alert => {
+        if(!alert.message) {
+            setAlerts(alerts =>{
+                const filteredAlerts = alerts.filter(x => x.keepAfterRouteChange);
+                filteredAlerts.forEach(x => delete x.keepAfterRouteChange);
+                return filteredAlerts;
+            })
+        } else {
+            setAlerts(alerts => ([...alerts, alert]));
+            toast.error(alert.message, {
+                position: toast.POSITION.TOP_RIGHT
+            });
+            
+        }
+      })
+    },[]);
+    console.log(alerts)
+    // if (!alerts.length) return null;
+
 
     // form validation rules 
     const validationSchema = Yup.object().shape({
@@ -34,6 +61,7 @@ function Register() {
             })
             .catch(alertService.error);
     }
+
 
     return (
         <>
@@ -79,6 +107,7 @@ function Register() {
                     </form>
                 </div>
             </div>
+            <ToastContainer/>
         </>
     );
 }

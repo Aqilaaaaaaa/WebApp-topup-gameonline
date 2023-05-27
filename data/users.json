@@ -30,5 +30,13 @@
         "id": 4,
         "dateCreated": "2023-05-24T14:56:20.594Z",
         "dateUpdated": "2023-05-24T14:56:20.594Z"
+    },
+    {
+        "name": "Haqila Nur Nouvadila",
+        "email": "haqilaan@gmail.com",
+        "hash": "$2a$10$oohUPkCTURXPwvhsTkLTO..ESYxZ5ooDpKzm3xPxl6lHgZUi2EfAa",
+        "id": 5,
+        "dateCreated": "2023-05-26T17:02:00.793Z",
+        "dateUpdated": "2023-05-26T17:02:00.793Z"
     }
 ]

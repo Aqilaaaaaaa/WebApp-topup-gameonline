@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
     if(!userService.userValue && !publicPaths.includes(path)){
       setAuthorized(false)
       router.push({
-        pathname:'/account/login',
+        pathname:'/account/register',
         query:{returnUrl: router.asPath}
       })
     } else{
@@ -59,7 +59,9 @@ export default function App({ Component, pageProps }) {
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
           crossOrigin="anonymous" />
-        <Component {...pageProps} />
+        {authorized && 
+          <Component {...pageProps}/>
+        }
      
     </>
   )

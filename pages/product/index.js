@@ -35,8 +35,9 @@ export default function index({product}){
     const handleCancelBtn = () => {
         setData(product)
         setType(false)
+        setSearch('')
     }
-    console.log(handleCancelBtn)
+    
 
     const searchData = (temp) => {
         if(!search){

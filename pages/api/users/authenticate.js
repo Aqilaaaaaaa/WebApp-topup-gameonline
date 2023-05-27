@@ -14,7 +14,7 @@ function authenticate(req, res) {
     const { email, password } = req.body;
     const user = usersRepo.find(u => u.email === email);
 
-    // validate
+    // validate login
     if (!(user && bcrypt.compareSync(password, user.hash))) {
         throw 'email or password is incorrect';
     }
@@ -26,8 +26,7 @@ function authenticate(req, res) {
     return res.status(200).json({
         id: user.id,
         email: user.email,
-        firstName: user.firstName,
-        lastName: user.lastName,
+        name: user.name,
         token
     });
 }

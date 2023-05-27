@@ -4,6 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import Link from 'next/link';
 import { userService, alertService } from 'services';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default Login;
@@ -31,6 +33,7 @@ function Login() {
             })
             .catch(alertService.error);
     }
+    console.log(userService.login)
 
     return (
         <>
@@ -84,7 +87,9 @@ function Login() {
                             pemenang sejati</p>
                     </div>
                 </div>
+                <ToastContainer/>
             </div> 
+            
         </>
     );
 }

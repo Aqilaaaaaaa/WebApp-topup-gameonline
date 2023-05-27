@@ -20,12 +20,13 @@ function getById(req, res) {
 function update(req, res) {
     const user = usersRepo.getById(req.query.id);
 
+    // validate login
     if (!user) throw 'User Not Found';
 
     // split out password from user details 
     const { password, ...params } = req.body;
 
-    // validate
+    // validate regist
     if (user.email !== params.email && usersRepo.find(x => x.email === params.email))
         throw `User with the email "${params.email}" already exists`;
 

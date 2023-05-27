@@ -34,7 +34,7 @@ export default function Navbar(){
                                         All Games
                                     </Link>
                                 </li>
-                                <Auth/>
+                                <li className="nav-item my-auto"><Auth/></li>
                             </ul>
                         </div>
                     </div>
