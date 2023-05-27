@@ -1,12 +1,11 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useForm } from 'react-hook-form';
-import { alertService, userService } from 'services';
 import { useEffect, useState } from 'react';
-import { Alert, AlertTitle, Stack } from '@mui/material';
+import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { alertService, userService } from 'services';
 import * as Yup from 'yup';
 
 export default Register;
@@ -32,6 +31,15 @@ function Register({id}) {
             
         }
       })
+      const clearAlerts = () => {
+        setTimeout(() => alertService.clear(id));
+      };
+      router.events.on('routeChangeStart', clearAlerts);
+
+      return ()=>{
+        subscription.unsubscribe()
+        router.events.off('routeChangeStart', clearAlerts)
+      }
     },[]);
     console.log(alerts)
     // if (!alerts.length) return null;
