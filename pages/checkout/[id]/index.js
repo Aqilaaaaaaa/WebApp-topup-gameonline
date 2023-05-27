@@ -4,31 +4,58 @@ import CheckoutItem from "@/components/Checkout/checkoutItem";
 import { userService } from "@/services";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 
 export default function index({product}) {
     const [data, setData] = useState(product)
+    const [localData, setLocalData] = useState()
+    const [total, setTotal] = useState()
+    const [isCheckPoint, setIsCheckPoint] = useState(false)
     const router = useRouter()
-    console.log(router)
-    console.log(data)
+    // console.log(router)
+    // console.log(data)
     // console.log('data')
 
+    const handleCheckPoint =(e)=>{
+        setIsCheckPoint(e.target.checked)
+        let temp = 0
+        if(isCheckPoint == true){
+            temp = priceFilter(data.priceList) - sumCoin(localData)
+            setTotal(temp)
+            
+            // console.log('coin',sumCoin(localData))
+            // console.log('price',data.priceList)
+        }
+    }
+
+    const getItemLocal =()=>{
+        const item = localStorage.getItem('history_payment')
+        const parseData = JSON.parse(item)
+        const temp = parseData?.filter((data)=>data.email == userService?.userValue.email)
+        setLocalData(temp)
+    }
+
+    useEffect(()=>{
+        getItemLocal()
+    },[])
+
+    
     const sumCoin =(data)=>{
         if(data){
           let sum=0
           data?.forEach(element => {
-            sum+=element.coin
-          });
-          return sum
+              sum+=element.coin
+            });
+            return sum
         }else{
-          return 0
+            return 0
         }
     }
     const titikPrice =(numb)=>{
-        return numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+        return numb?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     }
-
+    
     const onCheckout =()=>{
         let temp={
             email: userService?.userValue.email,
@@ -47,8 +74,8 @@ export default function index({product}) {
         }
         localStorage.setItem('history_payment', JSON.stringify(historyData))
     }
-
-
+    
+    
     const priceFilter = (temp)=>{
         const x = temp?.find((data)=>(data.item == router.query.item))
         return x.price
@@ -65,9 +92,10 @@ export default function index({product}) {
         const x =  temp?.find((data)=>(data.item == router.query.item))
         return x.coin
     }
-    // console.log(cointMap(data.priceList))
+    // console.log(localData)
+    // console.log(sumCoin(localData))
 
-
+    
     return (
         <section className="checkout mx-auto pt-md-100 pb-md-145 pt-30 pb-30">
             <div className="container-fluid">
@@ -91,10 +119,10 @@ export default function index({product}) {
                     <DetailPayment label="Order ID" value={router.query.idOrder}/>
                     <DetailPayment label="Item" value={`${router.query.item}`.concat(' ',itemNameMap(data.priceList))}/>
                     <DetailPayment label="Price" value={titikPrice(priceFilter(data.priceList))}/>
-                    <DetailPayment label="Total Price" value={titikPrice(priceFilter(data.priceList))}/>
+                    <DetailPayment label="Total Price" value={titikPrice(total)}/>
                     <h2 className="fw-bold text-xl text-danger color-palette-1 mb-20">Use Your Own Coin?</h2>
-                    <label className="checkbox-label text-lg color-palette-1">{titikPrice(sumCoin(data.priceList))} cash coin
-                        <input type="checkbox" name="type"/>
+                    <label className="checkbox-label text-lg color-palette-1">{titikPrice(sumCoin(localData))} cash coin
+                        <input onChange={handleCheckPoint} type="checkbox" name="type"/>
                         <span className="checkmark"></span>
                     </label>
                     
