@@ -3,15 +3,45 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import Link from 'next/link';
-import { userService, alertService } from 'services';
+import { useEffect, useState } from 'react';
+import { alertService, userService } from 'services';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 export default Login;
 
-function Login() {
+function Login({id}) {
     const router = useRouter();
+    const [alerts, setAlerts] = useState([]);
+
+    useEffect(() => {
+      const subscription = alertService.onAlert(id)
+      .subscribe(alert => {
+        if(!alert.message) {
+            setAlerts(alerts =>{
+                const filteredAlerts = alerts.filter(x => x.keepAfterRouteChange);
+                filteredAlerts.forEach(x => delete x.keepAfterRouteChange);
+                return filteredAlerts;
+            })
+        } else {
+            setAlerts(alerts => ([...alerts, alert]));
+            toast.error(alert.message, {
+                position: toast.POSITION.TOP_RIGHT
+            });
+            
+        }
+      })
+      const clearAlerts = () => {
+        setTimeout(() => alertService.clear(id));
+      };
+      router.events.on('routeChangeStart', clearAlerts);
+
+      return ()=>{
+        subscription.unsubscribe()
+        router.events.off('routeChangeStart', clearAlerts)
+      }
+    },[]);
 
     // form validation rules 
     const validationSchema = Yup.object().shape({
@@ -33,7 +63,6 @@ function Login() {
             })
             .catch(alertService.error);
     }
-    console.log(userService.login)
 
     return (
         <>
