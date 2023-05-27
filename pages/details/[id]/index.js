@@ -120,7 +120,7 @@ export default function Details({product}) {
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link> */}
                                 
-                                <button role="link" onClick={onSubmit} className="button-sub rounded-pill fw-medium" >Continue</button>
+                                <button role="button" onClick={onSubmit} disabled={!idGame? true : false} className="button-sub rounded-pill fw-medium" >Continue</button>
                                 
                             </div>
                         </form>

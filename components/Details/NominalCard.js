@@ -18,7 +18,7 @@ const NominalCard = ({item, itemName, price, coin, onSelect, value}) => {
                         </svg>
                     </div>
                     <p className="text-lg color-palette-1 m-0 mt-2">Rp {price}</p>
-                    <p className="text-lg color-palette-1 text-danger m-0">+{coin} cash coin</p>
+                    <p className="text-lg color-palette-1 text-danger m-0">+{coin} coin</p>
                 </div>
             </label>
         </div>

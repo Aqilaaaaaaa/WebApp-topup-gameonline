@@ -7,7 +7,7 @@ export default function handler(req, res) {
     switch (method) {
         case 'GET':
             res.status(200).json(products)
-            console.log(products);
+            
             break;
         case 'POST':
             const newProduct = {
