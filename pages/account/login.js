@@ -73,7 +73,7 @@ function Login({id}) {
                             <div className="container mx-auto">
                                 <div className="pb-50">
                                     <Link className="navbar-brand" href="/#">
-                                        <img src="/icon/logoo.png" width={100} height={100}/>
+                                        <img src="/icon/logo.svg" width={100} height={100}/>
                                     </Link>
                                 </div>
                                 <h2 className="text-4xl fw-bold color-palette-1 mb-10">Sign In</h2>

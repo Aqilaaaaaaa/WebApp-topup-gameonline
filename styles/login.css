@@ -28,7 +28,7 @@
 
 .login input[type="password"]::placeholder,
 .login input[type="email"]::placeholder{
-    color: #CCD0DD;
+    color: #E7EAF5;
 }
 
 .login .btn-login{

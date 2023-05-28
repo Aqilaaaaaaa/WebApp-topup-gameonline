@@ -39,7 +39,7 @@ export default function Auth(){
         userService.logout();
       
     }
-    console.log(logOut)
+    
 
     return (
         <li className="nav-item my-auto dropdown d-flex">

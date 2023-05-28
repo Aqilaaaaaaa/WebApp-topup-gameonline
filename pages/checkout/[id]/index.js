@@ -104,7 +104,7 @@ export default function index({product}) {
                         <button className="border-0 bg-transparent mt-20"><IoIosArrowBack size={30}/></button>
                     </Link>
                     <Link href="/#">
-                        <img src="/icon/logoo.png" className="logo" width={130} height={100}/>
+                        <img src="/icon/logo.svg" className="logo" width={130} height={100}/>
                     </Link>
                 </div>
                 <div className="title-text pt-md-50 pt-0">
@@ -121,10 +121,14 @@ export default function index({product}) {
                     <DetailPayment label="Price" value={titikPrice(priceFilter(data.priceList))}/>
                     <DetailPayment label="Total Price" value={titikPrice(total)}/>
                     <h2 className="fw-bold text-xl text-danger color-palette-1 mb-20">Use Your Own Coin?</h2>
-                    <label className="checkbox-label text-lg color-palette-1">{titikPrice(sumCoin(localData))} cash coin
-                        <input onChange={handleCheckPoint} type="checkbox" name="type"/>
+                    {/* <label className="checkbox-label text-lg color-palette-1">{titikPrice(sumCoin(localData))} cash coin
+                        <input onChange={handleCheckPoint} type="checkbox" role="switch" name="type"/>
                         <span className="checkmark"></span>
-                    </label>
+                    </label> */}
+                    <div className="form-check form-switch">
+                        <input className="form-check-input" onChange={handleCheckPoint} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                        <label className="form-check-label" for="flexSwitchCheckDefault">{titikPrice(sumCoin(localData))} cash coin</label>
+                    </div>
                     
                 </div>
                 <div className="payment pt-md-50 pb-md-50 pt-10 pb-10">

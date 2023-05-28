@@ -10,7 +10,7 @@ export default function Footer(){
                         <div className="row">
                             <div className="col-lg-4 text-lg-start text-center">
                                 <Link href="" className="mb-30">
-                                    <Image src="/icon/logoo.png" width={130} height={130}/>
+                                    <Image src="/icon/logo.svg" width={130} height={130}/>
                                 </Link>
                                 
                                 <p className="mt-30 text-light mb-30">Copyright 2023. All Rights Reserved.</p>

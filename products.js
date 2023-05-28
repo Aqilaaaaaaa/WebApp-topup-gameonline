@@ -11,28 +11,28 @@ export const products = [
                 item :"20",
                 itemName : "Diamond",
                 price : 10000,
-                coin : 2
+                coin : 20
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Diamond",
                 price : 27000,
-                coin : 20
+                coin : 200
             },
             {
                 idProduct : 3,
                 item :"80",
                 itemName : "Diamond",
                 price : 5000,
-                coin : 45
+                coin : 450
             },
             {
                 idProduct : 4,
                 item :"100",
                 itemName : "Diamond",
                 price : 80000,
-                coin : 120
+                coin : 1200
             },
             {
                 idProduct : 5,
@@ -87,28 +87,28 @@ export const products = [
                 item :"20",
                 itemName : "Gems",
                 price : 10000,
-                coin : 1
+                coin : 10
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Gems",
                 price : 27000,
-                coin : 3
+                coin : 300
             },
             {
                 idProduct : 3,
                 item :"400",
                 itemName : "Gems",
                 price : 240000,
-                coin : 200
+                coin : 2000
             },
             {
                 idProduct : 4,
                 item :"80",
                 itemName : "Gems",
                 price : 40000,
-                coin : 45
+                coin : 4500
             },
         ],
         payment : [
@@ -156,21 +156,21 @@ export const products = [
                 item :"20",
                 itemName : "CP",
                 price : 10000,
-                coin : 1
+                coin : 10
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "CP",
                 price : 27000,
-                coin : 3
+                coin : 30
             },
             {
                 idProduct : 3,
                 item :"400",
                 itemName : "CP",
                 price : 240000,
-                coin : 200
+                coin : 2000
             }
         ],
         payment : [
@@ -218,21 +218,21 @@ export const products = [
                 item :"20",
                 itemName : "Energy Crystal",
                 price : 10000,
-                coin : 1
+                coin : 10
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Energy Crystal",
                 price : 27000,
-                coin : 3
+                coin : 30
             },
             {
                 idProduct : 3,
                 item :"400",
                 itemName : "Energy Crystal",
                 price : 240000,
-                coin : 3
+                coin : 3000
             }
         ],
         payment : [
@@ -280,35 +280,35 @@ export const products = [
                 item :"20",
                 itemName : "Candy",
                 price : 1000,
-                coin : 1
+                coin : 10
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Candy",
                 price : 27000,
-                coin : 3
+                coin : 30
             },
             {
                 idProduct : 3,
                 item :"100",
                 itemName : "Candy",
                 price : 50000,
-                coin : 50
+                coin : 500
             },
             {
                 idProduct : 4,
                 item :"200",
                 itemName : "Candy",
                 price : 99000,
-                coin : 75
+                coin : 750
             },
             {
                 idProduct : 5,
                 item :"400",
                 itemName : "Candy",
                 price : 240000,
-                coin : 200
+                coin : 2000
             }
         ],
         payment : [
@@ -356,21 +356,21 @@ export const products = [
                 item :"20",
                 itemName : "Wild Cores",
                 price : 1000,
-                coin : 1
+                coin : 10
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Wild Cores",
                 price : 27000,
-                coin : 3
+                coin : 30
             },
             {
                 idProduct : 3,
                 item :"400",
                 itemName : "Wild Cores",
                 price : 240000,
-                coin : 200
+                coin : 2000
             }
         ],
         payment : [
@@ -418,28 +418,28 @@ export const products = [
                 item :"20",
                 itemName : "Steam Wallet",
                 price : 1000,
-                coin : 1
+                coin : 10
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Steam Wallet",
                 price : 27000,
-                coin : 3
+                coin : 30
             },
             {
                 idProduct : 3,
                 item :"400",
                 itemName : "Steam Wallet",
                 price : 240000,
-                coin : 200
+                coin : 2000
             },
             {
                 idProduct : 4,
-                item :"400",
+                item :"500",
                 itemName : "Steam Wallet",
-                price : 240000,
-                coin : 200
+                price : 280000,
+                coin : 4000
             }
         ],
         payment : [
@@ -487,28 +487,28 @@ export const products = [
                 item :"20",
                 itemName : "Points",
                 price : 1000,
-                coin : 1
+                coin : 10
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Points",
                 price : 27000,
-                coin : 3
+                coin : 30
             },
             {
                 idProduct : 3,
                 item :"400",
                 itemName : "Points",
                 price : 240000,
-                coin : 200
+                coin : 2000
             },
             {
                 idProduct : 4,
                 item :"400",
                 itemName : "Points",
-                price : 240000,
-                coin : 200
+                price : 280000,
+                coin : 4000
             }
         ],
         payment : [
@@ -556,35 +556,35 @@ export const products = [
                 item :"20",
                 itemName : "Diamond",
                 price : 10000,
-                coin : 1
+                coin : 20
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Diamond",
                 price : 27000,
-                coin : 3
+                coin : 200
             },
             {
                 idProduct : 3,
-                item :"400",
+                item :"80",
                 itemName : "Diamond",
-                price : 240000,
-                coin : 200
+                price : 5000,
+                coin : 450
             },
             {
                 idProduct : 4,
-                item :"400",
+                item :"100",
                 itemName : "Diamond",
-                price : 240000,
-                coin : 200
+                price : 80000,
+                coin : 1200
             },
             {
                 idProduct : 5,
                 item :"400",
                 itemName : "Diamond",
                 price : 240000,
-                coin : 200
+                coin : 2000
             }
         ],
         payment : [
@@ -1253,35 +1253,35 @@ export const products = [
                 item :"20",
                 itemName : "Diamond",
                 price : 10000,
-                coin : 1
+                coin : 20
             },
             {
                 idProduct : 2,
                 item :"50",
                 itemName : "Diamond",
                 price : 27000,
-                coin : 3
+                coin : 200
             },
             {
                 idProduct : 3,
-                item :"400",
+                item :"80",
                 itemName : "Diamond",
-                price : 240000,
-                coin : 200
+                price : 5000,
+                coin : 450
             },
             {
                 idProduct : 4,
-                item :"400",
+                item :"100",
                 itemName : "Diamond",
-                price : 240000,
-                coin : 200
+                price : 80000,
+                coin : 1200
             },
             {
                 idProduct : 5,
                 item :"400",
                 itemName : "Diamond",
                 price : 240000,
-                coin : 200
+                coin : 2000
             }
         ],
         payment : [
