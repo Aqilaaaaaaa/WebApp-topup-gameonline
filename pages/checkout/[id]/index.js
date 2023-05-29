@@ -12,20 +12,42 @@ export default function index({product}) {
     const [localData, setLocalData] = useState()
     const [total, setTotal] = useState()
     const [isCheckPoint, setIsCheckPoint] = useState(false)
+    const [point, setPoint] = useState()
     const router = useRouter()
+
+    console.log('checkpoint1', isCheckPoint)
+    
     // console.log(router)
     // console.log(data)
     // console.log('data')
 
-    const handleCheckPoint =(e)=>{
-        setIsCheckPoint(e.target.checked)
+    useEffect(()=>{
+        getItemLocal()
+        setPoint(sumCoin(localData))
+    },[])
+
+    const handleCheckPoint =()=>{
+        setIsCheckPoint(!isCheckPoint)
         let temp = 0
-        if(isCheckPoint == true){
+        if(isCheckPoint == false){
             temp = priceFilter(data.priceList) - sumCoin(localData)
             setTotal(temp)
-            
-            // console.log('coin',sumCoin(localData))
-            // console.log('price',data.priceList)
+            setPoint(0)
+
+        }else {
+            temp = priceFilter(data.priceList) 
+            setTotal(temp)
+            setPoint(sumCoin(localData))
+        }
+        
+    }
+    console.log('checkpoint2', isCheckPoint)
+
+    const totalPrice =()=>{
+        if(isCheckPoint == true){
+            return total
+        }else{
+            return (data.priceList)
         }
     }
 
@@ -35,11 +57,6 @@ export default function index({product}) {
         const temp = parseData?.filter((data)=>data.email == userService?.userValue.email)
         setLocalData(temp)
     }
-
-    useEffect(()=>{
-        getItemLocal()
-    },[])
-
     
     const sumCoin =(data)=>{
         if(data){
@@ -65,7 +82,9 @@ export default function index({product}) {
             name: data.name,
             price: priceFilter(data.priceList),
             itemName: itemNameMap(data.priceList),
-            coin: cointMap(data.priceList)
+            coin: cointMap(data.priceList),
+            resetCoin: point,
+            totalPrice: total
         }
         const dataLocalStorage = localStorage.getItem('history_payment')
         const historyData = dataLocalStorage?[...JSON.parse(dataLocalStorage), temp]:[temp]

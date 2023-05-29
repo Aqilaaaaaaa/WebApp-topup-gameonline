@@ -26,11 +26,15 @@ const History = () => {
           data?.forEach(element => {
             sum+=element.coin
           });
+          if(data.resetCoin == 0){
+            return 0
+          }
           return sum
         }else{
           return 0
         }
     }
+    console.log(data?.resetCoin)
 
     const getItemLocal =()=>{
         const item = localStorage.getItem('history_payment')
@@ -42,6 +46,7 @@ const History = () => {
         getItemLocal()
     },[])
 
+    console.log(data)
     return (
         <>
             <section className="overview overflow-auto">
@@ -68,7 +73,7 @@ const History = () => {
                                     </thead>
                                     <tbody>
                                         {data?.map((data, i)=>(
-                                            <HistoryRow title={data.name} type={data.type} item={`${data.item}`.concat(' ',data.itemName)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
+                                            <HistoryRow title={data.name} type={data.type} item={`${data.item}`.concat(' ',data.itemName)} price={titikPrice(data.total)} coin={data.coin} status={"Success"}/>
                                             // <tr className="align-middle text-center">
                                             //     <th scope="row">
                                             //         <div className="game-title-header">
