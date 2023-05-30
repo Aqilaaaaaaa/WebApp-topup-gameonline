@@ -1,7 +1,7 @@
 import { userService } from '@/services';
 import { useEffect, useState } from 'react';
-import HistoryTotal from './historyTotal';
 import HistoryRow from './historyRow';
+import HistoryTotal from './historyTotal';
 
 const History = () => {
     const [data, setData] = useState()
@@ -10,32 +10,48 @@ const History = () => {
         return numb?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     }
     const sumPrice =(data)=>{
+        let sum=0
         if(data){
-          let sum=0
           data?.forEach(element => {
-            sum+=element.price
+            if(!element.totalPrice){
+                sum+=element.price
+            }
           });
-          return sum
+           return sum
         }else{
-          return 0
+          return sum = 0
         }
     }
-
+    const sumTotalPrice =(data)=>{
+        let sum=0
+        if(data){
+            data?.forEach(element => {
+                if(element.totalPrice){
+                    sum+=element.totalPrice
+                }
+            })
+            return sum
+        }else{
+            return sum
+        }
+    }
+    const sumAllPrice =(data)=>{
+        let temp = sumPrice(data) + sumTotalPrice(data)
+        return temp
+    }
     const sumCoin =(data)=>{
         if(data){
           let sum=0
           data?.forEach(element => {
-            sum+=element.coin
+            if(!element.resetCoin){
+                sum+=element.coin
+            }
           })
-          if(data.resetCoin === 0){
-            return 0
-          }
           return sum
         }else{
           return 0
         }
     }
-
     const getItemLocal =()=>{
         const item = localStorage.getItem('history_payment')
         const parseData = JSON.parse(item)
@@ -55,7 +71,7 @@ const History = () => {
                         <div className="top-up-categories mb-30">
                             <h2 className="text-4xl fw-bold color-palette-1 mb-30">History Purchase</h2>
                             <div className="wrapper">
-                                <HistoryTotal title="Total Spent" total={titikPrice(sumPrice(data))}/>
+                                <HistoryTotal title="Total Spent" total={titikPrice(sumAllPrice(data))}/>
                                 <HistoryTotal title="Total Cash Coin" total={titikPrice(sumCoin(data))}/>
                             </div>
                         </div>

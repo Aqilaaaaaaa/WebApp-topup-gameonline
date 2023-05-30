@@ -15,11 +15,7 @@ export default function index({product}) {
     const [point, setPoint] = useState()
     const router = useRouter()
 
-    console.log('checkpoint1', isCheckPoint)
-    
-    // console.log(router)
-    // console.log(data)
-    // console.log('data')
+
     const priceFilter = (temp)=>{
         const x = temp?.find((data)=>(data.item == router.query.item))
         return x.price
@@ -57,16 +53,6 @@ export default function index({product}) {
         }
         
     }
-    // console.log((priceFilter(data.priceList)))
-    console.log('checkpoint2', isCheckPoint)
-
-    // const totalPrice =()=>{
-    //     if(isCheckPoint == true){
-    //         return total
-    //     }else{
-    //         return (data.priceList)
-    //     }
-    // }
 
     const getItemLocal =()=>{
         const item = localStorage.getItem('history_payment')
