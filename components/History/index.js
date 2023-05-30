@@ -7,7 +7,7 @@ const History = () => {
     const [data, setData] = useState()
 
     const titikPrice =(numb)=>{
-        return numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+        return numb?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     }
     const sumPrice =(data)=>{
         if(data){
@@ -20,13 +20,14 @@ const History = () => {
           return 0
         }
     }
+
     const sumCoin =(data)=>{
         if(data){
           let sum=0
           data?.forEach(element => {
             sum+=element.coin
-          });
-          if(data.resetCoin == 0){
+          })
+          if(data.resetCoin === 0){
             return 0
           }
           return sum
@@ -34,7 +35,6 @@ const History = () => {
           return 0
         }
     }
-    console.log(data?.resetCoin)
 
     const getItemLocal =()=>{
         const item = localStorage.getItem('history_payment')
@@ -73,7 +73,7 @@ const History = () => {
                                     </thead>
                                     <tbody>
                                         {data?.map((data, i)=>(
-                                            <HistoryRow title={data.name} type={data.type} item={`${data.item}`.concat(' ',data.itemName)} price={titikPrice(data.total)} coin={data.coin} status={"Success"}/>
+                                            <HistoryRow title={data.name} type={data.type} item={`${data.item}`.concat(' ',data.itemName)} totalPrice={titikPrice(data.totalPrice)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
                                             // <tr className="align-middle text-center">
                                             //     <th scope="row">
                                             //         <div className="game-title-header">

@@ -1,6 +1,6 @@
 import cx from "classnames";
 
-const HistoryRow = ({title, type, item, price, coin, status }) => {
+const HistoryRow = ({title, type, item, price, coin, status, totalPrice}) => {
     const props = {
         status: ["Succes", 'Pending', "Failed"]
 
@@ -27,7 +27,8 @@ const HistoryRow = ({title, type, item, price, coin, status }) => {
                     <p className="fw-medium color-palette-1 m-0">{item}</p>
                 </td>
                 <td>
-                    <p className="fw-medium text-start color-palette-1 m-0">Rp {price}</p>
+                    {!totalPrice? <p className="fw-medium text-start color-palette-1 m-0">Rp {price}</p>:
+                    <p className="fw-medium text-start color-palette-1 m-0">Rp {totalPrice}</p>}
                 </td>
                 <td>
                     <p className="fw-medium text-start color-palette-1 m-0"> +{coin} coin</p>

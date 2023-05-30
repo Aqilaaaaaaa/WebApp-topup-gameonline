@@ -20,7 +20,23 @@ export default function index({product}) {
     // console.log(router)
     // console.log(data)
     // console.log('data')
-
+    const priceFilter = (temp)=>{
+        const x = temp?.find((data)=>(data.item == router.query.item))
+        return x.price
+    }
+    const itemNameMap = (temp)=>{
+        const x =  temp?.find((data)=>(data.item == router.query.item))
+        return x.itemName
+    }
+    const paymentType =(temp)=>{
+        const x = temp?.find((data)=>data.payName == router.query.paymentMethod)
+        return x.typePay
+    }
+    const cointMap =(temp)=>{
+        const x =  temp?.find((data)=>(data.item == router.query.item))
+        return x.coin
+    }
+    
     useEffect(()=>{
         getItemLocal()
         setPoint(sumCoin(localData))
@@ -28,12 +44,12 @@ export default function index({product}) {
 
     const handleCheckPoint =()=>{
         setIsCheckPoint(!isCheckPoint)
+        
         let temp = 0
         if(isCheckPoint == false){
             temp = priceFilter(data.priceList) - sumCoin(localData)
             setTotal(temp)
             setPoint(0)
-
         }else {
             temp = priceFilter(data.priceList) 
             setTotal(temp)
@@ -41,15 +57,16 @@ export default function index({product}) {
         }
         
     }
+    // console.log((priceFilter(data.priceList)))
     console.log('checkpoint2', isCheckPoint)
 
-    const totalPrice =()=>{
-        if(isCheckPoint == true){
-            return total
-        }else{
-            return (data.priceList)
-        }
-    }
+    // const totalPrice =()=>{
+    //     if(isCheckPoint == true){
+    //         return total
+    //     }else{
+    //         return (data.priceList)
+    //     }
+    // }
 
     const getItemLocal =()=>{
         const item = localStorage.getItem('history_payment')
@@ -94,24 +111,6 @@ export default function index({product}) {
         localStorage.setItem('history_payment', JSON.stringify(historyData))
     }
     
-    
-    const priceFilter = (temp)=>{
-        const x = temp?.find((data)=>(data.item == router.query.item))
-        return x.price
-    }
-    const itemNameMap = (temp)=>{
-        const x =  temp?.find((data)=>(data.item == router.query.item))
-        return x.itemName
-    }
-    const paymentType =(temp)=>{
-        const x = temp?.find((data)=>data.payName == router.query.paymentMethod)
-        return x.typePay
-    }
-    const cointMap =(temp)=>{
-        const x =  temp?.find((data)=>(data.item == router.query.item))
-        return x.coin
-    }
-    // console.log(localData)
     // console.log(sumCoin(localData))
 
     
@@ -138,7 +137,8 @@ export default function index({product}) {
                     <DetailPayment label="Order ID" value={router.query.idOrder}/>
                     <DetailPayment label="Item" value={`${router.query.item}`.concat(' ',itemNameMap(data.priceList))}/>
                     <DetailPayment label="Price" value={titikPrice(priceFilter(data.priceList))}/>
-                    <DetailPayment label="Total Price" value={titikPrice(total)}/>
+                    {isCheckPoint? <DetailPayment label="Total Price" value={titikPrice(total)}/>:
+                    <DetailPayment label="Total Price" value={titikPrice(priceFilter(data.priceList))}/>}
                     <h2 className="fw-bold text-xl text-danger color-palette-1 mb-20">Use Your Own Coin?</h2>
                     {/* <label className="checkbox-label text-lg color-palette-1">{titikPrice(sumCoin(localData))} cash coin
                         <input onChange={handleCheckPoint} type="checkbox" role="switch" name="type"/>
