@@ -84,7 +84,7 @@ const History = () => {
                             <h2 className="text-4xl fw-bold color-palette-1 mb-30">History Purchase</h2>
                             <div className="wrapper">
                                 <HistoryTotal title="Total Spent" total={titikPrice(sumAllPrice(data))}/>
-                                <HistoryTotal title="Total Cash Coin" total={allCoin(data)}/>
+                                <HistoryTotal title="Total Cash Coin" total={titikPrice(allCoin(data))}/>
                             </div>
                         </div>
                         <div className="latest-transaction">

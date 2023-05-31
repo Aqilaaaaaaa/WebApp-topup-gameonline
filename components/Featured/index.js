@@ -22,10 +22,10 @@ const Featured = ({dataProduct}) => {
 
     return (
         <>
-            <section className="featured-game pt-50 pb-50">
-                <div className="container-fluid">
-                    <h2 className="text-4xl fw-bold color-palette-1 mb-30">Our Featured Games</h2>
-                    <div className="container overflow-setting justify-content-lg-between gap-lg-3 gap-4"
+            <section id="featured-game" className="featured-game pt-50 pb-50">
+                <div className="container-fluid ">
+                    <h2 className="text-4xl text-center fw-bold color-palette-1 mb-30">Our Featured Games</h2>
+                    <div className="container"
                         data-aos="fade-up">
                         <div className="container-btnR" >
                             <button className="pre-button border-0 bg-transparent" onClick={() => swiperRef.current?.slidePrev()}><IoIosArrowBack size={30}/></button>
@@ -60,13 +60,12 @@ const Featured = ({dataProduct}) => {
                         >
                             {dataProduct?.map((data, idx) => {
                                 return (
-                                    <SwiperSlide key={idx} className="m-auto p-4" >
+                                    <SwiperSlide key={idx} className="swiperSlide m-auto p-4" >
                                         <CardFeatured id={data.id} img={data.img} icon="icon/stick.svg" title={data.name} type={data.type}/>
                                     </SwiperSlide>
                                 )
                             })}
                             
-                                
                         </Swiper>
                         <div className="container-btnL">
                             <button className="nxt-button border-0 bg-transparent" onClick={() => swiperRef.current?.slideNext()}><IoIosArrowForward size={30}/></button>

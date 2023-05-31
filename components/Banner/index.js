@@ -25,7 +25,7 @@ export default function Banner(){
                             <div className="d-flex flex-lg-row flex-column gap-4">
                                 
                                 <Link className="btn btn-get text-lg text-black shadow-sm rounded-pill" 
-                                    href="#feature" 
+                                    href="#featured-game" 
                                     role="button">
                                     Lets Go
                                 </Link>

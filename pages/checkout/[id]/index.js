@@ -149,7 +149,7 @@ export default function index({product}) {
                     </label> */}
                     <div className="form-check form-switch">
                         <input className="form-check-input" onChange={handleCheckPoint} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                        <label className="form-check-label" for="flexSwitchCheckDefault">{allCoin(localData)}</label>
+                        <label className="form-check-label" for="flexSwitchCheckDefault">Rp {titikPrice(allCoin(localData))}</label>
                     </div>
                     
                 </div>

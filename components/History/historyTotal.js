@@ -12,7 +12,7 @@ const HistoryTotal = ({title, total}) => {
                                 <p className="color-palette-1 mb-0 ms-12">{title}</p>
                             </div>
                             <div>
-                                <p className="text-2xl color-palette-1 fw-medium m-0">{total}</p>
+                                <p className="text-2xl color-palette-1 fw-medium m-0">Rp {total}</p>
                             </div>
                         </div>
                     </div>

@@ -25,8 +25,13 @@
         right: 0px;
         /* border-radius: 0 0 2rem 2rem ; */
     }
+
 }
 
+.navbar .navbar-toggler{
+    position: absolute;
+    right: 100px;
+}
 /* Header */
 
 .header .header-title{
@@ -77,6 +82,12 @@
     left: auto;
     right: auto;
 }
+
+@media (max-width:768px){
+    .header {
+        text-align: center;
+    }
+}
 /*  */
 
 
@@ -88,6 +99,11 @@
     margin-right: 16px;
     height: 300px;
 }
+
+.feature .guide {
+    position: relative;
+    z-index: -9999;
+}
 /*  */
 
 
@@ -95,11 +111,6 @@
 .featured-game .overflow-setting{
     overflow-x: auto;
     overflow-y: hidden;
-}
-
-.feature .guide {
-    position: relative;
-    z-index: -9999;
 }
 
 .featured-game .featured-game-card{
@@ -135,12 +146,16 @@
     z-index: 1px;
     right: 10px;
 }
+.featured-game .container{
+    width: 100%;
+}
 
 .featured-game .swiper{
    margin: 40px;
    display: flex;
 
 }
+
 
 .featured-game .featured-game-card .blur-sharp{
     overflow: hidden;

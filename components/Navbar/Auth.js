@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 export default function Auth(){
     
-    const [isLogin, setIsLogin] = useState();
     const [data, setData] = useState()
 
     const getItemLocal =()=>{
@@ -60,7 +59,6 @@ export default function Auth(){
                         className="rounded-circle" width="40" height="40"
                        alt=""/>
                 </Link>
-
                 <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
                     <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">Cash Coin : Rp {titikPrice(allCoin(data))}</Link></li>
                     <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">History Purchase</Link></li>
