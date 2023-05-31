@@ -1,6 +1,6 @@
 import CardFeatured from "./cardFeatured";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";

@@ -2,14 +2,14 @@ import cx from "classnames";
 
 const HistoryRow = ({title, type, item, price, coin, status, totalPrice}) => {
     const props = {
-        status: ["Succes", 'Pending', "Failed"]
+        status: ["Succes", "Pending", "Failed"]
 
     }
     const statusClass = cx ({
-        'float-start icon-status': true,
-        'pending': status === 'Pending',
-        'succes': status === 'Success',
-        'failed': status === 'Failed'
+        "float-start icon-status": true,
+        "pending": status === "Pending",
+        "succes": status === "Success",
+        "failed": status === "Failed"
     })
     return (
         <>

@@ -1,12 +1,12 @@
-import { useRouter } from 'next/router';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { alertService, userService } from 'services';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from "next/router";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { alertService, userService } from "services";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 export default Login;
@@ -35,18 +35,18 @@ function Login({id}) {
       const clearAlerts = () => {
         setTimeout(() => alertService.clear(id));
       };
-      router.events.on('routeChangeStart', clearAlerts);
+      router.events.on("routeChangeStart", clearAlerts);
 
       return ()=>{
         subscription.unsubscribe()
-        router.events.off('routeChangeStart', clearAlerts)
+        router.events.off("routeChangeStart", clearAlerts)
       }
     },[]);
 
     // form validation rules 
     const validationSchema = Yup.object().shape({
-        email: Yup.string().required('email is required'),
-        password: Yup.string().required('Password is required')
+        email: Yup.string().required("email is required"),
+        password: Yup.string().required("Password is required")
     });
     const formOptions = { resolver: yupResolver(validationSchema) };
 
@@ -57,8 +57,8 @@ function Login({id}) {
     function onSubmit({ email, password }) {
         return userService.login(email, password)
             .then(() => {
-                // get return url from query parameters or default to '/'
-                const returnUrl = router.query.returnUrl || '/';
+                // get return url from query parameters or default to "/"
+                const returnUrl = router.query.returnUrl || "/";
                 router.push(returnUrl);
             })
             .catch(alertService.error);
@@ -81,12 +81,12 @@ function Login({id}) {
 
                                 <div className="pt-50">
                                     <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">email</label>
-                                    <input name="email" type="email" {...register('email')} className={`form-control rounded-pill text-lg ${errors.email ? 'is-invalid' : ''}`} aria-describedby="email" placeholder="Enter your email"/>
+                                    <input name="email" type="email" {...register("email")} className={`form-control rounded-pill text-lg ${errors.email ? "is-invalid" : ""}`} aria-describedby="email" placeholder="Enter your email"/>
                                     <div className="invalid-feedback">{errors.email?.message}</div>
                                 </div>
                                 <div className="pt-20">
                                     <label id="password" className="form-label text-lg fw-medium color-palette-1 mb-10">Password</label>
-                                    <input name="password" type="password" {...register('password')} className={`form-control rounded-pill text-lg ${errors.password ? 'is-invalid' : ''}`} aria-describedby="password" placeholder="Enter your password"/>
+                                    <input name="password" type="password" {...register("password")} className={`form-control rounded-pill text-lg ${errors.password ? "is-invalid" : ""}`} aria-describedby="password" placeholder="Enter your password"/>
                                     <div className="invalid-feedback">{errors.password?.message}</div>
                                 </div>
                                 <div className="button-group d-flex flex-column mx-auto pt-30 pb-30">

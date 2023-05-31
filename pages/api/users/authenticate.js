@@ -1,8 +1,8 @@
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-import getConfig from 'next/config';
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
+import getConfig from "next/config";
 
-import { apiHandler, usersRepo } from 'helpers/api';
+import { apiHandler, usersRepo } from "helpers/api";
 
 const { serverRuntimeConfig } = getConfig();
 
@@ -16,11 +16,11 @@ function authenticate(req, res) {
 
     // validate login
     if (!(user && bcrypt.compareSync(password, user.hash))) {
-        throw 'email or password is incorrect';
+        throw "email or password is incorrect";
     }
 
     // create a jwt token that is valid for 7 days
-    const token = jwt.sign({ sub: user.id }, serverRuntimeConfig.secret, { expiresIn: '7d' });
+    const token = jwt.sign({ sub: user.id }, serverRuntimeConfig.secret, { expiresIn: "7d" });
 
     // return basic user details and token
     return res.status(200).json({

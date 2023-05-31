@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "eslint": "eslint .",
     "eslint-fix": "eslint --fix \"src/**/*.js\""
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "classnames": "^2.3.2",
     "cx": "^23.3.1",
     "eslint": "8.33.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-next": "13.1.6",
     "express-jwt": "^8.4.1",
     "fanpm": "^1.0.3",
@@ -42,5 +44,8 @@
     "styled-components": "^5.3.9",
     "swiper": "^9.1.0",
     "yup": "^1.1.1"
+  },
+  "devDependencies": {
+    "eslint-config-react-app": "^7.0.1"
   }
 }

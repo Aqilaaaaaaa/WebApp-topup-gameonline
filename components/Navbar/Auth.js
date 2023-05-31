@@ -8,7 +8,7 @@ export default function Auth(){
     const [data, setData] = useState()
 
     const getItemLocal =()=>{
-        const item = localStorage.getItem('history_payment')
+        const item = localStorage.getItem("history_payment")
         const parseData = JSON.parse(item)
         const temp = parseData?.filter((data)=>data.email == userService?.userValue.email)
         setData(temp)
@@ -41,7 +41,7 @@ export default function Auth(){
         return (sumCoin(data)-(totalCoin(data)))
     }
     const titikPrice =(numb)=>{
-        return numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+        return numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
     }
     function logOut (){
         userService.logout();

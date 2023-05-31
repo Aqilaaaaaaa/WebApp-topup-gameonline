@@ -55,7 +55,7 @@ export default function index({product}) {
     }
 
     const getItemLocal =()=>{
-        const item = localStorage.getItem('history_payment')
+        const item = localStorage.getItem("history_payment")
         const parseData = JSON.parse(item)
         const temp = parseData?.filter((data)=>data.email == userService?.userValue.email)
         setLocalData(temp)
@@ -90,7 +90,7 @@ export default function index({product}) {
     }
     
     const titikPrice =(numb)=>{
-        return numb?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+        return numb?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
     }
     
     const onCheckout =()=>{
@@ -106,16 +106,13 @@ export default function index({product}) {
             resetCoin: point,
             totalPrice: total
         }
-        const dataLocalStorage = localStorage.getItem('history_payment')
+        const dataLocalStorage = localStorage.getItem("history_payment")
         const historyData = dataLocalStorage?[...JSON.parse(dataLocalStorage), temp]:[temp]
         if(dataLocalStorage){
-            localStorage.removeItem('history_payment')
+            localStorage.removeItem("history_payment")
         }
-        localStorage.setItem('history_payment', JSON.stringify(historyData))
+        localStorage.setItem("history_payment", JSON.stringify(historyData))
     }
-    
-    // console.log(sumCoin(localData))
-
     
     return (
         <section className="checkout mx-auto pt-md-100 pb-md-145 pt-30 pb-30">
@@ -138,7 +135,7 @@ export default function index({product}) {
                     <h2 className="fw-bold text-xl color-palette-1 mb-20">Purchase Details</h2>
                     <DetailPayment label="Your Game ID" value={router.query.idGame}/>
                     <DetailPayment label="Order ID" value={router.query.idOrder}/>
-                    <DetailPayment label="Item" value={`${router.query.item}`.concat(' ',itemNameMap(data.priceList))}/>
+                    <DetailPayment label="Item" value={`${router.query.item}`.concat(" ",itemNameMap(data.priceList))}/>
                     <DetailPayment label="Price" value={titikPrice(priceFilter(data.priceList))}/>
                     {isCheckPoint? <DetailPayment label="Total Price" value={titikPrice(total)}/>:
                     <DetailPayment label="Total Price" value={titikPrice(priceFilter(data.priceList))}/>}
@@ -166,7 +163,7 @@ export default function index({product}) {
     )
 }
 export async function getServerSideProps({params}){
-    const res = await fetch('http://localhost:3000/api/product/'+params.id)
+    const res = await fetch("http://localhost:3000/api/product/"+params.id)
     const product = await res.json()
     return {
       props:{

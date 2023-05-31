@@ -1,13 +1,13 @@
-import { userService } from '@/services';
-import { useEffect, useState } from 'react';
-import HistoryRow from './historyRow';
-import HistoryTotal from './historyTotal';
+import { userService } from "@/services";
+import { useEffect, useState } from "react";
+import HistoryRow from "./historyRow";
+import HistoryTotal from "./historyTotal";
 
 const History = () => {
     const [data, setData] = useState()
 
     const titikPrice =(numb)=>{
-        return numb?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+        return numb?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
     }
     const sumPrice =(data)=>{
         let sum=0
@@ -63,9 +63,9 @@ const History = () => {
     const allCoin =(data)=>{
         return (sumCoin(data)-(totalCoin(data)))
     }
-    // console.log('total coin now', allCoin(data))
+    
     const getItemLocal =()=>{
-        const item = localStorage.getItem('history_payment')
+        const item = localStorage.getItem("history_payment")
         const parseData = JSON.parse(item)
         const temp = parseData?.filter((data)=>data.email == userService?.userValue.email)
         setData(temp)
@@ -73,8 +73,6 @@ const History = () => {
     useEffect(()=>{
         getItemLocal()
     },[])
-
-    console.log(data)
     return (
         <>
             <section className="overview overflow-auto">
@@ -101,7 +99,7 @@ const History = () => {
                                     </thead>
                                     <tbody>
                                         {data?.map((data, i)=>(
-                                            <HistoryRow title={data.name} type={data.type} item={`${data.item}`.concat(' ',data.itemName)} totalPrice={titikPrice(data.totalPrice)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
+                                            <HistoryRow title={data.name} type={data.type} item={`${data.item}`.concat(" ",data.itemName)} totalPrice={titikPrice(data.totalPrice)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
                                             // <tr className="align-middle text-center">
                                             //     <th scope="row">
                                             //         <div className="game-title-header">
@@ -110,7 +108,7 @@ const History = () => {
                                             //         </div>
                                             //     </th>
                                             //     <td>
-                                            //         <p className="fw-medium text-start color-palette-1 m-0">{`${data.item}`.concat(' ',data.itemName)}</p>
+                                            //         <p className="fw-medium text-start color-palette-1 m-0">{`${data.item}`.concat(" ",data.itemName)}</p>
                                             //     </td>
                                             //     <td>
                                             //         <p className="fw-medium text-start color-palette-1 m-0">Rp {titikPrice(data.price)}</p>

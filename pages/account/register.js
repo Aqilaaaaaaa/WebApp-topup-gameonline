@@ -1,12 +1,12 @@
-import { yupResolver } from '@hookform/resolvers/yup';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { alertService, userService } from 'services';
-import * as Yup from 'yup';
+import { yupResolver } from "@hookform/resolvers/yup";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { alertService, userService } from "services";
+import * as Yup from "yup";
 
 export default Register;
 
@@ -34,26 +34,23 @@ function Register({id}) {
       const clearAlerts = () => {
         setTimeout(() => alertService.clear(id));
       };
-      router.events.on('routeChangeStart', clearAlerts);
+      router.events.on("routeChangeStart", clearAlerts);
 
       return ()=>{
         subscription.unsubscribe()
-        router.events.off('routeChangeStart', clearAlerts)
+        router.events.off("routeChangeStart", clearAlerts)
       }
     },[]);
-    console.log(alerts)
-    // if (!alerts.length) return null;
-
 
     // form validation rules 
     const validationSchema = Yup.object().shape({
         name: Yup.string()
-            .required('Name is required'),
+            .required("Name is required"),
         email: Yup.string()
-            .required('email is required'),
+            .required("email is required"),
         password: Yup.string()
-            .required('Password is required')
-            .min(6, 'Password must be at least 6 characters')
+            .required("Password is required")
+            .min(6, "Password must be at least 6 characters")
     });
     const formOptions = { resolver: yupResolver(validationSchema) };
 
@@ -64,8 +61,8 @@ function Register({id}) {
     function onSubmit(user) {
         return userService.register(user)
             .then(() => {
-                alertService.success('Registration successful', { keepAfterRouteChange: true });
-                router.push('login');
+                alertService.success("Registration successful", { keepAfterRouteChange: true });
+                router.push("login");
             })
             .catch(alertService.error);
     }
@@ -85,17 +82,17 @@ function Register({id}) {
                     <p className="text-lg color-palette-1 m-0">Daftar dan bergabung dengan CashLess</p>
                         <div className="pt-50">
                         <label id="name" className="form-label text-lg fw-medium color-palette-1 mb-10">Name</label>
-                            <input name="name" type="text" {...register('name')} className={`form-control rounded-pill text-lg ${errors.name ? 'is-invalid' : ''}`} aria-describedby="name" placeholder="Enter your name"/>
+                            <input name="name" type="text" {...register("name")} className={`form-control rounded-pill text-lg ${errors.name ? "is-invalid" : ""}`} aria-describedby="name" placeholder="Enter your name"/>
                             <div className="invalid-feedback">{errors.name?.message}</div>
                         </div>
                         <div className="pt-20">
                         <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">Email</label>
-                            <input name="email" type="text" {...register('email')} className={`form-control rounded-pill text-lg ${errors.email ? 'is-invalid' : ''}`} aria-describedby="email" placeholder="Enter your email"/>
+                            <input name="email" type="text" {...register("email")} className={`form-control rounded-pill text-lg ${errors.email ? "is-invalid" : ""}`} aria-describedby="email" placeholder="Enter your email"/>
                             <div className="invalid-feedback">{errors.email?.message}</div>
                         </div>
                         <div className="pt-20">
                             <label id="password" className="form-label text-lg fw-medium color-palette-1 mb-10">Password</label>
-                            <input name="password" type="password" {...register('password')} className={`form-control rounded-pill text-lg ${errors.password ? 'is-invalid' : ''}`} aria-describedby="password" placeholder="Your password" />
+                            <input name="password" type="password" {...register("password")} className={`form-control rounded-pill text-lg ${errors.password ? "is-invalid" : ""}`} aria-describedby="password" placeholder="Your password" />
                             <div className="invalid-feedback">{errors.password?.message}</div>
                         </div>
                         <div className="button-group d-flex flex-column mx-auto pt-50">

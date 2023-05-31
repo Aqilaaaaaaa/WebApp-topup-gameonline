@@ -2,7 +2,7 @@ export const products = [
     {
         id :1,
         name : "MobileLegend",
-        img :'/img/Thumbnail-5.png',
+        img :"/img/Thumbnail-5.png",
         type : "Mobile",
         rate : 5,
         priceList: [
@@ -78,7 +78,7 @@ export const products = [
     {
         id :2,
         name : "Clash Of Clan",
-        img :'/img/Thumbnail-4.png',
+        img :"/img/Thumbnail-4.png",
         type : "Mobile",
         rate : 3,
         priceList: [
@@ -147,7 +147,7 @@ export const products = [
     {
         id :3,
         name : "Modern Warfare",
-        img :'/img/Thumbnail-2.png',
+        img :"/img/Thumbnail-2.png",
         type : "PC",
         rate : 4,
         priceList: [
@@ -209,7 +209,7 @@ export const products = [
     {
         id :4,
         name : "Super Mecha",
-        img :'/img/Thumbnail-1.png',
+        img :"/img/Thumbnail-1.png",
         type : "Mobile",
         rate : 2,
         priceList: [
@@ -271,7 +271,7 @@ export const products = [
     {
         id :13,
         name : "Sausage Man",
-        img :'/img/Thumbnail-6.jpg',
+        img :"/img/Thumbnail-6.jpg",
         type : "Mobile",
         rate : 4,
         priceList: [
@@ -347,7 +347,7 @@ export const products = [
     {
         id :6,
         name : "Wild Trift",
-        img :'/img/Thumbnail-7.jpg',
+        img :"/img/Thumbnail-7.jpg",
         type : "Mobile",
         rate : 5,
         priceList: [
@@ -409,7 +409,7 @@ export const products = [
     {
         id :7,
         name : "Dota 2",
-        img :'/img/Thumbnail-8.jpg',
+        img :"/img/Thumbnail-8.jpg",
         type : "PC",
         rate : 3,
         priceList: [
@@ -478,7 +478,7 @@ export const products = [
     {
         id :8,
         name : "Valorant",
-        img :'/img/Thumbnail-3.jpg',
+        img :"/img/Thumbnail-3.jpg",
         type : "PC",
         rate : 5,
         priceList: [
@@ -547,7 +547,7 @@ export const products = [
     {
         id :9,
         name : "MobileLegend",
-        img :'/img/Thumbnail-5.png',
+        img :"/img/Thumbnail-5.png",
         type : "Mobile",
         rate : 5,
         priceList: [
@@ -623,7 +623,7 @@ export const products = [
     {
         id :10,
         name : "Clash Of Clan",
-        img :'/img/Thumbnail-4.png',
+        img :"/img/Thumbnail-4.png",
         type : "Mobile",
         rate : 3,
         priceList: [
@@ -692,7 +692,7 @@ export const products = [
     {
         id :11,
         name : "Modern Warfare",
-        img :'/img/Thumbnail-2.png',
+        img :"/img/Thumbnail-2.png",
         type : "PC",
         rate : 4,
         priceList: [
@@ -754,7 +754,7 @@ export const products = [
     {
         id :12,
         name : "Super Mecha",
-        img :'/img/Thumbnail-1.png',
+        img :"/img/Thumbnail-1.png",
         type : "Mobile",
         rate : 2,
         priceList: [
@@ -816,7 +816,7 @@ export const products = [
     {
         id :13,
         name : "Sausage Man",
-        img :'/img/Thumbnail-6.jpg',
+        img :"/img/Thumbnail-6.jpg",
         type : "Mobile",
         rate : 4,
         priceList: [
@@ -892,7 +892,7 @@ export const products = [
     {
         id :14,
         name : "Wild Trift",
-        img :'/img/Thumbnail-7.jpg',
+        img :"/img/Thumbnail-7.jpg",
         type : "Mobile",
         rate : 5,
         priceList: [
@@ -968,7 +968,7 @@ export const products = [
     {
         id :15,
         name : "Dota 2",
-        img :'/img/Thumbnail-8.jpg',
+        img :"/img/Thumbnail-8.jpg",
         type : "PC",
         rate : 3,
         priceList: [
@@ -1037,7 +1037,7 @@ export const products = [
     {
         id :16,
         name : "Valorant",
-        img :'/img/Thumbnail-3.jpg',
+        img :"/img/Thumbnail-3.jpg",
         type : "PC",
         rate : 5,
         priceList: [
@@ -1106,7 +1106,7 @@ export const products = [
     {
         id :17,
         name : "Dota 2",
-        img :'/img/Thumbnail-8.jpg',
+        img :"/img/Thumbnail-8.jpg",
         type : "PC",
         rate : 3,
         priceList: [
@@ -1175,7 +1175,7 @@ export const products = [
     {
         id :18,
         name : "Valorant",
-        img :'/img/Thumbnail-3.jpg',
+        img :"/img/Thumbnail-3.jpg",
         type : "PC",
         rate : 5,
         priceList: [
@@ -1244,7 +1244,7 @@ export const products = [
     {
         id :19,
         name : "MobileLegend",
-        img :'/img/Thumbnail-5.png',
+        img :"/img/Thumbnail-5.png",
         type : "Mobile",
         rate : 5,
         priceList: [
@@ -1320,7 +1320,7 @@ export const products = [
     {
         id :20,
         name : "Lorem ipsum",
-        img :'/img/Thumbnail-4.png',
+        img :"/img/Thumbnail-4.png",
         type : "Mobile",
         rate : 3,
         priceList: [

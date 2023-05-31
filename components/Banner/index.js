@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 import Link from "next/link"
-import { userService } from '@/services'
+import { userService } from "@/services"
 
 export default function Banner(){
-    console.log(userService.userValue)
     return (
         <>
             <section className="header pb-50 " style={{marginTop:"10rem"}}>
@@ -11,7 +10,7 @@ export default function Banner(){
                     <div className="flex-row d-flex gap-lg-0 gap-5">
                         <div className="col-lg-6 col-12 my-auto mt-200" >
                             <p className="header-title color-palette-2">
-                                {!userService? 'Halo gamers,': `Welcome ${userService?.userValue.name},`}
+                                {!userService? "Halo gamers,": `Welcome ${userService?.userValue.name},`}
                                 
                             </p>
                             <h1 className="header-title color-palette-1 fw-bold">

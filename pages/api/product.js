@@ -5,11 +5,11 @@ export default function handler(req, res) {
     let { id, name, img, type, priceList } = req.body 
 
     switch (method) {
-        case 'GET':
+        case "GET":
             res.status(200).json(products)
             
             break;
-        case 'POST':
+        case "POST":
             const newProduct = {
                 id: products.length + 1,
                 id,
@@ -22,7 +22,7 @@ export default function handler(req, res) {
             res.status(200).json(products)
             break;
         default:
-            res.setHeader('Allow', ['GET', 'POST']);
+            res.setHeader("Allow", ["GET", "POST"]);
             res.status(405).end(`Method ${method} Not Allowed`);
             break;
 

@@ -1,7 +1,7 @@
-const bcrypt = require('bcryptjs');
+const bcrypt = require("bcryptjs");
 
-import { apiHandler } from 'helpers/api';
-import { usersRepo, omit } from 'helpers/api';
+import { apiHandler } from "helpers/api";
+import { usersRepo, omit } from "helpers/api";
 
 export default apiHandler({
     get: getById,
@@ -12,16 +12,16 @@ export default apiHandler({
 function getById(req, res) {
     const user = usersRepo.getById(req.query.id);
 
-    if (!user) throw 'User Not Found';
+    if (!user) throw "User Not Found";
 
-    return res.status(200).json(omit(user, 'hash'));
+    return res.status(200).json(omit(user, "hash"));
 }
 
 function update(req, res) {
     const user = usersRepo.getById(req.query.id);
 
     // validate login
-    if (!user) throw 'User Not Found';
+    if (!user) throw "User Not Found";
 
     // split out password from user details 
     const { password, ...params } = req.body;

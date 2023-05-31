@@ -258,7 +258,7 @@ footer ul li a:hover{
 
 .header .underline-blue:after {
     position: absolute;
-    content: '';
+    content: "";
     height: 8px;
     bottom: 11px;
        margin: 0 auto;
