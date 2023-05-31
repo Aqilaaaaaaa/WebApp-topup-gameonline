@@ -43,15 +43,34 @@ const History = () => {
         if(data){
           let sum=0
           data?.forEach(element => {
-            if(!element.resetCoin){
+            // if(!element.resetCoin){
                 sum+=element.coin
-            }
+            // }
           })
           return sum
         }else{
           return 0
         }
     }
+    const totalCoin=(coin)=>{
+        if(coin?.resetCoin != 0){
+            let temp = 0
+            coin?.forEach(i=>{
+                temp += (i.resetCoin)
+            })
+            return (temp)
+        }
+        // return(x)
+    }
+    console.log('reset coin',totalCoin(data))
+    console.log('sum coin',sumCoin(data))
+
+    console.log(data)
+    
+    const allCoin =(data)=>{
+        return (sumCoin(data)-(totalCoin(data)))
+    }
+    console.log('total coin now', allCoin(data))
     const getItemLocal =()=>{
         const item = localStorage.getItem('history_payment')
         const parseData = JSON.parse(item)
@@ -72,7 +91,7 @@ const History = () => {
                             <h2 className="text-4xl fw-bold color-palette-1 mb-30">History Purchase</h2>
                             <div className="wrapper">
                                 <HistoryTotal title="Total Spent" total={titikPrice(sumAllPrice(data))}/>
-                                <HistoryTotal title="Total Cash Coin" total={titikPrice(sumCoin(data))}/>
+                                <HistoryTotal title="Total Cash Coin" total={allCoin(data)}/>
                             </div>
                         </div>
                         <div className="latest-transaction">

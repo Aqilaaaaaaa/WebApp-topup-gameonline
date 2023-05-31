@@ -38,5 +38,13 @@
         "id": 5,
         "dateCreated": "2023-05-26T17:02:00.793Z",
         "dateUpdated": "2023-05-26T17:02:00.793Z"
+    },
+    {
+        "name": "ananta",
+        "email": "qwerty@gmail.com",
+        "hash": "$2a$10$PgomU9YH7toL3hgx/00qN.aTOxYHKjlaJQe5rc9968wpQ4WeNO1fu",
+        "id": 6,
+        "dateCreated": "2023-05-31T08:26:00.547Z",
+        "dateUpdated": "2023-05-31T08:26:00.547Z"
     }
 ]

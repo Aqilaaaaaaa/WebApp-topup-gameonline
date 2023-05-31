@@ -45,11 +45,11 @@ export default function index({product}) {
         if(isCheckPoint == false){
             temp = priceFilter(data.priceList) - sumCoin(localData)
             setTotal(temp)
-            setPoint(0)
+            setPoint(sumCoin(localData))
         }else {
             temp = priceFilter(data.priceList) 
             setTotal(temp)
-            setPoint(sumCoin(localData))
+            setPoint(0)
         }
         
     }
@@ -60,7 +60,7 @@ export default function index({product}) {
         const temp = parseData?.filter((data)=>data.email == userService?.userValue.email)
         setLocalData(temp)
     }
-    
+    // logic coin pengguna baru dan jumlahin coin 
     const sumCoin =(data)=>{
         if(data){
           let sum=0
@@ -72,6 +72,7 @@ export default function index({product}) {
             return 0
         }
     }
+    
     const titikPrice =(numb)=>{
         return numb?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     }
@@ -132,7 +133,7 @@ export default function index({product}) {
                     </label> */}
                     <div className="form-check form-switch">
                         <input className="form-check-input" onChange={handleCheckPoint} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                        <label className="form-check-label" for="flexSwitchCheckDefault">{titikPrice(sumCoin(localData))} cash coin</label>
+                        <label className="form-check-label" for="flexSwitchCheckDefault">use your coin, view in <Link target="_blank" href={'/historyPurchase' }>History</Link></label>
                     </div>
                     
                 </div>
