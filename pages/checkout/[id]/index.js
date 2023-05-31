@@ -65,12 +65,28 @@ export default function index({product}) {
         if(data){
           let sum=0
           data?.forEach(element => {
-              sum+=element.coin
-            });
-            return sum
+            // if(!element.resetCoin){
+                sum+=element.coin
+            // }
+          })
+          return sum
         }else{
-            return 0
+          return 0
         }
+    }
+    const totalCoin=(coin)=>{
+        if(coin?.resetCoin != 0){
+            let temp = 0
+            coin?.forEach(i=>{
+                temp += (i.resetCoin)
+            })
+            return (temp)
+        }
+        // return(x)
+    }
+
+    const allCoin =(data)=>{
+        return (sumCoin(data)-(totalCoin(data)))
     }
     
     const titikPrice =(numb)=>{
@@ -133,7 +149,7 @@ export default function index({product}) {
                     </label> */}
                     <div className="form-check form-switch">
                         <input className="form-check-input" onChange={handleCheckPoint} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                        <label className="form-check-label" for="flexSwitchCheckDefault">use your coin, view in <Link target="_blank" href={'/historyPurchase' }>History</Link></label>
+                        <label className="form-check-label" for="flexSwitchCheckDefault">{allCoin(localData)}</label>
                     </div>
                     
                 </div>

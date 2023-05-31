@@ -43,9 +43,7 @@ const History = () => {
         if(data){
           let sum=0
           data?.forEach(element => {
-            // if(!element.resetCoin){
-                sum+=element.coin
-            // }
+            sum+=element.coin
           })
           return sum
         }else{
@@ -60,17 +58,12 @@ const History = () => {
             })
             return (temp)
         }
-        // return(x)
     }
-    console.log('reset coin',totalCoin(data))
-    console.log('sum coin',sumCoin(data))
 
-    console.log(data)
-    
     const allCoin =(data)=>{
         return (sumCoin(data)-(totalCoin(data)))
     }
-    console.log('total coin now', allCoin(data))
+    // console.log('total coin now', allCoin(data))
     const getItemLocal =()=>{
         const item = localStorage.getItem('history_payment')
         const parseData = JSON.parse(item)

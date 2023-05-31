@@ -23,18 +23,27 @@ export default function Auth(){
           let sum=0
           data?.forEach(element => {
             sum+=element.coin
-          });
+          })
           return sum
         }else{
           return 0
         }
     }
+    const totalCoin=(coin)=>{
+        if(coin?.resetCoin != 0){
+            let temp = 0
+            coin?.forEach(i=>{
+                temp += (i.resetCoin)
+            })
+            return (temp)
+        }
+    }
+    const allCoin =(data)=>{
+        return (sumCoin(data)-(totalCoin(data)))
+    }
     const titikPrice =(numb)=>{
         return numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     }
-
-
-
     function logOut (){
         userService.logout();
       
@@ -53,7 +62,7 @@ export default function Auth(){
                 </Link>
 
                 <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
-                    <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">Cash Coin : Rp {titikPrice(sumCoin(data))}</Link></li>
+                    <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">Cash Coin : Rp {titikPrice(allCoin(data))}</Link></li>
                     <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">History Purchase</Link></li>
                     <li onClick={logOut} className="dropdown-item text-lg color-palette-2"> Log Out</li>
                 </ul>
