@@ -7,14 +7,14 @@
                                     <g mask="url(#mask0-icon2)">
                                         <circle cx="40" cy="40" r="40" fill="#ADFF2F" />
                                         <rect x="-14" y="16" width="62" height="82" rx="16" fill="#1d394a" />
-                                        <path d="M32 36H5" stroke="white" stroke-width="4" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M27 45L9 45" stroke="#B7B0F4" stroke-width="4" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                        <path d="M32 36H5" stroke="white" stroke-width="4" strokeLinecap="round"
+                                            strokeLinejoin="round" />
+                                        <path d="M27 45L9 45" stroke="#B7B0F4" stroke-width="4" strokeLinecap="round"
+                                            strokeLinejoin="round" />
                                         <rect x="56" y="37" width="49" height="75" rx="16" fill="#2B2467" />
-                                        <path d="M97 50H70" stroke="white" stroke-width="4" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M92 59L74 59" stroke="#6B63AC" stroke-width="4" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                        <path d="M97 50H70" stroke="white" stroke-width="4" strokeLinecap="round"
+                                            strokeLinejoin="round" />
+                                        <path d="M92 59L74 59" stroke="#6B63AC" stroke-width="4" strokeLinecap="round"
+                                            strokeLinejoin="round" />
                                     </g>
                                 </svg>

@@ -33,7 +33,7 @@ export default function Banner(){
                         <div className="header poster">
                             <div className="d-flex justify-content-lg-end justify-content-center me-lg-5">
                                 <div className="position-relative" data-aos="zoom-in">
-                                    <img src="/img/Header-1.png" className="img-fluid" alt=""/>
+                                    <img src="/img/Header-1.png" className="img-fluid" alt="img"/>
                                 </div>
 
                             </div>

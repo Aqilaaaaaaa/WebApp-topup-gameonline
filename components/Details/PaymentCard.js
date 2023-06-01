@@ -13,7 +13,7 @@ const PaymentCard = ({payName, typePay, onSelectPay, value}) => {
                             xmlns="http://www.w3.org/2000/svg">
                             <circle cx="10" cy="10" r="10" fill="#ADFF2F" />
                             <path d="M5.83301 10L8.46459 12.5L14.1663 7.5" stroke="#1d394a"
-                                strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
+                                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </div>
                     <p className="text-lg color-palette-1 m-0">{typePay}</p>

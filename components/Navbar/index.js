@@ -16,7 +16,7 @@ export default function Navbar(){
                 <nav className="navbar navbar-expand-lg navbar-light ">
                     <div className="container-fluid">
                         <Link className="navbar-brand" href="/#">
-                            <Image src="/icon/logo.svg" width={100} height={100}/>
+                            <Image src="/icon/logo.svg" width={100} height={100} alt="img"/>
                         </Link>
                         <button onClick={handleModal} className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>

@@ -56,7 +56,7 @@ export default function Details({product}) {
                 <link rel="icon" href="/icon/logo.svg" />
             </Head>
             <Navbar/>
-            <section className="detail pt-lg-60 pb-50 .bg-secondary" style={{marginTop:"7rem"}}>
+            <section className="detail pt-lg-60 pb-50 .bg-secondary" style={{marginTop:"8rem"}}>
                 <div className="container-xxl container-fluid">
                     <div className="detail-header flex d-flex">
                         <Link href="/#">
@@ -91,16 +91,16 @@ export default function Details({product}) {
                                 <p className="text-lg fw-medium color-palette-1 ">Nominal Top Up</p>
                             </div>
                             <div className="flex-row d-flex flex-wrap pb-md-30 pb-20">
-                                {data?.priceList?.map((priceList) => (
-                                    <NominalCard item={priceList.item} itemName={priceList.itemName} price={priceList.price} coin={priceList.coin} 
+                                {data?.priceList?.map((priceList, i) => (
+                                    <NominalCard key={i} item={priceList.item} itemName={priceList.itemName} price={priceList.price} coin={priceList.coin} 
                                     onSelect={handleSelect} value={priceList.item}/>
                                 )) }
                             </div>
                             <div className="pb-md-30 pb-20">
                                 <p className="text-lg fw-medium color-palette-1 mb-md-10 mb-0">Payment Method</p>
                                 <div className="flex-row d-flex flex-wrap ">
-                                    {data?.payment?.map((payment) => (
-                                        <PaymentCard payName={payment.payName} typePay={payment.typePay} onSelectPay={handlePayment} value={payment.payName}/>
+                                    {data?.payment?.map((payment, i) => (
+                                        <PaymentCard key={i} payName={payment.payName} typePay={payment.typePay} onSelectPay={handlePayment} value={payment.payName}/>
                                     )) }
                                 </div>
                             </div>

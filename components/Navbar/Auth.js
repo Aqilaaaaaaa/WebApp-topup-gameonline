@@ -56,8 +56,8 @@ export default function Auth(){
                 <Link className="dropdown-toggle ms-lg-40" href="#" role="button" id="dropdownMenuLink"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <Image src="/img/avatar-1.png" 
-                        className="rounded-circle" width="40" height="40"
-                       alt=""/>
+                        className="rounded-circle" width="40" height="40" alt="img"
+                    />
                 </Link>
                 <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
                     <li><Link href="/historyPurchase" className="dropdown-item text-lg color-palette-2">Cash Coin : Rp {titikPrice(allCoin(data))}</Link></li>

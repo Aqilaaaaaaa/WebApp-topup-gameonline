@@ -6,7 +6,13 @@ import { Grid, Pagination} from "@mui/material"
 import usePagination from "./usePagination"
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
 
+const DynamicCard = dynamic(() => import("@/components/Featured/cardFeatured"), {
+    loading: () => <p>loading....</p>,
+    ssr: false,
+  });
+  
 
 export default function index({product}){
     const [data,setData] = useState(product)
@@ -82,7 +88,7 @@ export default function index({product}){
                         ?.length !=0 && _DATA.currentData()
                         .map((data) => (
                             <div key={data.id}>
-                                <CardFeatured id={data.id} img={data.img} title={data.name} type={data.type}/>
+                                <DynamicCard id={data.id} img={data.img} title={data.name} type={data.type}/>
                             </div>
                         )) }
                     <Grid 

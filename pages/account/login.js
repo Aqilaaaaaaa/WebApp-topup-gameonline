@@ -109,7 +109,7 @@ function Login({id}) {
                         
                     </div>
                     <div className="poster col-xxl-6 col-lg-6 text-center pt-lg-145 pb-lg-150 d-lg-block d-none">
-                        <img src="/img/Header-9.png" width="502" height="391.21" className="img-fluid pb-50" alt=""/>
+                        <img src="/img/Header-9.png" width="502" height="391.21" className="img-fluid pb-50" alt="img"/>
                         <h2 className="text-4xl fw-bold mb-30">Win the battle.<br/>
                             Be the Champion.</h2>
                         <p className=" m-0">Kami menyediakan jutaan cara untuk<br/> membantu players menjadi<br/>

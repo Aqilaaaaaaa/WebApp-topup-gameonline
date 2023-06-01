@@ -99,7 +99,7 @@ const History = () => {
                                     </thead>
                                     <tbody>
                                         {data?.map((data, i)=>(
-                                            <HistoryRow title={data.name} type={data.type} item={`${data.item}`.concat(" ",data.itemName)} totalPrice={titikPrice(data.totalPrice)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
+                                            <HistoryRow key={i} title={data.name} type={data.type} item={`${data.item}`.concat(" ",data.itemName)} totalPrice={titikPrice(data.totalPrice)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
                                             // <tr className="align-middle text-center">
                                             //     <th scope="row">
                                             //         <div className="game-title-header">
