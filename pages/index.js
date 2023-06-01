@@ -40,7 +40,7 @@ export default function Home({product}) {
 }
 export async function getServerSideProps(){
   try{
-    const res = await fetch("http://localhost:3000/api/product")
+    const res = await fetch("https://cashless-shop.vercel.app/api/product")
     const product = await res.json()
     return {
       props:{
