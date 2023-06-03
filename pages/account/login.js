@@ -80,13 +80,13 @@ function Login({id}) {
                                 <p className="text-lg color-palette-1 m-0">Sudah Punya akun? Ayo Segera Masuk</p>
 
                                 <div className="pt-50">
-                                    <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">email</label>
-                                    <input name="email" type="email" {...register("email")} className={`form-control rounded-pill text-lg ${errors.email ? "is-invalid" : ""}`} aria-describedby="email" placeholder="Enter your email"/>
+                                    <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">Email</label>
+                                    <input name="email" type="email" {...register("email")} className={`form-control rounded-pill text-lg ${errors.email ? "is-invalid" : ""}`} aria-describedby="email" placeholder="Enter Your Email"/>
                                     <div className="invalid-feedback">{errors.email?.message}</div>
                                 </div>
                                 <div className="pt-20">
                                     <label id="password" className="form-label text-lg fw-medium color-palette-1 mb-10">Password</label>
-                                    <input name="password" type="password" {...register("password")} className={`form-control rounded-pill text-lg ${errors.password ? "is-invalid" : ""}`} aria-describedby="password" placeholder="Enter your password"/>
+                                    <input name="password" type="password" {...register("password")} className={`form-control rounded-pill text-lg ${errors.password ? "is-invalid" : ""}`} aria-describedby="password" placeholder="Enter Your Password"/>
                                     <div className="invalid-feedback">{errors.password?.message}</div>
                                 </div>
                                 <div className="button-group d-flex flex-column mx-auto pt-30 pb-30">

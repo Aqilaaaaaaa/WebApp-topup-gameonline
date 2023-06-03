@@ -1,7 +1,6 @@
 import { userService } from "@/services";
 import { useRouter } from "next/router";
 import Script from "next/script";
-import Head from "next/head";
 import { useEffect, useState } from "react";
 import "../styles/404-not-found.css";
 import "../styles/checkout.css";
@@ -53,11 +52,6 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Head> 
-        <link    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-          crossOrigin="anonymous" />
-      </Head>
-      <Script id="bootstrap-cdn" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" />
       <Script id="topup-script"S
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"

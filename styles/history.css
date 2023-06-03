@@ -1,16 +1,13 @@
 
 .overview {
-    background-color: #FBFCFD;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
-.overview main.main-wrapper{
-    
+.overview .main-wrapper{
     height: 100%;
     margin-right: auto;
     position: relative;
     padding: 50px 50px 50px 0px;
-   
 }
 
 /* .overview main .main-content{
@@ -27,10 +24,9 @@
 }
 
 .overview .latest-transaction .main-content-table{
-    background-color: #FFFFFF;
     padding: 1.25rem 1.875rem;
     border-radius: 1rem;
-    max-width: 900px;
+    width: 900px;
     background-color: #E7EAF5;
     display: flex;
     justify-content: center;
@@ -82,12 +78,56 @@
     border-radius: 1rem;
     text-align: center;
     width: 280px;
- 
 }
 .overview .top-up-categories{
     text-align: center;
-
     justify-content: center;
+}
+@media (max-width:414px){
+    .overview main.main-wrapper{
+        width: 100%;
+    }
+    .overview .wrapper{
+        /* background-color: green; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        column-gap: 20px;
+        margin-left: 230px;
+        
+    }
+    .overview .top-up-categories .categories-card{
+        padding: 1.875rem;
+        border-radius: 1rem;
+        text-align: center;
+        width: 200px;
+        margin-top: 20px;
+    }
+    .overview .latest-transaction .main-content-table{
+        padding: 1.25rem 1.875rem;
+        border-radius: 1rem;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width:768px){
+    .overview main.main-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 50px;
+    }
+    .overview .latest-transaction .main-content-table{
+        background-color: #E7EAF5;
+        border-radius: 1rem;
+        width: 650px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width:992px){
@@ -96,8 +136,3 @@
     }
 }
 
-@media (max-width:768px){
-    .overview main.main-wrapper{
-        width: 100%;
-    }
-}

@@ -89,7 +89,7 @@ const History = () => {
                             <div className="main-content main-content-table overflow-auto">
                                 <table className="table table-borderless">
                                     <thead>
-                                        <tr className="color-palette-1">
+                                        <tr className="color-palette-1 text-lg fw-bold">
                                             <th className="text-start fw-bold" scope="col">Game</th>
                                             <th className="text-start fw-bold" scope="col ">Item</th>
                                             <th className="text-start fw-bold" scope="col">Price</th>

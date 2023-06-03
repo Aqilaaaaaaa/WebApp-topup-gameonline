@@ -18,7 +18,7 @@
 .login input[type="email"]{
     border: 1px solid #ADFF2F;
     padding: 0.75rem 1.625rem;
-    color: #ADFF2F;
+    color: #1d394a;
 }
 
 .login input[type="password"]:focus-within,
