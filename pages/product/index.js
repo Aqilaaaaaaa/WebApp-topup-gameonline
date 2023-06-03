@@ -117,7 +117,7 @@ export default function index({product}){
 }
 export async function getServerSideProps(){
     try{
-        const res = await fetch("https://cashless-shop.vercel.app/api/product")
+        const res = await fetch("https://cashless-shop-three.vercel.app/api/product")
         const product = await res.json()
         return {
             props:{
