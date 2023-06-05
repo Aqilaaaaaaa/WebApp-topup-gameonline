@@ -21,32 +21,40 @@
     .detail{
         margin-top: 200px;
     }
+    .detail .img-fluid{
+        max-width: 100%;
+        height: auto;
+        margin: 0 100px;
+        border-radius: 1rem;
+        background-color: green;
+    
+    }
+    
 
 }
 .detail .img-fluid{
-    /* max-width: 100%; */
-    /* height: auto; */
     border-radius: 1rem;
-
 }
 
 .detail .detail{
     margin-top: 100px;
-   
+}
+
+.detail .title{
+    text-align: center;
+    margin: 0 auto;
 }
 
 .detail .form {
     display: flex;
     justify-content: center;
-    
-    
 }
 
 .detail hr{
-        margin: 0;    
-        background-color:#E7EAF5;
-        border: 0;
-        opacity: 1;
+    margin: 0;    
+    background-color:#E7EAF5;
+    border: 0;
+    opacity: 1;
 }
 
 .detail input[type="text"]{
@@ -58,6 +66,7 @@
 
 .detail .card-img {
     justify-content: center;
+    text-align: center;
     width: 500px;
     margin: 8px;
 }

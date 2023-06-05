@@ -79,11 +79,11 @@ export default function Details({product}) {
                                 <label id="ID" className="form-label text-lg fw-medium color-palette-1 mb-10" >User
                                     ID</label>
                                 <input type="text" className="form-control rounded-pill text-lg" id="ID" name="ID"
-                                    aria-describedby="UserID" placeholder="Enter your ID"
+                                    aria-describedby="UserID" placeholder="Masukkan ID Game Anda"
                                     onChange={handleInputIdGame}/>
                                 {idGame? "" :
                                     <span className="text-danger text-xs">
-                                    Masukkan ID Game
+                                    Masukkan User ID
                                     </span>
                                 }
                             </div>
@@ -118,7 +118,6 @@ export default function Details({product}) {
                                 </Link> */}
                                 
                                 <button role="button" onClick={onSubmit} disabled={!idGame? true : false} className="button-sub rounded-pill fw-medium" >Continue</button>
-                                
                             </div>
                         </form>
                         
