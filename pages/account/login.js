@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { alertService, userService } from "services";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 
 export default Login;
@@ -66,6 +67,11 @@ function Login({id}) {
 
     return (
         <>
+            <Head>
+                <title>CashLess Shop | Masuk</title>
+                <meta name="description" content="CashLess membantu anda agar semangat bermain" />
+                <link rel="icon" href="/icon/logo.svg" />
+            </Head>
             <div className="login mx-auto">
                 <div className="row">
                     <div className="col-xxl-6 col-lg-6 my-auto py-lg-0 pt-lg-50 pb-lg-50 pt-30 pb-47 px-0">
