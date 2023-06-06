@@ -82,7 +82,7 @@ function Login({id}) {
                                         <img src="/icon/logo.svg" width={100} height={100}/>
                                     </Link>
                                 </div>
-                                <h2 className="text-4xl fw-bold color-palette-1 mb-10">Sign In</h2>
+                                <h2 className="text-4xl fw-bold color-palette-1 mb-10">Masuk</h2>
                                 <p className="text-lg color-palette-1 m-0">Sudah Punya akun? Ayo Segera Masuk</p>
 
                                 <div className="pt-50">
@@ -97,13 +97,13 @@ function Login({id}) {
                                 </div>
                                 <div className="button-group d-flex flex-column mx-auto pt-30 pb-30">
                                     <button disabled={formState.isSubmitting} className="btn btn-login fw-medium text-lg rounded-pill mb-10" role="button">
-                                        LogIn
+                                        Masuk
                                     </button>
                                     <div className="w-full">
                                         <p className="text-center text-dark">
                                             Belum punya akun Di CashLess Shop?{" "}
                                             <Link href="/account/register" role="button" style={{textDecoration:"none", color:"#ADFF2F"}}>
-                                                <span className="font-semibold cursor-pointer hover:text-success">Register</span>
+                                                <span className="font-semibold cursor-pointer hover:text-success">Daftar</span>
                                             </Link>
                                         </p>
                                     </div>
