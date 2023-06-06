@@ -6,7 +6,7 @@ export default function SearchBar({onChangeInput, value}){
         <>
             <div className="filter">
                 <div className="search flex d-flex rounded my-5" action="action_page.php">
-                    <input type="text" 
+                    <input type="search" 
                     className="form-control rounded border"  
                     placeholder="Search Game" 
                     name="search"

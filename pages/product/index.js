@@ -17,7 +17,6 @@ const DynamicCard = dynamic(() => import("@/components/Featured/cardFeatured"), 
 export default function index({product}){
     const [data,setData] = useState(product)
     const [search,setSearch] = useState("")
-    const [type, setType] = useState("")
     const [page, setPage] = useState(1)
 
   // pagination
@@ -33,18 +32,6 @@ export default function index({product}){
         setSearch(e.target.value);
     }
 
-    const handleType = (e) => {
-        setType(e.target.value);
-        
-    }
-
-    const handleCancelBtn = () => {
-        setData(product)
-        setType(false)
-        setSearch("")
-    }
-    
-
     const searchData = (temp) => {
         if(!search){
             return temp
@@ -54,19 +41,10 @@ export default function index({product}){
         return foundData
     }
 
-    const filterType = (temp) =>{
-        if(!type){
-            return temp
-        }
-        const filterRadio = temp.filter((data)=>(data.type == type))
-        return filterRadio
-    }
-
     useEffect(()=> {
-        let dataTemp = filterType(product)
-        dataTemp = searchData(dataTemp)
+        let dataTemp = searchData(product)
         setData(dataTemp)
-    }, [search, type])
+    }, [search])
 
     return (
         <>
@@ -80,8 +58,6 @@ export default function index({product}){
                 <SearchBar
                     value={search}
                     onChangeInput={handleSearchData}
-                    onFilterType={handleType}
-                    onCancel={handleCancelBtn}
                 />
                 <div className="product-item flex d-flex flex-wrap gap-5 justify-content-center">
                     {data

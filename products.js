@@ -269,7 +269,7 @@ export const products = [
         ]
     },
     {
-        id :13,
+        id :5,
         name : "Sausage Man",
         img :"/img/Thumbnail-6.jpg",
         type : "Mobile",
