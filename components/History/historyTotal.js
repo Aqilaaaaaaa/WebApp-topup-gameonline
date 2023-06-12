@@ -5,15 +5,13 @@ const HistoryTotal = ({title, total}) => {
         <>
             <div className="main-content">
                 <div className="row">
-                    <div className="">
-                        <div className="categories-card border border-secondary">
-                            <div className="d-flex align-items-center mb-24">
-                                <img src="icon/guidestep3.svg" width={50} height={50} />
-                                <p className="color-palette-1 mb-0 ms-12">{title}</p>
-                            </div>
-                            <div>
-                                <p className="text-2xl color-palette-1 fw-medium m-0">Rp {total}</p>
-                            </div>
+                    <div className="categories-card border border-secondary">
+                        <div className="d-flex align-items-center mb-24">
+                            <img src="icon/guidestep3.svg" width={50} height={50} />
+                            <p className="color-palette-1 mb-0 ms-12">{title}</p>
+                        </div>
+                        <div>
+                            <p className="text-2xl color-palette-1 fw-medium m-0">Rp {total}</p>
                         </div>
                     </div>
                 </div>

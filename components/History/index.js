@@ -1,5 +1,6 @@
 import { userService } from "@/services";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import HistoryRow from "./historyRow";
 import HistoryTotal from "./historyTotal";
 
@@ -75,59 +76,47 @@ const History = () => {
     },[])
     return (
         <>
+            <Head>
+                <title>CashLess Shop | History </title>
+                <meta name="description" content="CashLess membantu anda agar semangat bermain" />
+                <link rel="icon" href="/icon/logo.svg" />
+            </Head>
             <section className="overview overflow-auto">
-                <main className="main-wrapper">
-                    <div className="ps-lg-0">
-                        <div className="top-up-categories mb-30">
-                            <h2 className="text-4xl fw-bold color-palette-1 mb-30">History Purchase</h2>
-                            <div className="wrapper">
-                                <HistoryTotal title="Total Spent" total={titikPrice(sumAllPrice(data))}/>
-                                <HistoryTotal title="Total Cash Coin" total={titikPrice(allCoin(data))}/>
-                            </div>
+                <main className="main-wrapper ps-lg-0">
+                    <div className="top-up-categories mb-30">
+                        <h2 className="text-4xl fw-bold color-palette-1 mb-30">History Purchase</h2>
+                        <div className="wrapper">
+                            <HistoryTotal title="Total Spent" total={titikPrice(sumAllPrice(data))}/>
+                            <HistoryTotal title="Total Cash Coin" total={titikPrice(allCoin(data))}/>
                         </div>
-                        <div className="latest-transaction">
-                            <div className="main-content main-content-table overflow-auto">
-                                <table className="table table-borderless">
-                                    <thead>
-                                        <tr className="color-palette-1 text-lg fw-bold">
-                                            <th className="text-start fw-bold" scope="col">Game</th>
-                                            <th className="text-start fw-bold" scope="col ">Item</th>
-                                            <th className="text-start fw-bold" scope="col">Price</th>
-                                            <th className="text-start fw-bold" scope="col">Cash Coin</th>
-                                            <th className="text-start fw-bold" scope="col">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {data?.map((data, i)=>(
-                                            <HistoryRow key={i} title={data.name} type={data.type} item={`${data.item}`.concat(" ",data.itemName)} totalPrice={titikPrice(data.totalPrice)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
-                                            // <tr className="align-middle text-center">
-                                            //     <th scope="row">
-                                            //         <div className="game-title-header">
-                                            //             <p className="game-title fw-medium text-start color-palette-1 m-0">{data.name}</p>
-                                            //             <p className="text-xs fw-normal text-start color-palette-2 m-0">{data.type}</p>
-                                            //         </div>
-                                            //     </th>
-                                            //     <td>
-                                            //         <p className="fw-medium text-start color-palette-1 m-0">{`${data.item}`.concat(" ",data.itemName)}</p>
-                                            //     </td>
-                                            //     <td>
-                                            //         <p className="fw-medium text-start color-palette-1 m-0">Rp {titikPrice(data.price)}</p>
-                                            //     </td>
-                                            //     <td>
-                                            //         <p className="fw-medium text-start color-palette-1 m-0">+{data.coin}</p>
-                                            //     </td>
-                                            //     <td>
-                                            //         <div>
-                                            //             <span className="float-start icon-status success"></span>
-                                            //             <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-                                            //                 Success</p>
-                                            //         </div>
-                                            //     </td>
-                                            // </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                    </div>
+                    <div className="latest-transaction">
+                        <div className="main-content-table overflow-auto">
+                            <table className="table table-borderless">
+                                <thead>
+                                    <tr className="color-palette-1 text-lg fw-bold">
+                                        <th className="text-start fw-bold" scope="col">Game</th>
+                                        <th className="text-start fw-bold" scope="col ">Item</th>
+                                        <th className="text-start fw-bold" scope="col">Price</th>
+                                        <th className="text-start fw-bold" scope="col">Cash Coin</th>
+                                        <th className="text-start fw-bold" scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {data?.map((data, i)=>(
+                                        <HistoryRow key={i} title={data.name} type={data.type} item={`${data.item}`.concat(" ",data.itemName)} totalPrice={titikPrice(data.totalPrice)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
+                                        // <tr className="align-middle text-center">
+                                        //     <td>
+                                        //         <div>
+                                        //             <span className="float-start icon-status success"></span>
+                                        //             <p className="fw-medium text-start color-palette-1 m-0 position-relative">
+                                        //                 Success</p>
+                                        //         </div>
+                                        //     </td>
+                                        // </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </main>

@@ -14,15 +14,12 @@ const HistoryRow = ({title, type, item, price, coin, status, totalPrice}) => {
     return (
         <>
             <tr className="align-middle">
-                <th scope="row">
-                    {/* <img className="float-start me-3 mb-lg-0 mb-3" 
-                        src={img}
-                        width="80" height="60" alt=""/> */}
+                <td scope="row">
                     <div className="game-title-header">
-                        <p className="game-title fw-medium text-start color-palette-1 m-0">{title}</p>
+                        <p className="fw-medium text-start color-palette-1 m-0">{title}</p>
                         <p className="text-xs fw-normal text-start color-palette-2 m-0">{type}</p>
                     </div>
-                </th>
+                </td>
                 <td>
                     <p className="fw-medium color-palette-1 m-0">{item}</p>
                 </td>
