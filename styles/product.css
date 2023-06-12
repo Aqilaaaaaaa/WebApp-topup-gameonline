@@ -104,3 +104,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media (max-width:414px){
+  .product .search {
+    width: 320px;
+    margin: 0 auto;
+}
+}
