@@ -9,7 +9,7 @@ export default function CompleteCheckout(){
                 </div>
                 <div className="pt-70 pb-50">
                     <h2 className="text-4xl fw-bold text-center color-palette-1 mb-10">Checkout Completed</h2>
-                    <p className="text-lg text-center color-palette-1 m-0">Kami akan periksa pembayaran Anda</p>
+                    <p className="text-lg text-center color-palette-1 m-0">We will check your payment</p>
                 </div>
                 <div className="button-group d-flex flex-column mx-auto">
                     <Link className="btn btn-dashboard fw-medium text-lg rounded-pill mb-16"

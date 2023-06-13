@@ -79,11 +79,11 @@ export default function Details({product}) {
                                 <label id="ID" className="form-label text-lg fw-medium color-palette-1 mb-10" >User
                                     ID</label>
                                 <input type="text" className="form-control rounded-pill text-lg" id="ID" name="ID"
-                                    aria-describedby="UserID" placeholder="Masukkan ID Game Anda"
+                                    aria-describedby="UserID" placeholder="Enter Your User ID"
                                     onChange={handleInputIdGame}/>
                                 {idGame? "" :
                                     <span className="text-danger text-xs">
-                                    Masukkan User ID
+                                    Fill the User ID box
                                     </span>
                                 }
                             </div>
@@ -97,7 +97,7 @@ export default function Details({product}) {
                                 )) }
                             </div>
                             <div className="pb-md-30 pb-20">
-                                <p className="text-lg fw-medium color-palette-1 mb-md-10 mb-0">Payment Method</p>
+                                <p className="text-lg fw-medium color-palette-1 mb-md-10 mb-0">Payment Methode</p>
                                 <div className="flex-row d-flex flex-wrap ">
                                     {data?.payment?.map((payment, i) => (
                                         <PaymentCard key={i} payName={payment.payName} typePay={payment.typePay} onSelectPay={handlePayment} value={payment.payName}/>
@@ -117,7 +117,7 @@ export default function Details({product}) {
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link> */}
                                 
-                                <button role="button" onClick={onSubmit} disabled={!idGame? true : false} className="button-sub rounded-pill fw-medium" >Continue</button>
+                                <button role="button" onClick={onSubmit} disabled={!(idGame && itemGame && payment) ? true : false} className="button-sub rounded-pill fw-medium" >Continue</button>
                             </div>
                         </form>
                         

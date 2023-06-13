@@ -9,7 +9,7 @@ export default function Banner(){
                 <div className="container-xxl container-fluid">
                     <div className="flex-row d-flex gap-lg-0 gap-5">
                         <div className="col-lg-6 col-12 my-auto mt-200" >
-                            <p className="header-title color-palette-2">
+                            <p className="header-title color-palette-2 fs-2">
                                 {!userService? "Halo gamers,": `Welcome ${userService?.userValue.name},`}
                                 
                             </p>
@@ -18,8 +18,8 @@ export default function Banner(){
                                 </span><span className="underline-blue"> New</span> <br className="d-sm-block d-none"/> <span
                                     className="underline-blue">Experience</span> in Gaming
                             </h1>
-                            <p className="mt-30 mb-40 text-lg color-palette-1">Kami menyediakan jutaan cara untuk membantu<br
-                                    className="d-md-block d-none"/> players menjadi pemenang sejati
+                            <p className="mt-30 mb-40 text-lg color-palette-1">We provide millions of ways <br
+                                    className="d-md-block d-none"/> to help players become true winners
                             </p>
                             <div className="d-flex flex-lg-row flex-column gap-4">
                                 

@@ -129,7 +129,7 @@ export default function index({product}) {
                     </div>
                     <div className="title-text pt-md-50 pt-0">
                         <h2 className="text-4xl fw-bold color-palette-1 mb-10">Checkout</h2>
-                        <p className="text-lg color-palette-1 mb-0">Waktunya meningkatkan semangat bermainmu</p>
+                        <p className="text-lg color-palette-1 mb-0">Time to step up your gaming spirit</p>
                     </div>
                     <CheckoutItem img={data.img} title={data.name} type={data.type}/>
                     <hr/>
