@@ -84,21 +84,21 @@ function Register({id}) {
                             <img src="/icon/logo.svg" width={100} height={100}/>
                         </Link>
                     </div>
-                    <h2 className="text-4xl fw-bold color-palette-1 mb-10">Daftar</h2>
-                    <p className="text-lg color-palette-1 m-0">Daftar dan bergabung dengan CashLess</p>
+                    <h2 className="text-4xl fw-bold color-palette-1 mb-10">Register</h2>
+                    <p className="text-lg color-palette-1 m-0">Register Now And Join The Cashless Shop</p>
                         <div className="pt-50">
                         <label id="name" className="form-label text-lg fw-medium color-palette-1 mb-10">Nama</label>
-                            <input name="name" type="text" {...register("name")} className={`form-control rounded-pill text-lg ${errors.name ? "is-invalid" : ""}`} aria-describedby="name" placeholder="Enter Your Name"/>
+                            <input name="name" type="text" {...register("name")} className={`form-control rounded-pill text-lg ${errors.name ? "is-invalid" : ""}`} aria-describedby="name" placeholder="Write your name"/>
                             <div className="invalid-feedback">{errors.name?.message}</div>
                         </div>
                         <div className="pt-20">
                         <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">Email</label>
-                            <input name="email" type="text" {...register("email")} className={`form-control rounded-pill text-lg ${errors.email ? "is-invalid" : ""}`} aria-describedby="email" placeholder="Enter Your Email"/>
+                            <input name="email" type="text" {...register("email")} className={`form-control rounded-pill text-lg ${errors.email ? "is-invalid" : ""}`} aria-describedby="email" placeholder="Enter your email address"/>
                             <div className="invalid-feedback">{errors.email?.message}</div>
                         </div>
                         <div className="pt-20">
                             <label id="password" className="form-label text-lg fw-medium color-palette-1 mb-10">Password</label>
-                            <input name="password" type="password" {...register("password")} className={`form-control rounded-pill text-lg ${errors.password ? "is-invalid" : ""}`} aria-describedby="password" placeholder="Enter Your Password" />
+                            <input name="password" type="password" {...register("password")} className={`form-control rounded-pill text-lg ${errors.password ? "is-invalid" : ""}`} aria-describedby="password" placeholder="Your password" />
                             <div className="invalid-feedback">{errors.password?.message}</div>
                         </div>
                         <div className="button-group d-flex flex-column mx-auto pt-50">
@@ -108,9 +108,9 @@ function Register({id}) {
                             </button>
                             <div className="w-full">
                                 <p className="text-center text-dark">
-                                    Sudah punya akun Di CashLess Shop?{" "}
+                                    Already have an account at CashLess Shop?{" "}
                                     <Link href="/account/login" role="button" style={{textDecoration:"none", color:"#ADFF2F"}}>
-                                        <span className="font-semibold cursor-pointer hover:text-danger">Masuk</span>
+                                        <span className="font-semibold cursor-pointer hover:text-danger">Login</span>
                                     </Link>
                                 </p>
                             </div>

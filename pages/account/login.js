@@ -82,8 +82,8 @@ function Login({id}) {
                                         <img src="/icon/logo.svg" width={100} height={100}/>
                                     </Link>
                                 </div>
-                                <h2 className="text-4xl fw-bold color-palette-1 mb-10">Masuk</h2>
-                                <p className="text-lg color-palette-1 m-0">Sudah Punya akun? Ayo Segera Masuk</p>
+                                <h2 className="text-4xl fw-bold color-palette-1 mb-10">Login</h2>
+                                <p className="text-lg color-palette-1 m-0">Already Have an Account? Come Less</p>
 
                                 <div className="pt-50">
                                     <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">Email</label>
@@ -97,13 +97,13 @@ function Login({id}) {
                                 </div>
                                 <div className="button-group d-flex flex-column mx-auto pt-30 pb-30">
                                     <button disabled={formState.isSubmitting} className="btn btn-login fw-medium text-lg rounded-pill mb-10" role="button">
-                                        Masuk
+                                        Login
                                     </button>
                                     <div className="w-full">
                                         <p className="text-center text-dark">
-                                            Belum punya akun Di CashLess Shop?{" "}
+                                        Don't have an account yet?{" "}
                                             <Link href="/account/register" role="button" style={{textDecoration:"none", color:"#ADFF2F"}}>
-                                                <span className="font-semibold cursor-pointer hover:text-success">Daftar</span>
+                                                <span className="font-semibold cursor-pointer hover:text-success">Register</span>
                                             </Link>
                                         </p>
                                     </div>
@@ -118,8 +118,8 @@ function Login({id}) {
                         <img src="/img/Header-9.png" width="502" height="391.21" className="img-fluid pb-50" alt="img"/>
                         <h2 className="text-4xl fw-bold mb-30">Win the battle.<br/>
                             Be the Champion.</h2>
-                        <p className=" m-0">Kami menyediakan jutaan cara untuk<br/> membantu players menjadi<br/>
-                            pemenang sejati</p>
+                        <p className=" m-0">We Provide Millions Of Ways<br/>To Help Players Become<br/>
+                         True Champion</p>
                     </div>
                 </div>
                 <ToastContainer/>
