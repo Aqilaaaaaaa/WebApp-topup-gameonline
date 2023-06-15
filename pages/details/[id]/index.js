@@ -57,7 +57,7 @@ export default function Details({product}) {
             </Head>
             <Navbar/>
             <section className="detail pt-lg-60 pb-50 .bg-secondary" style={{marginTop:"8rem"}}>
-                <div className="container-xxl container-fluid">
+                <div className="container-fluid">
                     <div className="detail-header flex d-flex">
                         <Link href="/#">
                             <button className="border-0 bg-transparent mt-20"><IoIosArrowBack size={30}/></button>
@@ -112,15 +112,14 @@ export default function Details({product}) {
                                     name="bankAccount" aria-describedby="bankAccount"
                                     placeholder="Enter your Bank Account Name"/>
                             </div> */}
-                            <div className="detail d-sm-block d-flex flex-column w-100 mt-4">
+                            <div className="mt-4">
                                 {/* <Link href={`checkout/${data.id}`} type="submit"
                                     className="btn btn-submit rounded-pill fw-medium border-0 text-lg">Continue
                                 </Link> */}
                                 
-                                <button role="button" onClick={onSubmit} disabled={!(idGame && itemGame && payment) ? true : false} className="button-sub rounded-pill fw-medium" >Continue</button>
+                                <button role="button" onClick={onSubmit} disabled={!(idGame && itemGame && payment) ? true : false} className="button-sub rounded-pill" >Continue</button>
                             </div>
                         </form>
-                        
                     </div>
                 </div>
             </section>

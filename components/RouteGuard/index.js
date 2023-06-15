@@ -13,7 +13,7 @@ function RouteGuard ({children}) {
           setAuthorized(false)
           router.re;
           router.push({
-            pathname:"/account/login",
+            pathname:"/account/register",
             query:{returnUrl: router.asPath}
           })
         } else{
