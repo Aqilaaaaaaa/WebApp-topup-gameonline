@@ -30,17 +30,19 @@
 }
 
 
-@media (max-width:414px){
+@media (max-width: 767px) and (min-width:414px){
     .overview .wrapper{
         display: flex;
         flex-direction: column;
         row-gap: 20px;
         align-items: center;
+        /* background-color: red; */
     }
     .overview .categories-card{
         padding: 1.875rem;
         border-radius: 1rem;
         width: 330px;
+        /* background-color: red; */
     }
     .overview .latest-transaction .main-content-table{
         padding: 1.25rem 1.875rem;

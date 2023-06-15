@@ -4,7 +4,6 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import HistoryTotal from "./historyTotal";
 
-
 const History = () => {
     const [data, setData] = useState()
 
@@ -75,6 +74,11 @@ const History = () => {
     useEffect(()=>{
         getItemLocal()
     },[])
+
+    const style ={
+        color: 'green'
+    }
+
     return (
         <>
             <Head>
@@ -110,7 +114,7 @@ const History = () => {
                                         <TableCell>{`${dataTable.item}`.concat(' ', dataTable.itemName)}</TableCell>
                                         <TableCell>Rp. {dataTable.totalPrice? titikPrice(dataTable.totalPrice): titikPrice(dataTable.price)}</TableCell>
                                         <TableCell>+ {dataTable.coin}</TableCell>
-                                        <TableCell sx={{fontWeight: 600}}>{'success'}</TableCell>
+                                        <TableCell sx={style}>{dataTable.status}</TableCell>
                                     </TableRow>
                                     ))}
                                 </TableBody>

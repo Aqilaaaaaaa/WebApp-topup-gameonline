@@ -123,7 +123,7 @@
 }
 
   /* Medium devices (landscape phones, 768px and up) */
-@media (max-width: 768px) { 
+@media screen and (max-width: 768px) { 
     .checkout span.purchase-details{
         float: right;
       }
@@ -140,7 +140,7 @@
     }
     
   }
-  @media (max-width: 414px) { 
+  @media (max-width: 767px) and (min-width: 414px) { 
     .checkout {
       background-color: #E7EAF5;
       background-image: none;
