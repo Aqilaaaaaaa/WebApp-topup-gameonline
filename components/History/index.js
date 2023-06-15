@@ -1,7 +1,7 @@
 import { userService } from "@/services";
-import { useEffect, useState } from "react";
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import Head from "next/head";
-import HistoryRow from "./historyRow";
+import { useEffect, useState } from "react";
 import HistoryTotal from "./historyTotal";
 
 const History = () => {
@@ -74,6 +74,11 @@ const History = () => {
     useEffect(()=>{
         getItemLocal()
     },[])
+
+    const style ={
+        color: 'green'
+    }
+
     return (
         <>
             <Head>
@@ -90,34 +95,31 @@ const History = () => {
                             <HistoryTotal title="Total Cash Coin" total={titikPrice(allCoin(data))}/>
                         </div>
                     </div>
-                    <div className="latest-transaction">
-                        <div className="main-content-table overflow-auto">
-                            <table className="table table-borderless">
-                                <thead>
-                                    <tr className="color-palette-1 text-lg fw-bold">
-                                        <th className="text-start fw-bold" scope="col">Game</th>
-                                        <th className="text-start fw-bold" scope="col ">Item</th>
-                                        <th className="text-start fw-bold" scope="col">Price</th>
-                                        <th className="text-start fw-bold" scope="col">Cash Coin</th>
-                                        <th className="text-start fw-bold" scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {data?.map((data, i)=>(
-                                        <HistoryRow key={i} title={data.name} type={data.type} item={`${data.item}`.concat(" ",data.itemName)} totalPrice={titikPrice(data.totalPrice)} price={titikPrice(data.price)} coin={data.coin} status={"Success"}/>
-                                        // <tr className="align-middle text-center">
-                                        //     <td>
-                                        //         <div>
-                                        //             <span className="float-start icon-status success"></span>
-                                        //             <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-                                        //                 Success</p>
-                                        //         </div>
-                                        //     </td>
-                                        // </tr>
+                    <div className='container my-3 '>
+                        <TableContainer component={Paper} sx={{borderRadius: `1rem`}}>
+                            <Table sx={{minWidth: 650}}>
+                                <TableHead sx={{ backgroundColor: '#1D394A', height: '50px' }}>
+                                    <TableRow>
+                                        <TableCell sx={{ fontWeight: 750, color: 'white' }}>Game</TableCell>
+                                        <TableCell sx={{ fontWeight: 750, color: 'white' }}>Item</TableCell>
+                                        <TableCell sx={{ fontWeight: 750, color: 'white' }}>Price</TableCell>
+                                        <TableCell sx={{ fontWeight: 750, color: 'white' }}>Cash Coin</TableCell>
+                                        <TableCell sx={{ fontWeight: 750, color: 'white' }}>Status</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {data?.map((dataTable, i)=>(
+                                    <TableRow key={i} sx={{ '&:last-child td, &:last-child th': { border: 0 }}}>
+                                        <TableCell>{dataTable.name}<br/>{dataTable.type}</TableCell>
+                                        <TableCell>{`${dataTable.item}`.concat(' ', dataTable.itemName)}</TableCell>
+                                        <TableCell>Rp. {dataTable.totalPrice? titikPrice(dataTable.totalPrice): titikPrice(dataTable.price)}</TableCell>
+                                        <TableCell>+ {dataTable.coin}</TableCell>
+                                        <TableCell sx={style}>{dataTable.status}</TableCell>
+                                    </TableRow>
                                     ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                </TableBody>
+                            </Table>
+                        </TableContainer>  
                     </div>
                 </main>
             </section>

@@ -103,7 +103,8 @@ export default function index({product}) {
             itemName: itemNameMap(data.priceList),
             coin: cointMap(data.priceList),
             resetCoin: point,
-            totalPrice: total
+            totalPrice: total,
+            status: 'success'
         }
         const dataLocalStorage = localStorage.getItem("history_payment")
         const historyData = dataLocalStorage?[...JSON.parse(dataLocalStorage), temp]:[temp]
