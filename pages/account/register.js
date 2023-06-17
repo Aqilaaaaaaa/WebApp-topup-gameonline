@@ -93,7 +93,7 @@ function Register({id}) {
                         </div>
                         <div className="pt-20">
                         <label id="email" className="form-label text-lg fw-medium color-palette-1 mb-10">Email</label>
-                            <input name="email" type="text" {...register("email")} className={`form-control rounded-pill text-lg ${errors.email ? "is-invalid" : ""}`} aria-describedby="email" placeholder="Enter your email address"/>
+                            <input name="email" type="email" {...register("email")} className={`form-control rounded-pill text-lg ${errors.email ? "is-invalid" : ""}`} aria-describedby="email" placeholder="Enter your email address"/>
                             <div className="invalid-feedback">{errors.email?.message}</div>
                         </div>
                         <div className="pt-20">
