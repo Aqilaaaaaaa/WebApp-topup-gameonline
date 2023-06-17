@@ -10,7 +10,7 @@
 .detail .card-img {
     justify-content: center;
     text-align: center;
-    width: 500px;
+    width: 400px;
     
 }
 
@@ -53,16 +53,7 @@
     border: 0;
  }
 
-@media (max-width:414px){
-    .detail form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .detail .detail-card{
         transition: all 0.1s linear;
         background-color: #E7EAF5;
@@ -71,11 +62,18 @@
         width: 180px;
         height: 170px;
     }
-    .detail form {
+    .detail .form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 }
+@media (max-width: 767px) and (min-width:414px){
+    .detail .form{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 
